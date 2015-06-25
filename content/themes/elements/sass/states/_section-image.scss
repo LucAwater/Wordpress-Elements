@@ -1,0 +1,13 @@
+section.image .section-body{
+  &.is-pos-left{
+    text-align: left;
+  }
+  
+  &.is-pos-center{
+    text-align: center;
+  }
+  
+  &.is-pos-right{
+    text-align: right;
+  }
+}

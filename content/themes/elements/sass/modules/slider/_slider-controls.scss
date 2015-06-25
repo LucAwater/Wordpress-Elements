@@ -1,0 +1,75 @@
+/* Arrows */
+.slider-controls{
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  @include transform( translate(-50%, -50%) );
+  
+  .arrow{
+    height: 100%;
+    width: rem-calc(44);
+    position: absolute;
+    top: 0;
+    display: block;
+    cursor: pointer;
+//    z-index: $zIndex-rsArrow;
+    
+    i{		
+      width: rem-calc(20);
+      height: rem-calc(20);
+      top: 50%;
+      left: 50%;
+      
+      position: absolute;
+      cursor: pointer;
+      
+      &:before{
+        width: rem-calc(3);
+        height: 100%;
+        position: absolute;
+        background: $black;
+        content: " ";
+      }
+      
+      &:after{
+        height: rem-calc(3);
+        width: 100%;
+        position: absolute;
+        background: $black;
+        content: " ";
+      }
+    }
+    
+    &.arrow-left{ 
+      left: 0;
+      margin-left: 2em;
+      -webkit-transform: rotate(-45deg);
+      
+      i{ 
+        background-position: -64px -32px;
+      }
+    }
+    
+    &.arrow-right{ 
+      right: 0;
+      margin-right: 2em;
+      -webkit-transform: rotate(135deg);
+      
+      i{
+        background-position: -64px -64px;
+      }
+    }
+  }
+}
+
+// Only show arrows when slider is hovered
+.section-slider .section-content{
+  .slider-controls{
+    @include hide( .3s );
+  }
+  
+  &:hover .slider-controls{
+    @include show( .3s );
+  }
+}

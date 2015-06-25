@@ -1,0 +1,63 @@
+a.trigger-menu{
+  width: 35px;
+  height: 35px;
+  display: block;
+  position: relative;
+  
+  i{
+    width: 100%;
+    height: 3px;
+    display: block;
+    top: calc(50% - 1.5px);
+    background: $black;
+    
+    &:before,
+    &:after{
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      transition: .2s;
+    }
+    
+    &:before{
+      margin-top: -8px;
+    }
+    
+    &:after{
+      margin-top: 8px;
+    }
+  }
+}
+
+a.trigger-menu:hover i{
+  &:before,
+  &:after{
+    transition: .2s;
+  }
+  
+  &:before{
+    margin-top: -11px;
+  }
+  
+  &:after{
+    margin-top: 11px;
+  }
+}
+
+@keyframes activebefore{
+  50%{
+    margin-top: 0;
+  }
+  
+  100%{
+    @include transform( rotate(45deg) );
+  }
+}
+
+a.trigger-menu:focus i{
+  &:before{
+    -webkit-animation: activebefore .4s linear;
+  }
+}

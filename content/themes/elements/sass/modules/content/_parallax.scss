@@ -1,0 +1,18 @@
+section.parallax .section-body,
+.bcg{
+  height: 0;
+  padding-bottom: 50% !important;
+}
+
+.section-parallax{
+  width: 100%;
+  z-index: $zIndex-parallax;
+}
+
+.bcg{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+}

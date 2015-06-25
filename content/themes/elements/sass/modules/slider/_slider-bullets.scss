@@ -1,0 +1,32 @@
+// Gallery: bullets
+.slider-bullets{
+  position: absolute;
+//  z-index: $zIndex-rsBullet;
+  bottom: 1em;
+  width: 100%;
+  
+  background: none;
+  text-align: center;
+  
+  li{
+    display: inline-block;
+    *display: inline; 
+    *zoom: 1;
+    padding: 0 .2em;
+    
+    i{
+      display: block;
+      width: rem-calc(8);
+      height: rem-calc(8);
+      border-radius: 50%;
+      background: transparent;
+      border: thin solid $black;
+    }
+    
+    &.is-active{
+      i{
+        background-color: $black;
+      }
+    }
+  }
+}

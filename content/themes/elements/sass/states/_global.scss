@@ -1,0 +1,33 @@
+/*
+ * Show and Hide class functions
+ */
+.is-visible{
+  @include show( .3s );
+}
+
+.is-hidden{
+  @include hide( .3s );
+}
+
+@for $i from 1 through 9 {
+  .is-visible-0\.#{$i}s {
+    @include show($i / 10 * 1s);
+  }
+  
+  .is-hidden-0\.#{$i}s {
+    @include hide($i / 10 * 1s);
+  }
+}
+
+.is-pos-left{
+  float: left;
+}
+
+.is-pos-right{
+  float: right;
+}
+
+.is-pos-center{
+  display: block;
+  margin: auto;
+}
