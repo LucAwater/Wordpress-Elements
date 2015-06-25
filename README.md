@@ -4,7 +4,7 @@ This is a Wordpress framework, which can be used in a variety of ways. It contai
 
 Although this framework is initially build for onepagers, of course it can easily be used to make larger websites, go crazy.
 
-Wordpress Elements initially assumes a setup with these dependencies
+Wordpress Elements initially assumes a setup with these dependencies:
 * You have multiple servers(local, development, production)
 * You have an Advanced Custom Fields(ACF) license key
 
@@ -19,3 +19,28 @@ Wordpress Elements initially assumes a setup with these dependencies
 6. Activate 'Elements' theme
 7. import 'acf.json' file in ACF
 8. Begin building something awesome
+
+
+## Theme
+###Class system
+The class system in the elements theme is setup to be readable, flexible and easily extendable.
+
+**Module**  module
+            module variant
+            
+**State**   indicator
+            indicator extension
+            subject
+            subject variant
+            
+Module example: `<div class=“grid grid-primary”>`
+
+module          = grid
+module variant  = primary
+
+State example: `<div class=“is-bold is-pos-left has-no-pad-top”>`
+
+indicator           = is, has
+indicator extension = no
+subject             = bold, pos, pad
+subject variant     = left, top
