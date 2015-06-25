@@ -1,0 +1,44 @@
+@mixin section-padding{
+  &.has-no-pad{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  &.has-no-pad-top{
+    padding-top: 0;
+  }
+  
+  &.has-no-pad-bottom{
+    padding-bottom: 0;
+  }
+  
+  &.has-no-pad-left{
+    padding-left: 0;
+  }
+  
+  &.has-no-pad-right{
+    padding-right: 0;
+  }
+  
+  &.has-no-pad-sides{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  &.has-extra-pad-top{
+    padding-top: $section-spacing * 2;
+  }
+  
+  &.has-extra-pad-bottom{
+    padding-bottom: $section-spacing * 2;
+  }
+}
+
+section,
+.section-header,
+.section-body,
+.section-footer{
+  @include section-padding;
+}

@@ -1,0 +1,63 @@
+section.grid{
+  ul{
+    width: 100%;
+    
+    li{
+      margin-bottom: 50px;
+      
+      > *{
+        margin-bottom: 15px;
+      }
+      
+      img{
+        min-width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+// Removing margin-bottom for last row
+@media #{$large-up}{
+  @for $value from $block-grid-elements through 1{
+    .l-grid-#{$value} li:nth-last-child(-n + #{$value}){
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media #{$medium-only}{
+  @for $value from $block-grid-elements through 1{
+    .m-grid-#{$value} li:nth-last-child(-n + #{$value}){
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media #{$small-only}{
+  @for $value from $block-grid-elements through 1{
+    .s-grid-#{$value} li:nth-last-child(-n + #{$value}){
+      margin-bottom: 0;
+    }
+  }
+}
+
+section.grid ul.isotope-masonry{
+  li:nth-child(n){
+    margin-bottom: $column-gutter;
+    
+    img{
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px){
+  section.grid{
+    ul{
+      li{
+        width: 25%;
+      }
+    }
+  }
+}

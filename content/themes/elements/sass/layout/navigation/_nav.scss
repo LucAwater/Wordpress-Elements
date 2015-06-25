@@ -1,0 +1,19 @@
+nav ul{
+  display: inline;
+  
+  li{
+    display: inline-block;
+    padding-right: 1em;
+    
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+// Current item
+nav ul{
+  li.current{
+    text-decoration: underline;
+  }
+}

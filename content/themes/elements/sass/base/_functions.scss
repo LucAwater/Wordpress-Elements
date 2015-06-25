@@ -1,0 +1,13 @@
+// Margin-top classes
+@for $a from 1 through 100{
+  .margin-t#{$a}{
+    margin-top: rem-calc($a) !important;
+  }
+}
+
+// Margin-bottom classes
+@for $b from 1 through 100{
+  .margin-b#{$b}{
+    margin-bottom: rem-calc($b) !important;
+  }
+}

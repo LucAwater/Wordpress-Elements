@@ -1,0 +1,29 @@
+// Example calculation:
+// Desired side margin is 60
+// Gutters are 30
+// So on either sides of a column it's 30 / 2 = 15px
+// Side margin = 60 - 15 = 45px
+
+header{
+  padding-left: $side-margin;
+  padding-right: $side-margin;
+}
+
+main,
+footer{
+  padding-left: $side-margin - ($column-gutter / 2);
+  padding-right: $side-margin - ($column-gutter / 2);
+}
+
+@media #{$small-only}{
+  header{
+    padding-left: $side-margin-small;
+    padding-right: $side-margin-small;
+  }
+  
+  main,
+  footer{
+    padding-left: $side-margin-small - ($column-gutter / 2);
+    padding-right: $side-margin-small - ($column-gutter / 2);
+  }
+}

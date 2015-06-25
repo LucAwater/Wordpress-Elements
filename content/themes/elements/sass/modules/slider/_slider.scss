@@ -1,0 +1,51 @@
+$ratio: (1 / 2) * 100%; // 2:1
+
+.slider{
+  position: relative;
+}
+
+// Setting ratio of image
+.slider-images{
+  height: 0;
+  padding-bottom: $ratio;
+}
+
+// Gallery: images
+.slider-images{
+  top: 0;
+  left: $column-gutter / 2;
+  position: relative;
+  
+  width: calc(100% - #{$column-gutter});
+  overflow: hidden;
+  
+  list-style: none;
+  
+  li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    
+    img{
+      height: 100%;
+      width: auto;
+      max-width: none;
+      display: block;
+      
+      top: 50%;
+      left: 50%;
+      @include transform( translate(-50%, -50%) );
+    }
+    
+    &.is-active{
+      opacity: 1;
+      visibility: visible;
+      transition: .5s;
+    }
+  }
+}

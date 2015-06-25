@@ -1,0 +1,14 @@
+section.text{
+  text-align: center;
+  
+  .section-body{
+    max-width: 600px;
+    margin: auto;
+    
+    h2,
+    p,
+    a{
+      margin-bottom: 1em;
+    }
+  }
+}
