@@ -4,9 +4,12 @@ This is a Wordpress framework, which can be used in a variety of ways. It contai
 
 Although this framework is initially build for onepagers, of course it can easily be used to make larger websites, go crazy.
 
-Wordpress Elements initially assumes a setup with these dependencies:
-- You have multiple servers(local, development, production)
-- You have an Advanced Custom Fields(ACF) license key
+Wordpress Elements initially assumes a setup with these dependencies
+* You have multiple servers(local, development, production)
+* You have an Advanced Custom Fields(ACF) license key
+
+
+## Getting started
 
 1. Git clone git@github.com:LucAwater/Wordpress-Elements.git .
 2. Git submodule init
