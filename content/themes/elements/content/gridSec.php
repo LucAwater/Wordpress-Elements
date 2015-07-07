@@ -28,9 +28,9 @@ echo '<section class="grid grid-sec' . (( $o_menu == true ) ? ' has-anchor" id="
     echo '<div class="section-body">';
 
     if( $o_b_layout == 'masonry' ){
-      echo '<ul class="s-grid-1 m-grid-2 l-grid-4 isotope isotope-masonry">';
+      echo '<ul class="s-grid-1 m-grid-2 l-grid-4 row isotope isotope-masonry">';
     } else {
-      echo '<ul class="s-grid-1 m-grid-2 l-grid-4">';
+      echo '<ul class="s-grid-1 m-grid-2 l-grid-4 row">';
     }
 
         while( have_rows('gridSec_b_item') ): the_row();

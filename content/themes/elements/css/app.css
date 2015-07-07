@@ -1353,8 +1353,8 @@ header {
 
 main,
 footer {
-  padding-left: 2.8125rem;
-  padding-right: 2.8125rem; }
+  padding-left: 3.75rem;
+  padding-right: 3.75rem; }
 
 @media only screen and (max-width: 31.25em) {
   header {
@@ -1363,8 +1363,8 @@ footer {
 
   main,
   footer {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem; } }
+    padding-left: 1.875rem;
+    padding-right: 1.875rem; } }
 main {
   height: auto !important;
   height: 100%;
