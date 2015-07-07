@@ -11,8 +11,8 @@ header{
 
 main,
 footer{
-  padding-left: $side-margin - ($column-gutter / 2);
-  padding-right: $side-margin - ($column-gutter / 2);
+  padding-left: $side-margin;
+  padding-right: $side-margin;
 }
 
 @media #{$small-only}{
@@ -20,10 +20,10 @@ footer{
     padding-left: $side-margin-small;
     padding-right: $side-margin-small;
   }
-  
+
   main,
   footer{
-    padding-left: $side-margin-small - ($column-gutter / 2);
-    padding-right: $side-margin-small - ($column-gutter / 2);
+    padding-left: $side-margin-small;
+    padding-right: $side-margin-small;
   }
 }
