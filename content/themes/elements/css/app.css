@@ -1,7 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 [class*="grid-"] {
   display: block;
-  padding: 0;
   *zoom: 1; }
   [class*="grid-"]:before, [class*="grid-"]:after {
     content: " ";
