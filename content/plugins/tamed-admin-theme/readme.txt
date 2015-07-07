@@ -1,8 +1,10 @@
 === Tamed Admin Theme ===
 Contributors: lucawater
-Tags: theme, basic, clean, minimalistic, wordpress. admin
-Requires at least: 3.0.1
-Tested up to: 4.1
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KP8MQXS4NNU36
+Tags: theme, basic, clean, minimalistic, wordpress admin, backend, backend theme, admin theme, custom admin, custom admin theme
+Requires at least: 3.0
+Tested up to: 4.2.2
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +35,12 @@ Nope, it does not. It is just a way to give a nice touch to the backend.
 
 == Changelog ==
 
-
+= 1.0.1 =
+* fixed "customize your site" button on dashboard
+* equalized and tweaked buttons
+* overall tidying up and straightening out
 
 == Upgrade Notice ==
+
+
+Admin colour, Admin theme style plugin, back end theme, backend, background colour, background theme style plugin, Best admin theme, Best Admin theme style plugin, Best back-end, Best backend theme style plugin, colour, Custom admin theme, customized admin theme, Customized WordPress admin theme, Download Admin theme style plugin, Download backend theme style plugin, Free admin theme style plugin, Free backend theme style plugin, navigation menu, new admin ui
