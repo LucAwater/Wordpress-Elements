@@ -25,22 +25,24 @@ Wordpress Elements initially assumes a setup with these dependencies:
 ###Class system
 The class system in the elements theme is setup to be readable, flexible and easily extendable.
 
-**Module**  module
-            module variant
-            
-**State**   indicator
-            indicator extension
-            subject
-            subject variant
-            
+**Module** consists of:
+- module
+- module variant
+
 Module example: `<div class=“grid grid-primary”>`
 
-module          = grid
-module variant  = primary
+- module = grid
+- module variant = primary
+
+**State** consists of:
+- indicator
+- indicator extension
+- subject
+- subject variant
 
 State example: `<div class=“is-bold is-pos-left has-no-pad-top”>`
 
-indicator           = is, has
-indicator extension = no
-subject             = bold, pos, pad
-subject variant     = left, top
+- indicator  = is, has
+- indicator extension = no
+- subject = bold, pos, pad
+- subject variant = left, top
