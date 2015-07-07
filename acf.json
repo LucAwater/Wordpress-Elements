@@ -55,7 +55,7 @@
                             {
                                 "key": "field_5515707936df3",
                                 "label": "Image (logo)",
-                                "name": "hero_c_image",
+                                "name": "hero_b_image",
                                 "prefix": "",
                                 "type": "image",
                                 "instructions": "",
@@ -80,7 +80,7 @@
                             {
                                 "key": "field_5515707936e0a",
                                 "label": "Title",
-                                "name": "hero_c_title",
+                                "name": "hero_b_title",
                                 "prefix": "",
                                 "type": "text",
                                 "instructions": "",
@@ -102,7 +102,7 @@
                             {
                                 "key": "field_5515707936e20",
                                 "label": "Text",
-                                "name": "hero_c_text",
+                                "name": "hero_b_text",
                                 "prefix": "",
                                 "type": "wysiwyg",
                                 "instructions": "",
@@ -121,7 +121,7 @@
                             {
                                 "key": "field_5515707936e39",
                                 "label": "Color of text",
-                                "name": "hero_o_c_textColor",
+                                "name": "hero_o_b_textColor",
                                 "prefix": "",
                                 "type": "radio",
                                 "instructions": "",
@@ -170,7 +170,7 @@
                             {
                                 "key": "field_5515707936e7e",
                                 "label": "Title",
-                                "name": "text_c_title",
+                                "name": "text_b_title",
                                 "prefix": "",
                                 "type": "text",
                                 "instructions": "",
@@ -192,7 +192,7 @@
                             {
                                 "key": "field_5515707936e99",
                                 "label": "Content",
-                                "name": "text_c_text",
+                                "name": "text_b_text",
                                 "prefix": "",
                                 "type": "wysiwyg",
                                 "instructions": "",
@@ -227,7 +227,7 @@
                             {
                                 "key": "field_5515707936ef6",
                                 "label": "Positioning",
-                                "name": "text_o_c_pos",
+                                "name": "text_o_b_pos",
                                 "prefix": "",
                                 "type": "radio",
                                 "instructions": "",
@@ -251,7 +251,7 @@
                             {
                                 "key": "field_5515707936f27",
                                 "label": "Alignment",
-                                "name": "text_o_c_align",
+                                "name": "text_o_b_align",
                                 "prefix": "",
                                 "type": "radio",
                                 "instructions": "",
@@ -348,7 +348,7 @@
                             {
                                 "key": "field_551e3c76d3a14",
                                 "label": "Image",
-                                "name": "image_c_image",
+                                "name": "image_b_image",
                                 "prefix": "",
                                 "type": "image",
                                 "instructions": "",
@@ -373,7 +373,7 @@
                             {
                                 "key": "field_551e44936e672",
                                 "label": "Caption",
-                                "name": "image_c_caption",
+                                "name": "image_b_caption",
                                 "prefix": "",
                                 "type": "text",
                                 "instructions": "",
@@ -411,7 +411,7 @@
                             {
                                 "key": "field_551e3cacd3a16",
                                 "label": "Width",
-                                "name": "image_o_c_width",
+                                "name": "image_o_b_width",
                                 "prefix": "",
                                 "type": "radio",
                                 "instructions": "",
@@ -434,7 +434,7 @@
                             {
                                 "key": "field_551e423b63971",
                                 "label": "Positioning",
-                                "name": "image_o_c_pos",
+                                "name": "image_o_b_pos",
                                 "prefix": "",
                                 "type": "radio",
                                 "instructions": "",
@@ -541,7 +541,7 @@
                             {
                                 "key": "field_5515707937017",
                                 "label": "Images",
-                                "name": "gridPri_c_images",
+                                "name": "gridPri_b_images",
                                 "prefix": "",
                                 "type": "gallery",
                                 "instructions": "",
@@ -631,7 +631,7 @@
                             {
                                 "key": "field_5515707937075",
                                 "label": "Layout mode",
-                                "name": "gridPri_o_c_layout",
+                                "name": "gridPri_o_b_layout",
                                 "prefix": "",
                                 "type": "radio",
                                 "instructions": "",
@@ -784,7 +784,7 @@
                             {
                                 "key": "field_5515707937194",
                                 "label": "Items",
-                                "name": "gridSec_c_item",
+                                "name": "gridSec_b_item",
                                 "prefix": "",
                                 "type": "repeater",
                                 "instructions": "",
@@ -803,7 +803,7 @@
                                     {
                                         "key": "field_5515707968ba9",
                                         "label": "Image",
-                                        "name": "gridSec_c_item_image",
+                                        "name": "gridSec_b_item_image",
                                         "prefix": "",
                                         "type": "image",
                                         "instructions": "",
@@ -828,7 +828,7 @@
                                     {
                                         "key": "field_5515707968bd6",
                                         "label": "Title",
-                                        "name": "gridSec_c_item_title",
+                                        "name": "gridSec_b_item_title",
                                         "prefix": "",
                                         "type": "text",
                                         "instructions": "",
@@ -850,7 +850,7 @@
                                     {
                                         "key": "field_5515707968c08",
                                         "label": "Text",
-                                        "name": "gridSec_c_item_text",
+                                        "name": "gridSec_b_item_text",
                                         "prefix": "",
                                         "type": "wysiwyg",
                                         "instructions": "",
@@ -935,7 +935,7 @@
                             {
                                 "key": "field_55157079371f3",
                                 "label": "Layout mode",
-                                "name": "gridSec_o_c_layout",
+                                "name": "gridSec_o_b_layout",
                                 "prefix": "",
                                 "type": "radio",
                                 "instructions": "",
@@ -1088,7 +1088,7 @@
                             {
                                 "key": "field_55157079373ca",
                                 "label": "Images",
-                                "name": "slider_c_images",
+                                "name": "slider_b_images",
                                 "prefix": "",
                                 "type": "gallery",
                                 "instructions": "",
@@ -1235,7 +1235,7 @@
                             {
                                 "key": "field_55157079373f3",
                                 "label": "Image",
-                                "name": "parallax_c_image",
+                                "name": "parallax_b_image",
                                 "prefix": "",
                                 "type": "image",
                                 "instructions": "",
