@@ -28,6 +28,16 @@ class acf_wpml_compatibility {
 		$this->lang = ICL_LANGUAGE_CODE;
 		
 		
+		// update settings
+		acf_update_setting('default_language', $sitepress->get_default_language());
+		acf_update_setting('current_language', $this->lang);
+		
+		
+		// actions
+		add_action('acf/field_group/admin_head',		array($this, 'admin_head'));
+		add_action('acf/input/admin_head',				array($this, 'admin_head'));
+		
+		
 		// bail early if not transaltable
 		if( !$this->is_translatable() ) {
 			
@@ -36,24 +46,17 @@ class acf_wpml_compatibility {
 		}
 		
 		
-		// update settings
-		acf_update_setting('default_language', $sitepress->get_default_language());
-		acf_update_setting('current_language', $this->lang);
-		
-		
 		// actions
 		add_action('acf/upgrade_start/5.0.0',			array($this, 'upgrade_start_5'));
 		add_action('acf/upgrade_finish/5.0.0',			array($this, 'upgrade_finish_5'));
 		add_action('acf/update_field_group',			array($this, 'update_field_group'), 2, 1);
 		add_action('icl_make_duplicate',				array($this, 'icl_make_duplicate'), 10, 4);
-		add_action('acf/field_group/admin_head',		array($this, 'admin_head'));
-		add_action('acf/input/admin_head',				array($this, 'admin_head'));
-		
 		
 		
 		// filters
 		add_filter('acf/settings/save_json',			array($this, 'settings_save_json'));
 		add_filter('acf/settings/load_json',			array($this, 'settings_load_json'));
+		
 	}
 	
 	

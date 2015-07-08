@@ -50,6 +50,10 @@
 			this.$options.addClass('acf-postbox');
 		
 			
+			// disable validation
+			acf.validation.active = 0;
+			
+			
 			// sortable
 			this.sort_fields( $('.acf-field-list:first') );
 			
@@ -161,7 +165,6 @@
 			// modules
 			this.conditions.init();
 			this.locations.init();
-			this.options.init();
 			
 			
 			// render
@@ -1475,39 +1478,20 @@
 				type = $el.attr('data-type');
 				
 			
+			// render name
 			if( $name.val() == '' ) {
 				
-				// thanks to https://gist.github.com/richardsweeney/5317392 for this code!
-				var val = $label.val(),
-					replace = {
-						'ä': 'a',
-						'æ': 'a',
-						'å': 'a',
-						'ö': 'o',
-						'ø': 'o',
-						'é': 'e',
-						'ë': 'e',
-						'ü': 'u',
-						'ó': 'o',
-						'ő': 'o',
-						'ú': 'u',
-						'é': 'e',
-						'á': 'a',
-						'ű': 'u',
-						'í': 'i',
-						' ' : '_',
-						'\'' : '',
-						'\\?' : ''
-					};
-				
-				$.each( replace, function(k, v){
-					var regex = new RegExp( k, 'g' );
-					val = val.replace( regex, v );
-				});
+				// vars
+				var s = $label.val();
 				
 				
-				val = val.toLowerCase();
-				$name.val( val ).trigger('change');
+				// sanitize
+				s = acf.str_sanitize(s);
+				
+				
+				// update name
+				$name.val( s ).trigger('change');
+				
 			}
 			
 			
@@ -2345,60 +2329,6 @@
 	};
 	
 	
-	acf.field_group.options = {
-		
-		$el : null,
-		
-		
-		/*
-		*  init
-		*
-		*  This function will run on document ready and initialize the module
-		*
-		*  @type	function
-		*  @date	8/04/2014
-		*  @since	5.0.0
-		*
-		*  @param	n/a
-		*  @return	n/a
-		*/
-		
-		init : function(){
-			
-			// vars
-			this.$el = acf.field_group.$options;
-			
-			
-			// hide on screen toggle
-			var $ul = this.$el.find('tr[data-name="hide_on_screen"] ul'),
-				$li = $('<li><label><input type="checkbox" value="" name="" >' + acf._e('hide_show_all') + '</label></li>');
-			
-			
-			// start checked?
-			if( $ul.find('input:not(:checked)').length == 0 )
-			{
-				$li.find('input').attr('checked', 'checked');
-			}
-			
-			
-			// event
-			$li.on('change', 'input', function(){
-				
-				var checked = $(this).is(':checked');
-				
-				$ul.find('input').attr('checked', checked);
-				
-			});
-			
-			
-			// add to ul
-			$ul.prepend( $li );
-			
-		}
-		
-	};
-	
-	
 	/*
 	*  ready
 	*
@@ -2567,7 +2497,7 @@
 		} else {
 			
 			$el.find('.acf-field[data-name="save_other_choice"]').hide();
-			$el.find('.acf-field[data-name="save_other_choice"] input').removeAttr('checked');
+			$el.find('.acf-field[data-name="save_other_choice"] input').prop('checked', false);
 			
 		}
 			

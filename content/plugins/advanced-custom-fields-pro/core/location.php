@@ -320,13 +320,21 @@ class acf_location {
 		
 			
 		// get term data
+		// - selected term may have a numeric slug '123' (user reported on forum), so always check slug first
 		$data = acf_decode_taxonomy_term( $rule['value'] );
-		$field = is_numeric( $data['term'] ) ? 'id' : 'slug';
-		$term = get_term_by( $field, $data['term'], $data['taxonomy'] );
+		$term = get_term_by( 'slug', $data['term'], $data['taxonomy'] );
 		
 		
-		// validate term
-		if( empty($term) ) {
+		// attempt get term via ID (ACF4 uses ID)
+		if( !$term && is_numeric($data['term']) ) {
+			
+			$term = get_term_by( 'id', $data['term'], $data['taxonomy'] );
+			
+		}
+		
+		
+		// bail early if no term
+		if( !$term ) {
 			
 			return false;
 						

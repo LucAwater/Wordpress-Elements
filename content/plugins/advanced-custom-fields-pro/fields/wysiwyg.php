@@ -289,7 +289,7 @@ class acf_field_wysiwyg extends acf_field {
 			<div id="wp-<?php echo $id; ?>-editor-tools" class="wp-editor-tools hide-if-no-js">
 				<?php if( $field['media_upload'] ): ?>
 				<div id="wp-<?php echo $id; ?>-media-buttons" class="wp-media-buttons">
-					<?php do_action( 'media_buttons' ); ?>
+					<?php do_action( 'media_buttons', $id ); ?>
 				</div>
 				<?php endif; ?>
 				<?php if( user_can_richedit() && $show_tabs ): ?>
