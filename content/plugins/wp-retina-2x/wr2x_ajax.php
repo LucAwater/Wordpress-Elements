@@ -482,27 +482,29 @@ function wr2x_check_get_ajax_uploaded_file() {
 	$data = $_POST['data'];
 
 	// Create the file as a TMP
-	$tmpfname = tempnam( sys_get_temp_dir(), "wpx_" );
-	
-	if ( $tmpfname == FALSE ) {
+	if ( is_writable( sys_get_temp_dir() ) ) {
+		$tmpfname = tempnam( sys_get_temp_dir(), "wpx_" );
+	}
+	else if ( is_writable( wr2x_get_upload_root() ) ) {
+		if ( !file_exists( trailingslashit( wr2x_get_upload_root() ) . "wr2x-tmp" ) )
+			mkdir( trailingslashit( wr2x_get_upload_root() ) . "wr2x-tmp" );
+		$tmpfname = tempnam( trailingslashit( wr2x_get_upload_root() ) . "wr2x-tmp", "wpx_" );
+	}
 
+	if ( $tmpfname == null || $tmpfname == FALSE ) {
 		$tmpdir = get_temp_dir();
-		if ( !is_writable( $tmpdir ) )
-			echo json_encode( array(
-				'success' => false,
-				'message' => __( "You don't have the rights to use a temporary directory.", 'wp-retina-2x' )
-			));
-		else
-			echo json_encode( array(
-				'success' => false,
-				'message' => __( "The temporary directory could not be created.", 'wp-retina-2x' )
-			));
-		die();
+		error_log( "Retina: The temporary directory could not be created." );
+		echo json_encode( array(
+			'success' => false,
+			'message' => __( "The temporary directory could not be created.", 'wp-retina-2x' )
+		));
+		die;
 	}
 
 	$handle = fopen( $tmpfname, "w" );
 	fwrite( $handle, base64_decode( $data ) );
 	fclose( $handle );
+	chmod( $tmpfname, 0664 );
 
 	// Check if it is an image
 	$file_info = getimagesize( $tmpfname );
@@ -531,7 +533,6 @@ function wr2x_check_get_ajax_uploaded_file() {
 function wr2x_wp_ajax_wr2x_upload() {
 	$tmpfname = wr2x_check_get_ajax_uploaded_file();
 	$attachmentId = (int) $_POST['attachmentId'];
-
 	$meta = wp_get_attachment_metadata( $attachmentId );
 	$current_file = get_attached_file( $attachmentId );
 	$pathinfo = pathinfo( $current_file );
@@ -542,8 +543,6 @@ function wr2x_wp_ajax_wr2x_upload() {
 		unlink( $retinafile );
 
 	// Insert the new file and delete the temporary one
-	//rename( $tmpfname, $retinafile );
-	//chmod( $retinafile, 0644 );
 	list( $width, $height ) = getimagesize( $tmpfname );
 
 	if ( !wr2x_are_dimensions_ok( $width, $height, $meta['width'] * 2, $meta['height'] * 2 ) ) {
