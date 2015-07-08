@@ -22,13 +22,12 @@ $block-grid-media-queries: true !default;
 // $spacing - # of ems to use as padding on each block item. Default: rem-calc(20).
 // $base-style - Apply a base style to block grid. Default: true.
 @mixin block-grid(
-  $per-row:false, 
-  $spacing:$block-grid-default-spacing, 
+  $per-row:false,
+  $spacing:$block-grid-default-spacing,
   $base-style:true) {
 
   @if $base-style {
     display: block;
-    padding: 0;
     //margin: 0 (-$spacing/2);
     @include clearfix;
 
@@ -65,7 +64,7 @@ $block-grid-media-queries: true !default;
 
 @include exports("grid") {
   @if $include-html-grid-classes {
-    
+
     [class*="grid-"] { @include block-grid; }
 
     @media #{$small-up} {
@@ -79,11 +78,11 @@ $block-grid-media-queries: true !default;
     @media #{$large-up} {
       @include block-grid-html-classes($size:l);
     }
-    
+
     @media #{$xlarge-up} {
       @include block-grid-html-classes($size:xl);
     }
-    
+
     @media #{$xxlarge-up} {
       @include block-grid-html-classes($size:xxl);
     }
