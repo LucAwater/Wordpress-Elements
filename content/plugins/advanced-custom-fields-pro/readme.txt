@@ -2,7 +2,7 @@
 Contributors: elliotcondon
 Tags: custom, field, custom field, advanced, simple fields, magic fields, more fields, repeater, matrix, post, type, text, textarea, file, image, edit, admin
 Requires at least: 3.6.0
-Tested up to: 4.1
+Tested up to: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,47 @@ http://support.advancedcustomfields.com/
 
 
 == Changelog ==
+
+= 5.2.7 =
+* Taxonomy field: Split setting 'load_save_terms' into 'load_terms' and 'save_terms'
+* Select field: Fixed bug causing values containing ',' to fail
+* Checkbox field: Fixed bug causing values containing ',' to fail
+* Checkbox field: Added new 'toggle all' setting
+* User field: Added new filters 'acf/fields/user/result' and 'acf/fields/user/search_columns'
+* Gallery field: Added logic to increase sidebar width when space is available
+* Options page: Added new 'post_id' setting to customise where values are loaded and saved
+* API: Improved `get_field()` to better handle no value
+* API: Optimised asset loading when using the `acf_form()` function
+* API: Added new function `delete_sub_field()`
+* Core: Added new `acf/init` action when ACF has loaded all functionality
+* Core: Added compatibility with Select2 language translations
+* Core: Changed compatibility filter default to false
+* Core: Minor fixes and improvements
+* Language: Updated German translation - thanks to Thomas Meyer
+* Language: Updated French Translation - thanks to Maxime Bernard-Jacquet
+* Language: Updated Persian translation - thanks to Kamel
+
+= 5.2.6 =
+* Core: Improved validation logic to display HTML5 validation messages
+* Core: Improved conditional logic performance for large field groups
+* Core: Removed updates menu item when not activated as a plugin (included within theme)
+* Core: Fixed various JS performance issues
+* Core: Minor fixes and improvements
+* Core: Added compatibility for saving widget in 'accessibility mode'
+* Language: Added Finnish translation - thanks to Sauli Rajala
+
+= 5.2.5 =
+* Core: Fixed JS error preventing changes to large field groups
+* Language: Added Romanian translation - thanks to Eduard Ungureanu
+
+= 5.2.4 =
+* WYSIWYG field: Fixed bug where new editor is not focused when adding media
+* Core: Added new 'uploader' setting to `acf_form()` options for basic upload inputs
+* Core: Fixed Multisite loop when WordPress MU Domain Mapping plugin is active
+* Core: Improved CSS when editing taxonomy terms and users
+* Core: Fixed validation bugs when clicking save or preview 
+* Core: Added compatibility with WPML translations when field group is not set as a translatable post type
+* Core: Many minor fixes and improvements
 
 = 5.2.3 =
 * Taxonomy field: Added button and popup to create new terms
@@ -1231,6 +1272,9 @@ http://support.advancedcustomfields.com/
 
 
 == Upgrade Notice ==
+
+= 5.2.7 =
+* Field class names have changed slightly in v5.2.7 from `field_type-{$type}` to `acf-field-{$type}`. This change was introduced to better optimise JS performance. The previous class names can be added back in with the following filter: http://www.advancedcustomfields.com/resources/acfcompatibility/
 
 = 3.0.0 =
 * Editor is broken in WordPress 3.3

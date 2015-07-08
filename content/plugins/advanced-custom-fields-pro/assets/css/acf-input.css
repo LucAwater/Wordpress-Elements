@@ -34,6 +34,7 @@
   background: #F55E4F;
   color: #fff;
   margin: 0 0 10px;
+  display: inline-block;
 }
 .acf-field .acf-error-message:after {
   content: "";
@@ -312,13 +313,15 @@ ul.acf-hl.acf-checkbox-list li {
 ul.acf-radio-list li input,
 ul.acf-checkbox-list li input {
   margin: -1px 4px 0 0;
-  width: auto !important;
   vertical-align: middle;
 }
 ul.acf-radio-list li label,
 ul.acf-checkbox-list li label {
   display: inline;
   margin: 2px 0;
+}
+ul.acf-radio-list li input[type="text"] {
+  width: auto;
 }
 /* rtl */
 html[dir="rtl"] ul.acf-radio-list li input,
@@ -468,7 +471,8 @@ html[dir="rtl"] .pac-container .pac-item {
 .acf-relationship .list ul {
   padding-bottom: 5px;
 }
-.acf-relationship .list ul .acf-rel-item {
+.acf-relationship .list ul .acf-rel-item,
+.acf-relationship .list ul p {
   padding-left: 20px;
 }
 .acf-relationship .list .acf-rel-label {
@@ -565,7 +569,7 @@ html[dir="rtl"] .pac-container .pac-item {
   padding: 10px 2px 0 0;
 }
 .acf-tab-group li {
-  margin: 0 8px 0 0;
+  margin: 0 5px 0 0;
 }
 .acf-tab-group li a {
   padding: 6px 10px;
@@ -578,7 +582,8 @@ html[dir="rtl"] .pac-container .pac-item {
   border-bottom: 0 none;
   text-decoration: none;
   background: #E4E4E4;
-  border-radius: 1px 1px 0 0;
+  border-radius: 3px 3px 0 0;
+  transition: none;
 }
 .acf-tab-group li a:hover {
   background: #F1F1F1;
@@ -636,7 +641,7 @@ html[dir="rtl"] .pac-container .pac-item {
 }
 /* left aligned */
 .acf-fields.acf-tpl {
-  padding-left: 150px !important;
+  padding-left: 170px !important;
 }
 .acf-tpl > .acf-tab-wrap {
   position: absolute;
@@ -644,42 +649,63 @@ html[dir="rtl"] .pac-container .pac-item {
   left: 0;
   width: 149px;
   height: 100%;
-  background: #F9F9F9;
-  border-right: #DFDFDF solid 1px;
+  border-right: #CCCCCC solid 1px;
 }
 .acf-tpl > .acf-tab-wrap .acf-tab-group {
-  padding: 0 !important;
-  margin: 0 !important;
-  border: 0 none !important;
+  padding: 1px 0 0;
+  border-bottom: 0 none;
 }
 .acf-tpl > .acf-tab-wrap .acf-tab-group li {
   float: none;
-  padding: 0;
-  margin: 0;
+  margin: -1px 0 0;
 }
 .acf-tpl > .acf-tab-wrap .acf-tab-group li a {
-  border-width: 1px 0;
-  border-color: #EAEAEA transparent transparent;
-  border-style: solid;
-  background: transparent !important;
+  border: 1px solid #CCCCCC;
   font-size: 13px;
   line-height: 18px;
   color: #0074a2;
   padding: 10px;
   font-weight: normal;
+  margin-right: -1px;
 }
 .acf-tpl > .acf-tab-wrap .acf-tab-group li:first-child a {
-  border-top-width: 0px;
+  border-radius: 3px 0 0 0;
+}
+.acf-tpl > .acf-tab-wrap .acf-tab-group li:last-child a {
+  border-radius: 0 0 0 3px;
 }
 .acf-tpl > .acf-tab-wrap .acf-tab-group li.active a {
-  margin: 0 -1px 0 0;
+  color: #000;
+  border-right-color: transparent;
+  margin-right: -2px;
+  /* makes border join neet and tidy */
+}
+/* left aligned - default */
+.acf-postbox.default .acf-fields.acf-tpl {
+  padding-left: 150px !important;
+}
+.acf-postbox.default .acf-tpl > .acf-tab-wrap {
+  border-right: #DFDFDF solid 1px;
+  background: #F9F9F9;
+}
+.acf-postbox.default .acf-tpl > .acf-tab-wrap .acf-tab-group {
+  padding-top: 0;
+}
+.acf-postbox.default .acf-tpl > .acf-tab-wrap .acf-tab-group li a {
+  border-left-width: 0;
   border-color: #DFDFDF;
-  color: #555;
-  background: #fff !important;
+  border-radius: 0 !important;
+  background: transparent;
 }
-.acf-tpl > .acf-tab-wrap .acf-tab-group li a:hover,
-.acf-tpl > .acf-tab-wrap .acf-tab-group li.active a {
-  background: #fff !important;
+.acf-postbox.default .acf-tpl > .acf-tab-wrap .acf-tab-group li a:hover {
+  background: #fff;
+}
+.acf-postbox.default .acf-tpl > .acf-tab-wrap .acf-tab-group li.active a {
+  border-right-color: #fff;
+  background: #fff;
+}
+.acf-postbox.default .acf-tpl > .acf-tab-wrap .acf-tab-group li:first-child a {
+  border-top-color: #EEEEEE;
 }
 /* rtl */
 html[dir="rtl"] .acf-fields.acf-tpl {
@@ -849,11 +875,10 @@ html[dir="rtl"] .acf-tpl > .acf-tab-wrap .acf-tab-group li.active a {
 .acf-image-uploader input.button {
   width: auto;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .acf-image-uploader img {
-    width: auto;
-    max-width: 100%;
-  }
+/* svg */
+.acf-image-uploader img[src$=".svg"] {
+  min-height: 100px;
+  min-width: 100px;
 }
 /* rtl */
 html[dir="rtl"] .acf-image-uploader .view {
@@ -1126,6 +1151,13 @@ html[dir="rtl"] .acf-image-uploader .view {
 .media-modal .upload-error-message {
   white-space: pre-wrap;
 }
+/* fix required span */
+.media-modal .acf-required {
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+  color: #f00 !important;
+}
 /*---------------------------------------------------------------------------------------------
 *
 *  Media Model (Edit Mode)
@@ -1237,13 +1269,69 @@ body.acf-wp-4 .media-modal.acf-media-modal .media-frame-content {
 .media-modal.acf-media-modal .media-frame-content {
   left: 0;
 }
-/*--------------------------------------------------------------------------
+/*--------------------------------------------------------------------------------------------
 *
-*	Profile page
-*	
-*-------------------------------------------------------------------------*/
-#profile-page .acf-field textarea {
-  width: 100%;
+*	User
+*
+*--------------------------------------------------------------------------------------------*/
+.form-table > tbody > .acf-field > .acf-label {
+  padding: 20px 10px 20px 0;
+  width: 200px;
+}
+.form-table > tbody > .acf-field > .acf-label label {
+  font-size: 14px;
+}
+.form-table > tbody > .acf-field > .acf-input {
+  padding: 15px 5% 15px 10px;
+}
+.form-table th.acf-th {
+  width: auto;
+}
+/*
+.form-table .acf-error-message {
+	display: inline-block;
+}
+*/
+/*--------------------------------------------------------------------------------------------
+*
+*	Term
+*
+*--------------------------------------------------------------------------------------------*/
+#addtag .acf-field {
+  padding-right: 5%;
+}
+#addtag .acf-field .acf-label {
+  margin: 0;
+}
+#addtag .acf-field .acf-label label {
+  font-size: 12px;
+  font-weight: normal;
+}
+p.submit .spinner,
+p.submit .acf-spinner {
+  vertical-align: top;
+  float: none;
+  margin: 4px 4px 0;
+}
+/*--------------------------------------------------------------------------------------------
+*
+*	Comment
+*
+*--------------------------------------------------------------------------------------------*/
+.editcomment td:first-child {
+  white-space: nowrap;
+  width: 131px;
+}
+/*--------------------------------------------------------------------------------------------
+*
+*	Widget
+*
+*--------------------------------------------------------------------------------------------*/
+.widget .acf-field .acf-label {
+  margin: 0;
+}
+.widget .acf-field .acf-label label {
+  font-weight: normal;
 }
 /*--------------------------------------------------------------------------
 *

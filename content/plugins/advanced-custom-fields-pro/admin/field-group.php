@@ -178,7 +178,6 @@ class acf_admin_field_group {
 			'fields'				=> __("Fields",'acf'),
 			'parent_fields'			=> __("Parent fields",'acf'),
 			'sibling_fields'		=> __("Sibling fields",'acf'),
-			'hide_show_all'			=> __("Hide / Show All",'acf'),
 			'move_field'			=> __("Move Custom Field",'acf'),
 			'move_field_warning'	=> __("This field cannot be moved until its changes have been saved",'acf'),
 			'null'					=> __("Null",'acf'),

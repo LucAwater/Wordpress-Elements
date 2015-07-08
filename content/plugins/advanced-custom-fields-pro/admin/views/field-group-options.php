@@ -86,6 +86,7 @@
 			'name'			=> 'hide_on_screen',
 			'prefix'		=> 'acf_field_group',
 			'value'			=> $field_group['hide_on_screen'],
+			'toggle'		=> true,
 			'choices' => array(
 				'permalink'			=>	__("Permalink", 'acf'),
 				'the_content'		=>	__("Content Editor",'acf'),
@@ -105,6 +106,10 @@
 			)
 		), 'tr');
 		
+		
+		// 3rd party settings
+		do_action('acf/render_field_group_settings', $field_group);
+				
 		?>
 	</tbody>
 </table>

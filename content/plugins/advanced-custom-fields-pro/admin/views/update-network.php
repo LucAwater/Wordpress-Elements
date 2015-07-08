@@ -173,26 +173,26 @@ extract($args);
 					},
 					success: function( json ){
 						
-						// bail early if no success
-						if( !json || !json.data ) {
+						// remove input
+						$input.prop('checked', false);
+						$input.remove();
+						
+						
+						// vars
+						var message = acf.get_ajax_message(json);
+						
+						
+						// bail early if no message text
+						if( !message.text ) {
 							
 							return;
 							
 						}
 						
 						
-						// remove input
-						$input.removeAttr('checked');
-						$input.remove();
-						
-						
-						// message
-						if( json.data.message ) {
-							
-							text = '<pre>' + json.data.message +  '</pre>';
-							
-						}
-						
+						// update text
+						text = '<pre>' + message.text +  '</pre>';
+												
 					},
 					complete: function(){
 						

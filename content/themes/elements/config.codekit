@@ -67,19 +67,6 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
-	"\/coffee\/init-waypoints.coffee": {
-		"createSourceMap": 0,
-		"fileType": 32,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coffee\/init-waypoints.coffee",
-		"minifyOutput": 1,
-		"outputAbbreviatedPath": "\/coffee\/init-waypoints.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
-		},
 	"\/coffee\/link-heading.coffee": {
 		"createSourceMap": 0,
 		"fileType": 32,
@@ -191,15 +178,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/content\/text.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/css\/app.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/app.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -322,17 +300,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/js\/app.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/app.js",
-		"outputAbbreviatedPath": "\/js\/min\/app-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
 		},
 	"\/js\/vendor\/imagesLoaded.js": {
 		"fileType": 64,
@@ -669,22 +636,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/layout\/foundation\/_settings.scss",
 		"outputAbbreviatedPath": "\/sass\/layout\/css\/_settings.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/sass\/layout\/foundation\/components\/_block-grid.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/layout\/foundation\/components\/_block-grid.scss",
-		"outputAbbreviatedPath": "\/sass\/layout\/foundation\/css\/_block-grid.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1111,20 +1062,14 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/init-waypoints.coffee",
+			"linkedFileAbbreviatedPath": "\/coffee\/init-isotope.coffee",
 			"position": 11,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/init-isotope.coffee",
-			"position": 12,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/coffee\/init-skrollr.coffee",
-			"position": 13,
+			"position": 12,
 			"type": 1
 			}
 		]
