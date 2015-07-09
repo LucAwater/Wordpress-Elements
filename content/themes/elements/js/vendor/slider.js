@@ -163,6 +163,26 @@
           bullets.hide();
         }
 
+        // Lightbox functionality
+        if( settings.lightbox === true ) {
+          var open = $('.lightbox-open');
+          var close = $('.lightbox-close');
+          var gallery = this;
+          
+          open.click(function() {
+            gallery.addClass("is-zoomed");
+
+            close.click(function() {
+              gallery.removeClass("is-zoomed");
+
+              var gallery_width = gallery.width();
+
+              gallery.css("height", gallery_width * 0.75);
+              $('#order').css("height", gallery_width * 0.75);
+            });
+          });
+        }
+
     };
 
 }( jQuery ));
