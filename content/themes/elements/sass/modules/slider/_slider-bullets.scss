@@ -4,16 +4,17 @@
 //  z-index: $zIndex-rsBullet;
   bottom: 1em;
   width: 100%;
-  
+
   background: none;
   text-align: center;
-  
+
   li{
     display: inline-block;
-    *display: inline; 
+    *display: inline;
     *zoom: 1;
     padding: 0 .2em;
-    
+    cursor: pointer;
+
     i{
       display: block;
       width: rem-calc(8);
@@ -22,7 +23,7 @@
       background: transparent;
       border: thin solid $black;
     }
-    
+
     &.is-active{
       i{
         background-color: $black;
