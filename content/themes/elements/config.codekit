@@ -1086,19 +1086,19 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.waypoints.min.js",
+			"linkedFileAbbreviatedPath": "\/js\/vendor\/slider.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.mobile.custom.min.js",
+			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.waypoints.min.js",
 			"position": 6,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/vendor\/slider.js",
+			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.mobile.custom.min.js",
 			"position": 7,
 			"type": 0
 			},
