@@ -1518,7 +1518,8 @@ nav ul li.current {
     display: inline-block;
     *display: inline;
     *zoom: 1;
-    padding: 0 .2em; }
+    padding: 0 .2em;
+    cursor: pointer; }
     .slider-bullets li i {
       display: block;
       width: 0.5rem;
