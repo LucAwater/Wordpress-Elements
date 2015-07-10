@@ -67,10 +67,23 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
+	"\/coffee\/init-slider.coffee": {
+		"createSourceMap": 0,
+		"fileType": 32,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/coffee\/init-slider.coffee",
+		"minifyOutput": 1,
+		"outputAbbreviatedPath": "\/coffee\/init-slider.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"syntaxCheckerStyle": 1
+		},
 	"\/coffee\/init-waypoints.coffee": {
 		"createSourceMap": 0,
 		"fileType": 32,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/coffee\/init-waypoints.coffee",
 		"minifyOutput": 1,
@@ -114,19 +127,6 @@
 		"inputAbbreviatedPath": "\/coffee\/resize.coffee",
 		"minifyOutput": 1,
 		"outputAbbreviatedPath": "\/coffee\/resize.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
-		},
-	"\/coffee\/slider.coffee": {
-		"createSourceMap": 0,
-		"fileType": 32,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/coffee\/slider.coffee",
-		"minifyOutput": 1,
-		"outputAbbreviatedPath": "\/coffee\/slider.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -323,17 +323,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/js\/app.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/app.js",
-		"outputAbbreviatedPath": "\/js\/min\/app-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/vendor\/imagesLoaded.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -358,7 +347,7 @@
 		},
 	"\/js\/vendor\/jquery.mobile.custom.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/jquery.mobile.custom.min.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/jquery.mobile.custom.min-min.js",
@@ -406,6 +395,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/vendor\/skrollr.js",
 		"outputAbbreviatedPath": "\/js\/vendor\/min\/skrollr-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/vendor\/slider.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/vendor\/slider.js",
+		"outputAbbreviatedPath": "\/js\/vendor\/min\/slider-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1075,50 +1075,68 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.waypoints.min.js",
+			"linkedFileAbbreviatedPath": "\/js\/vendor\/slider.js",
 			"position": 5,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/pageload.coffee",
+			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.waypoints.min.js",
 			"position": 6,
-			"type": 1
+			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/resize.coffee",
+			"linkedFileAbbreviatedPath": "\/js\/vendor\/jquery.mobile.custom.min.js",
 			"position": 7,
-			"type": 1
+			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/height.coffee",
+			"linkedFileAbbreviatedPath": "\/coffee\/pageload.coffee",
 			"position": 8,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/hero.coffee",
+			"linkedFileAbbreviatedPath": "\/coffee\/resize.coffee",
 			"position": 9,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/slider.coffee",
+			"linkedFileAbbreviatedPath": "\/coffee\/height.coffee",
 			"position": 10,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/init-isotope.coffee",
+			"linkedFileAbbreviatedPath": "\/coffee\/hero.coffee",
 			"position": 11,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/coffee\/init-skrollr.coffee",
+			"linkedFileAbbreviatedPath": "\/coffee\/init-isotope.coffee",
 			"position": 12,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/coffee\/init-skrollr.coffee",
+			"position": 13,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/coffee\/init-waypoints.coffee",
+			"position": 14,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/coffee\/init-slider.coffee",
+			"position": 15,
 			"type": 1
 			}
 		]
