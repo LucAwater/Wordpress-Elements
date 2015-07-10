@@ -147,12 +147,11 @@
           });
         }
 
-        // Next and previous with swipe
+        // Bullet click functionality
         if( settings.bullets === true ) {
-          // Bullet click functionality
           bullet.click(function() {
             var count = $(this).index() + 1;
-            var parent = $(this).closest('.slider')
+            var parent = $(this).parent().parent();
             var current = parent.find('.is-active');
             var target = parent.find('.slider-images li:nth-child(' + count + ')');
             var target_bullet = parent.find('.slider-bullets li:nth-child(' + count + ')');
@@ -175,9 +174,10 @@
 
         // Lightbox functionality
         if( settings.lightbox === true ) {
-          var open = $('.lightbox-open');
-          var close = $('.lightbox-close');
-          var gallery = this;
+          var parent = $(this).closest('.slider')
+          var open = parent.find('.lightbox-open');
+          var close = parent.find('.lightbox-close');
+          var gallery = $(this);
 
           open.click(function() {
             gallery.addClass("is-zoomed");
