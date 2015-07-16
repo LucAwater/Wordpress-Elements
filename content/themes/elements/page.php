@@ -1,12 +1,17 @@
 <?php
 get_header();
 
+if ( class_exists('WooCommerce') ) {
+  // Woocommere page shortcodes(see pages in backend)
+  the_content();
+}
+
 // Loop into ACF groups
 if( have_rows('page') ): $i_anchor = 1; $i_par = 0;
   while( have_rows('page') ): the_row();
-    
+
     // Hero section is placed before main
-    
+
     if( get_row_layout() == 'text' ):
       include( locate_template('content/text.php') ); $i_anchor++;
     elseif( get_row_layout() == 'image' ):
@@ -20,7 +25,7 @@ if( have_rows('page') ): $i_anchor = 1; $i_par = 0;
     elseif( get_row_layout() == 'parallax' ): $i_par++;
       include( locate_template('content/parallax.php') );
     endif;
-    
+
   endwhile;
 endif;
 
