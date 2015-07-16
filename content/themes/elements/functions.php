@@ -16,6 +16,12 @@ require_once('includes/admin/tutorial.php');
 require_once('includes/cart-update.php');
 require_once('woocommerce/woo-functions.php');
 
+// Add support for woocommerce
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
 // Initialize mobile detect
 require_once('includes/Mobile_Detect.php');
 $detect = new Mobile_Detect;
