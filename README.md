@@ -11,14 +11,15 @@ Wordpress Elements initially assumes a setup with these dependencies:
 
 ## Getting started
 1. Git clone git@github.com:LucAwater/Wordpress-Elements.git .
-2. Git submodule init
-3. Git submodule update
-4. Go to http://yourwebsite.com/wordpress/wp-admin
-5. Delete example post and page(important when not working with woocommerce)
-5. Install all plugins
-6. Activate 'Elements' theme
-7. import 'acf.json' file in ACF
-8. Begin building something awesome
+2. Add local-config.php file(see below)
+3. Git submodule init
+4. Git submodule update
+5. Go to http://yourwebsite.com/wordpress/wp-admin
+6. Delete example post and page(important when not working with woocommerce)
+7. Install all plugins
+8. Activate 'Elements' theme
+9. import 'acf.json' file in ACF
+10. Begin building something awesome
 
 #### Removing woocommerce
 1. Remove all woocommerce plugins
@@ -26,6 +27,23 @@ Wordpress Elements initially assumes a setup with these dependencies:
   - woocommerce-ajax-add-to-cart-for-variable-products
 2. Delete all woocommerce files by going to http://yourwebsite/delete-woocommerce.php
 
+#### local-config file
+```
+<?php
+define( 'WP_LOCAL_DEV', true );
+define( 'WP_DEBUG', true );
+define( 'DB_NAME', 'YOUR_DATABASE_NAME' );
+define( 'DB_USER', 'root' );
+define( 'DB_PASSWORD', 'root' );
+define( 'DB_HOST', 'localhost' ); // Probably 'localhost'
+define( 'HOST', 'localhost' ); // Probably 'localhost' too, be sure to include the port if it's other than 80 in your setup.
+define( 'SITE_PATH', 'YOUR_PATH/YOUR_SUBFOLDER'); // the path to the root of your project, relative to the hostname aka the part of the url that comes after the hostname. Don't use a leading /.
+define( 'WP_HOME', 'http://'. HOST .'/'. SITE_PATH);
+define( 'WP_SITEURL','http://'. HOST .'/'. SITE_PATH .'/wordpress');
+define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
+define( 'WP_CONTENT_URL', 'http://'. HOST .'/'. SITE_PATH .'/content' );
+?>
+```
 
 ## Theme
 ###Class system
