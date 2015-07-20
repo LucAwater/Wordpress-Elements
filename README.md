@@ -2,7 +2,7 @@
 
 This is a Wordpress framework, which can be used in a variety of ways. It contains a wordpress setup with a multiple server config method and wordpress as a submodule. It also has a basic wordpress theme. It contains elements like a gallery, grid, text block and more. To make it even easier, there's also an Advanced Custom Fields(ACF) export file so you don't have to manually add these with every install. As of 2.0, it's even extended with WooCommerce.
 
-> Wordpress Elements is an extensive framework, but still very flexible. It's is a great starting point for simple onepagers, or you could go for a full-sized webstore. Go crazy.
+> Wordpress Elements is an extensive framework, but still very flexible. It's a great starting point for simple onepagers, or you could go for a full-sized webstore. Go crazy.
 
 Wordpress Elements initially assumes a setup with these dependencies:
 * You have multiple servers(local, development, production)
