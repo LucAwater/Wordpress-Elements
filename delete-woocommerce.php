@@ -1,35 +1,35 @@
 <?php
-rmdir('content/plugins/woocommerce');
-rmdir('content/plugins/woocommerce-ajax-add-to-cart-for-variable-products');
-rmdir('content/themes/elements/woocommerce');
-rmdir('content/themes/elements/sass/woocommerce');
+// Remove files
+unlink('content/themes/elements/woocommerce/woo-functions.php');
+unlink('content/themes/elements/includes/cart-update.php');
+unlink('content/themes/elements/js/vendor/add-to-cart-variation.min.js');
 
-unlink('content/themes/elements/js/includes/cart-update.php');
-unlink('content/themes/elements/js/vendor/add-to-cart-variation-min.js');
+// Remove directories
+function Delete($path){
+  if (is_dir($path) === true){
+    $files = array_diff(scandir($path), array('.', '..'));
 
-/*
- * Ajaxed update cart contents
- */
-$dir1 = "content/themes/elements/header.php";
+    foreach ($files as $file){
+      Delete(realpath($path) . '/' . $file);
+    }
 
-$line1 = '<div class="cart-contents">
+    return rmdir($path);
+  }
 
-  $cart_total = WC()->cart->get_cart_total();
-  $cart_count = WC()->cart->cart_contents_count;
-  echo "<p>" . $cart_count . " – " . $cart_total . "</p>";
-  ?>
-</div>';
-$new1 = '';
-$contents1 = file_get_contents($dir1);
-$contents1 = str_replace($line1, $new1, $contents1);
-file_put_contents($dir1, $contents1);
+  else if (is_file($path) === true){
+    return unlink($path);
+  }
 
-/*
- * Woocommerce includes and support in functions
- */
-$dir2 = "content/themes/elements/functions.php";
+  return false;
+}
 
-$line2 = "// Woocommerce includes
+Delete('content/plugins/woocommerce');
+Delete('content/plugins/woocommerce-ajax-add-to-cart-for-variable-products');
+Delete('content/theme/elements/woocommerce');
+Delete('content/theme/elements/sass/woocommerce');
+
+// Remove functions in files
+$string1 = "// Woocommerce includes
 require_once('includes/cart-update.php');
 require_once('woocommerce/woo-functions.php');
 
@@ -38,24 +38,31 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }";
-$new2 = '';
-$contents2 = file_get_contents($dir2);
-$contents2 = str_replace($line2, $new2, $contents2);
-file_put_contents($dir2, $contents2);
+$file1 = 'content/themes/elements/functions.php';
+$contents1 = file_get_contents($file1);
+$contents1 = str_replace($string1, '', $contents1);
+file_put_contents($file1, $contents1);
 
-/*
- * Shortcodes in page template
- */
-$dir3 = "content/themes/elements/page.php";
+$string2 = '<div class="cart-contents">
+  <?php
+  $cart_total = WC()->cart->get_cart_total();
+  $cart_count = WC()->cart->cart_contents_count;
 
-$line3 = "if ( class_exists('WooCommerce') ) {
+  echo "<p>" . $cart_count . " – " . $cart_total . "</p>";
+  ?>
+</div>';
+$file2 = 'content/themes/elements/header.php';
+$contents2 = file_get_contents($file2);
+$contents2 = str_replace($string2, '', $contents2);
+file_put_contents($file2, $contents2);
+
+$string3 = "
+if ( class_exists('WooCommerce') ) {
   // Woocommere page shortcodes(see pages in backend)
   the_content();
 }";
-$new3 = '';
-$contents3 = file_get_contents($dir3);
-$contents3 = str_replace($line3, $new3, $contents3);
-file_put_contents($dir3, $contents3);
-
-unlink('delete-woocommerce.php');
+$file3 = 'content/themes/elements/page.php';
+$contents3 = file_get_contents($file3);
+$contents3 = str_replace($string3, '', $contents3);
+file_put_contents($file3, $contents3);
 ?>
