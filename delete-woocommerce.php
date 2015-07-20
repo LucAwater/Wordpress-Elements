@@ -53,4 +53,7 @@ $file2 = 'content/themes/elements/page.php';
 $contents2 = file_get_contents($file2);
 $contents2 = str_replace($string2, '', $contents2);
 file_put_contents($file2, $contents2);
+
+// Remove file itself
+unlink('delete-woocommerce.php');
 ?>
