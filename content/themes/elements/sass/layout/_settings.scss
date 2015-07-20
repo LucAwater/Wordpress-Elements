@@ -1,12 +1,44 @@
-// Foundation by ZURB
-// foundation.zurb.com
-// Licensed under MIT Open Source
+/*
+ * Project settings
+ *
+ * contents:
+ * 1. Sizes & margins
+ * 2. Grid
+ * 3. Media queries
+ */
 
-// This is the default html and body font-size for the base rem value.
-$rem-base: 16px;
+ // Allows the use of rem-calc() or lower-bound() in your settings
+ @import "foundation/_functions";
 
-// Allows the use of rem-calc() or lower-bound() in your settings
-@import "_functions";
+/*
+ * 1. Sizes & margins
+ */
+
+ // This is the default html and body font-size for the base rem value.
+ $rem-base: 16px;
+
+// Don't worry about padding, header's elements are vertically centered with flex
+$header-height: 60px;
+
+// (Extra) margin at either side of content
+$side-margin: rem-calc(60);
+$side-margin-small: rem-calc(30);
+
+// Space between content sections
+$section-spacing: rem-calc(60);
+
+
+/*
+ * 2. Grid
+ */
+
+ // Basic settings
+ $total-columns: 4;
+ $column-gutter: 30px;
+
+ $block-grid-elements: 4;
+ $block-grid-default-spacing: 30px;
+ $align-block-grid-to-grid: true;
 
 // Initialize foundation classes
 $include-html-classes: true;
@@ -18,31 +50,15 @@ $include-xl-html-grid-classes: true;
 $include-html-block-grid-classes: $include-html-classes;
 $include-xl-html-block-grid-classes: true;
 
-// Basic settings
-$total-columns: 4;
-$column-gutter: rem-calc(30);
 
-$block-grid-elements: 4;
-$block-grid-default-spacing: rem-calc(30);
-$align-block-grid-to-grid: true;
-
-// (Extra) margin at either side of content
-$side-margin: rem-calc(60);
-$side-margin-small: rem-calc(30);
-
-// Space between content sections
-$section-spacing: rem-calc(60);
-
-
-// 
-// Media Query Ranges
-//
-
-$small-range: (0em, 31.250em);//0 - 500
-$medium-range: (31.313em, 62.5em);//501 - 1000
-$large-range: (62.563em, 87.438em);//1001 - 1399
-$xlarge-range: (87.500em, 119.938em);//1400 - 1919
-$xxlarge-range: (120em);//1920 - beyond
+/*
+ * 3. Media queries
+ */
+$small-range: (0, 500px);//0 - 500
+$medium-range: (501px, 1000px);//501 - 1000
+$large-range: (1001px, 1399px);//1001 - 1399
+$xlarge-range: (1400px, 1919px);//1400 - 1919
+$xxlarge-range: (1920px);//1920 - beyond
 
 $screen: "only screen";
 

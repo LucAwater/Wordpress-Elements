@@ -1,6 +1,6 @@
 // FOUNDATION
 @import
-  "layout/foundation/_settings",
+  "layout/_settings",
   "layout/foundation/_foundation";
 
 // BASE
@@ -9,10 +9,10 @@
   "base/_mixins",
   "base/_functions",
   "base/_colors",
-  
+
   "base/typo/_fonts",
   "base/typo/_typography";
-  
+
 // LAYOUT
 @import
   "layout/_z-index",
@@ -21,23 +21,23 @@
   "layout/_main",
   "layout/_header",
   "layout/_footer",
-  
+
   "layout/navigation/_menu.scss",
   "layout/navigation/_nav.scss";
-  
+
 // MODULE
 @import
   "modules/slider/_slider",
   "modules/slider/_slider-bullets",
   "modules/slider/_slider-controls",
-  
+
   "modules/content/_section",
   "modules/content/_hero",
   "modules/content/_text",
   "modules/content/_image",
   "modules/content/_grid",
   "modules/content/_parallax";
-  
+
 // STATE
 @import
   "states/_global",
