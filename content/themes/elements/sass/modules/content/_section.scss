@@ -1,33 +1,14 @@
 section{
   height: auto;
   overflow: hidden;
-  padding-top: $section-spacing;
-  padding-bottom: $section-spacing;
   background: $white;
-  
+
   .section-header,
   .section-body{
     clear: both;
   }
-  
+
   .section-header{
-    margin-bottom: $section-spacing / 2;
-  }
-}
-
-// First and last sections get extra padding
-main section:first-child{
-  padding-top: $section-spacing * 2;
-}
-
-main section:last-child{
-  padding-bottom: $section-spacing * 2;
-}
-
-.section-header{
-  max-width: 600px;
-  
-  h2{
-    margin-bottom: $section-spacing / 4;
+    margin-bottom: $space-section / 2;
   }
 }

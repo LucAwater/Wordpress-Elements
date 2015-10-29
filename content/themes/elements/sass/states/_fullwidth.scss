@@ -1,10 +1,10 @@
 .is-fullwidth{
-  width: calc(100% + (#{$side-margin} * 2));
-  margin-left: -$side-margin;
+  width: calc(100% + (#{$space-sides} * 2));
+  margin-left: -$space-sides;
 }
 
 @media #{$small-only}{
   .is-fullwidth{
-    margin-left: -$side-margin-small;
+    margin-left: -$space-sides-small;
   }
 }

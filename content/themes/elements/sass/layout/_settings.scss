@@ -21,11 +21,12 @@
 $header-height: 60px;
 
 // (Extra) margin at either side of content
-$side-margin: rem-calc(60);
-$side-margin-small: rem-calc(30);
+$space-sides: rem-calc(100);
+$space-sides-small: rem-calc(60);
 
 // Space between content sections
-$section-spacing: rem-calc(60);
+$space-section: rem-calc(100);
+$space-section-small: rem-calc(60);
 
 
 /*
@@ -34,10 +35,10 @@ $section-spacing: rem-calc(60);
 
  // Basic settings
  $total-columns: 4;
- $column-gutter: 30px;
+ $column-gutter: rem-calc(30);
 
  $block-grid-elements: 4;
- $block-grid-default-spacing: 30px;
+ $block-grid-default-spacing: rem-calc(30);
  $align-block-grid-to-grid: true;
 
 // Initialize foundation classes
@@ -54,6 +55,7 @@ $include-xl-html-block-grid-classes: true;
 /*
  * 3. Media queries
  */
+
 $small-range: (0, 500px);//0 - 500
 $medium-range: (501px, 1000px);//501 - 1000
 $large-range: (1001px, 1399px);//1001 - 1399
