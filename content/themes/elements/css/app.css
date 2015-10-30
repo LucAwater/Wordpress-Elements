@@ -714,13 +714,17 @@
   .column.xxl-uncentered.opposite,
   .columns.xxl-uncentered.opposite {
     float: right !important; } }
-html {
-  box-sizing: border-box; }
-
 * {
   margin: 0;
   padding: 0;
-  position: relative;
+  position: relative; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 img {
