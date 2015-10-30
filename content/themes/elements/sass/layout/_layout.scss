@@ -5,15 +5,16 @@ body > *{
 
 // Level 2 elements: sections
 main > *{
-  padding: ($space-section / 2) 0;
+  margin: ($space-section / 2) 0;
+  display: inline-block !important;
 
   // Because padding is split in two, first and last elements get double the padding
   &:first-child{
-    padding-top: $space-section;
+    margin-top: $space-section;
   }
 
   &:last-child{
-    padding-bottom: $space-section;
+    margin-bottom: $space-section;
   }
 }
 
@@ -24,6 +25,6 @@ main > *{
   }
 
   main > *{
-    padding: ($space-section-small / 2) 0;
+    margin: ($space-section-small / 2) 0;
   }
 }

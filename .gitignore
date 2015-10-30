@@ -43,6 +43,8 @@ local-config.php
 /content/uploads/
 *.sccsc
 *.sass-cache*
+/content/themes/elements/sass/.sass-cache
+/content/themes/elements/sass/.sass-cache/*
 content/languages/*
 *.codekit
 *.codekit
