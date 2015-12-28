@@ -1423,17 +1423,9 @@ header {
 footer {
   z-index: 1100;
   padding: 50px;
-  background: black;
-  text-align: center; }
-  footer > img {
-    max-width: 250px;
-    margin-bottom: 50px; }
-  footer p {
-    margin-bottom: 1em; }
-  footer ul li {
-    width: 35px;
-    padding: 0 .5em;
-    display: inline-block; }
+  background: black; }
+  footer p, footer a {
+    color: white; }
 
 main {
   background-color: #f6f6f6; }

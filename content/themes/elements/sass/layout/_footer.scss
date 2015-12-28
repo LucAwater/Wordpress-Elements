@@ -1,26 +1,11 @@
 footer{
   z-index: $zIndex-footer;
-  
+
   padding: 50px;
-  
+
   background: $black;
-  text-align: center;
-  
-  > img{
-    max-width: 250px;
-    margin-bottom: 50px;
+
+  p, a{
+    color: $white;
   }
-  
-  p{
-    margin-bottom: 1em;
-  }
-  
-  ul{
-    li{
-      width: 35px;
-      padding: 0 .5em;
-      display: inline-block;
-    }
-  }
-  
 }
