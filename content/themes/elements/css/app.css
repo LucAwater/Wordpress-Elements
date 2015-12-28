@@ -1441,6 +1441,14 @@ main {
     padding: 6.25rem 6.25rem;
     background-color: white; }
 
+body.error404 #error404-content {
+  max-width: 800px;
+  margin: 100px auto;
+  display: block !important;
+  background-color: transparent; }
+  body.error404 #error404-content h2, body.error404 #error404-content p {
+    margin-bottom: 1em; }
+
 a.trigger-menu {
   width: 35px;
   height: 35px;

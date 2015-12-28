@@ -7,9 +7,11 @@ if ( class_exists('WooCommerce') ) {
 }
 
 // Loop into ACF groups
-if( have_rows('page') ): $i_anchor = 1; $i_par = 0;
-  while( have_rows('page') ): the_row();
+if( have_rows('page') ):
+  $i_anchor = 1;
+  $i_par = 0;
 
+  while( have_rows('page') ): the_row();
     // Hero section is placed before main
 
     if( get_row_layout() == 'text' ):
