@@ -16,10 +16,18 @@ require_once('includes/admin/tutorial.php');
 require_once('includes/cart-update.php');
 require_once('woocommerce/woo-functions.php');
 
-// Add support for woocommerce
+// Add support for WooCommerce
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
+}
+
+// Change the WooCommerce paypal icon
+add_filter('woocommerce_paypal_icon', 'custom_woocommerce_paypal_icon');
+
+function custom_woocommerce_paypal_icon( $url ) {
+  $url = get_bloginfo('template_url')."/img/pay-paypal.svg";
+  return $url;
 }
 
 // Initialize mobile detect
@@ -30,6 +38,7 @@ $detect = new Mobile_Detect;
 add_filter('show_admin_bar', '__return_false');
 
 // Add support for post-thumbnails
+// https://codex.wordpress.org/Post_Thumbnails
 add_theme_support( 'post-thumbnails' );
 
 // Add support for automatic RSS feed links
@@ -51,20 +60,11 @@ function w3_flush_page_custom( $post_id ) {
   endif;
 }
 
-// Change the paypal icon
-add_filter('woocommerce_paypal_icon', 'custom_woocommerce_paypal_icon');
-
-function custom_woocommerce_paypal_icon( $url ) {
-  $url = get_bloginfo('template_url')."/img/pay-paypal.svg";
-  return $url;
-}
-
 /* Cleaner image captions */
 add_filter( 'img_caption_shortcode', 'cleaner_caption', 10, 3 );
 
 function cleaner_caption( $output, $attr, $content ) {
-
-  // We're not worried abut captions in feeds, so just return the output here
+  // We're not worried about captions in feeds, so just return the output here
   if ( is_feed() )
     return $output;
 
