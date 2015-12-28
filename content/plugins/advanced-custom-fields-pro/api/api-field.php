@@ -263,26 +263,30 @@ function acf_get_valid_field( $field = false ) {
 
 function acf_prepare_field( $field ) {
 	
+	// bail early if already prepared
+	if( $field['_input'] ) {
+		
+		return $field;
+			
+	}
+	
+	
 	// _input
-	if( !$field['_input'] ) {
+	$field['_input'] = $field['name'];
+	
+
+	// _input: key overrides name
+	if( $field['key'] ) {
 		
-		$field['_input'] = $field['name'];
-	
-	
-		// _input: key overrides name
-		if( $field['key'] ) {
-			
-			$field['_input'] = $field['key'];
-			
-		}
-	
+		$field['_input'] = $field['key'];
 		
-		// _input: prefix prepends name
-		if( $field['prefix'] ) {
-			
-			$field['_input'] = "{$field['prefix']}[{$field['_input']}]";
-			
-		}
+	}
+
+	
+	// _input: prefix prepends name
+	if( $field['prefix'] ) {
+		
+		$field['_input'] = "{$field['prefix']}[{$field['_input']}]";
 		
 	}
 	
@@ -298,10 +302,13 @@ function acf_prepare_field( $field ) {
 	// filter to 3rd party customization
 	$field = apply_filters( "acf/prepare_field", $field );
 	$field = apply_filters( "acf/prepare_field/type={$field['type']}", $field );
+	$field = apply_filters( "acf/prepare_field/name={$field['name']}", $field );
+	$field = apply_filters( "acf/prepare_field/key={$field['key']}", $field );
 	
 	
 	// return
 	return $field;
+	
 }
 
 
@@ -548,7 +555,21 @@ function acf_render_field_wrap( $field, $el = 'div', $instruction = 'label' ) {
 	// replace
 	$wrapper['class'] = str_replace('_', '-', $wrapper['class']);
 	$wrapper['class'] = str_replace('field-field-', 'field-', $wrapper['class']);
+	
+	
+	// wrap classes have changed (5.2.7)
+	if( acf_get_compatibility('field_wrapper_class') ) {
 		
+		$wrapper['class'] .= " field_type-{$field['type']}";
+		
+		if( $field['key'] ) {
+			
+			$wrapper['class'] .= " field_key-{$field['key']}";
+			
+		}
+		
+	}
+	
 	
 	// merge in atts
 	$wrapper = acf_merge_atts( $wrapper, $field['wrapper'] );
@@ -817,13 +838,7 @@ function acf_get_field( $selector = null, $db_only = false ) {
 	// is $selector a string (name|key)	
 	} elseif( is_string($selector) ) {
 		
-		$type = 'name';
-		
-		if( acf_is_field_key($selector) ) {
-			
-			$type = 'key';
-		
-		}
+		$type = acf_is_field_key($selector) ? 'key' : 'name';
 	
 	// is $selector an object
 	} elseif( is_object($selector) ) {
@@ -1059,6 +1074,87 @@ function _acf_get_field_by_name( $name = '', $db_only = false ) {
 	
 	// return
 	return _acf_get_field_by_id( $posts[0]->ID, $db_only );
+	
+}
+
+
+/*
+*  acf_maybe_get_field
+*
+*  This function will return a field for the given selector.
+*  It will also review the field_reference to ensure the correct field is returned which makes it useful for the template API
+*
+*  @type	function
+*  @date	4/08/2015
+*  @since	5.2.3
+*
+*  @param	$selector (mixed) identifyer of field. Can be an ID, key, name or post object
+*  @param	$post_id (mixed) the post_id of which the value is saved against
+*  @param	$strict (boolean) if true, return a field only when a field key is found.
+*  @return	$field (array)
+*/
+
+function acf_maybe_get_field( $selector, $post_id = false, $strict = true ) {
+	
+	// complete init
+	// this function may be used in a theme file before the init action has been run
+	acf()->init();
+	
+	
+	// vars
+	$field_name = false;
+	
+	
+	// get valid post_id
+	$post_id = acf_get_valid_post_id( $post_id );
+	
+	
+	// load field reference if not a field_key
+	if( !acf_is_field_key($selector) ) {
+		
+		// save selector as field_name (could be sub field name)
+		$field_name = $selector;
+			
+			
+		// get reference
+		$field_key = acf_get_field_reference( $selector, $post_id );
+		
+		
+		if( $field_key ) {
+			
+			$selector = $field_key;
+			
+		} elseif( $strict ) {
+			
+			return false;
+			
+		}
+		
+	}
+	
+	
+	// get field key
+	$field = acf_get_field( $selector );
+	
+	
+	// bail early if no field
+	if( !$field ) {
+		
+		return false;
+		
+	}
+	
+	
+	// Override name - allows the $selector to be a sub field (images_0_image)
+	if( $field_name ) {
+	
+		$field['name'] = $field_name;	
+		
+	}
+	
+	
+	// return
+	return $field;
 	
 }
 
@@ -1656,8 +1752,6 @@ function acf_prepare_field_for_export( $field ) {
 		'id',
 		'class',
 		'parent',
-		//'ancestors',
-		//'field_group',
 		'_name',
 		'_input',
 		'_valid',

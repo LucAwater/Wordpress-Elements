@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Custom Fields Pro v5.2.9\n"
+"Project-Id-Version: Advanced Custom Fields Pro v5.3.2 Formal\n"
 "Report-Msgid-Bugs-To: http://support.advancedcustomfields.com\n"
-"POT-Creation-Date: 2015-11-04 01:40-0200\n"
-"PO-Revision-Date: 2015-11-04 02:01-0200\n"
-"Last-Translator: Augusto Simão <augusto@ams.art.br>\n"
-"Language-Team: Augusto Simão <augusto@ams.art.br>\n"
-"Language: pt_BR\n"
+"POT-Creation-Date: 2015-11-04 00:45+0100\n"
+"PO-Revision-Date: 2015-11-04 00:49+0100\n"
+"Last-Translator: Ralf Koller <r.koller@gmail.com>\n"
+"Language-Team: Ralf Koller <r.koller@gmail.com>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -30,176 +30,177 @@ msgstr "Advanced Custom Fields"
 # @ acf
 #: acf.php:264 admin/admin.php:61
 msgid "Field Groups"
-msgstr "Grupos de Campos"
+msgstr "Feld-Gruppen"
 
 # @ acf
 #: acf.php:265
 msgid "Field Group"
-msgstr "Grupo de Campos"
+msgstr "Feld-Gruppe"
 
 # @ acf
 #: acf.php:266 acf.php:298 admin/admin.php:62
 #: pro/fields/flexible-content.php:505
 msgid "Add New"
-msgstr "Adicionar Novo"
+msgstr "Erstellen"
 
 # @ acf
 #: acf.php:267
 msgid "Add New Field Group"
-msgstr "Adicionar Novo Grupo de Campos"
+msgstr "Neue Feld-Gruppe erstellen"
 
 # @ acf
 #: acf.php:268
 msgid "Edit Field Group"
-msgstr "Editar Grupo de Campos"
+msgstr "Feld-Gruppe bearbeiten"
 
 # @ acf
 #: acf.php:269
 msgid "New Field Group"
-msgstr "Novo Grupo de Campos"
+msgstr "Neue Feld-Gruppe"
 
 # @ acf
 #: acf.php:270
 msgid "View Field Group"
-msgstr "Ver Grupo de Campos"
+msgstr "Feld-Gruppe anzeigen"
 
 # @ acf
 #: acf.php:271
 msgid "Search Field Groups"
-msgstr "Pesquisar Grupos de Campos"
+msgstr "Feld-Gruppen suchen"
 
 # @ acf
 #: acf.php:272
 msgid "No Field Groups found"
-msgstr "Nenhum Grupo de Campos encontrado"
+msgstr "Keine Feld-Gruppen gefunden"
 
 # @ acf
 #: acf.php:273
 msgid "No Field Groups found in Trash"
-msgstr "Nenhum Grupo de Campos encontrado na Lixeira"
+msgstr "Keine Feld-Gruppen im Papierkorb gefunden"
 
 # @ acf
 #: acf.php:296 admin/field-group.php:182 admin/field-group.php:213
 #: admin/field-groups.php:528
 msgid "Fields"
-msgstr "Campos"
+msgstr "Felder"
 
 # @ acf
 #: acf.php:297
 msgid "Field"
-msgstr "Campo"
+msgstr "Feld"
 
 # @ acf
 #: acf.php:299
 msgid "Add New Field"
-msgstr "Adicionar Novo Campo"
+msgstr "Feld hinzufügen"
 
 # @ acf
 #: acf.php:300
 msgid "Edit Field"
-msgstr "Editar Campo"
+msgstr "Feld bearbeiten"
 
 # @ acf
 #: acf.php:301 admin/views/field-group-fields.php:18
 #: admin/views/settings-info.php:111
 msgid "New Field"
-msgstr "Novo Campo"
+msgstr "Neues Feld"
 
 # @ acf
 #: acf.php:302
 msgid "View Field"
-msgstr "Ver Campo"
+msgstr "Feld anzeigen"
 
 # @ acf
 #: acf.php:303
 msgid "Search Fields"
-msgstr "Pesquisar Campos"
+msgstr "Felder suchen"
 
 # @ acf
 #: acf.php:304
 msgid "No Fields found"
-msgstr "Nenhum Campo encontrado"
+msgstr "Keine Felder gefunden"
 
 # @ acf
 #: acf.php:305
 msgid "No Fields found in Trash"
-msgstr "Nenhum Campo encontrado na Lixeira"
+msgstr "Keine Feld-Gruppen im Papierkorb gefunden"
 
 #: acf.php:344 admin/field-group.php:283 admin/field-groups.php:586
 #: admin/views/field-group-options.php:13
 msgid "Disabled"
-msgstr "Desabilitado"
+msgstr "Deaktiviert"
 
 #: acf.php:349
 #, php-format
 msgid "Disabled <span class=\"count\">(%s)</span>"
 msgid_plural "Disabled <span class=\"count\">(%s)</span>"
-msgstr[0] "Desabilitado <span class=“count”>(%s)</span>"
-msgstr[1] "Desabilitados <span class=“count”>(%s)</span>"
+msgstr[0] "Deaktiviert <span class=\"count\">(%s)</span>"
+msgstr[1] "Deaktiviert <span class=\"count\">(%s)</span>"
 
 # @ acf
 #: admin/admin.php:57 admin/views/field-group-options.php:115
 msgid "Custom Fields"
-msgstr "Campos Personalizados"
+msgstr "Eigene Felder"
 
 # @ acf
 #: admin/field-group.php:68 admin/field-group.php:69 admin/field-group.php:71
 msgid "Field group updated."
-msgstr "Grupo de campos atualizado"
+msgstr "Feld-Gruppe aktualisiert."
 
+# @ acf
 #: admin/field-group.php:70
 msgid "Field group deleted."
-msgstr "Grupo de campos excluído."
+msgstr "Feld-Gruppe gelöscht."
 
 # @ acf
 #: admin/field-group.php:73
 msgid "Field group published."
-msgstr "Grupo de campos publicado."
+msgstr "Feld-Gruppe veröffentlicht."
 
 # @ acf
 #: admin/field-group.php:74
 msgid "Field group saved."
-msgstr "Grupo de campos salvo."
+msgstr "Feld-Gruppe gesichert."
 
 # @ acf
 #: admin/field-group.php:75
 msgid "Field group submitted."
-msgstr "Grupo de campos enviado."
+msgstr "Feld-Gruppe übertragen."
 
 # @ acf
 #: admin/field-group.php:76
 msgid "Field group scheduled for."
-msgstr "Grupo de campos agendando."
+msgstr "Feld-Gruppe geplant für."
 
 # @ acf
 #: admin/field-group.php:77
 msgid "Field group draft updated."
-msgstr "Rascunho do grupo de campos atualizado."
+msgstr "Entwurf der Feld-Gruppe aktualisiert."
 
 # @ acf
 #: admin/field-group.php:176
 msgid "Move to trash. Are you sure?"
-msgstr "Mover para a lixeira. Você tem certeza?"
+msgstr "Wirklich in den Papierkorb verschieben?"
 
 # @ acf
 #: admin/field-group.php:177
 msgid "checked"
-msgstr "selecionado"
+msgstr "ausgewählt"
 
 # @ acf
 #: admin/field-group.php:178
 msgid "No toggle fields available"
-msgstr "Não há campos de alternância disponíveis"
+msgstr "Es liegen keine Auswahl-Feld-Typen vor"
 
 # @ acf
 #: admin/field-group.php:179
 msgid "Field group title is required"
-msgstr "O título do grupo de campos é obrigatório"
+msgstr "Es ist ein Titel für die Feld-Gruppe erforderlich"
 
 # @ acf
 #: admin/field-group.php:180 api/api-field-group.php:615
 msgid "copy"
-msgstr "copiar"
+msgstr "kopieren"
 
 # @ acf
 #: admin/field-group.php:181
@@ -208,106 +209,110 @@ msgstr "copiar"
 #: admin/views/field-group-locations.php:59
 #: admin/views/field-group-locations.php:135 api/api-helpers.php:3326
 msgid "or"
-msgstr "ou"
+msgstr "oder"
 
 # @ acf
 #: admin/field-group.php:183
 msgid "Parent fields"
-msgstr "Campos pais"
+msgstr "Übergeordnete Felder"
 
 # @ acf
 #: admin/field-group.php:184
 msgid "Sibling fields"
-msgstr "Campos irmãos"
+msgstr "Geschwister-Felder"
 
 # @ acf
 #: admin/field-group.php:185
 msgid "Move Custom Field"
-msgstr "Mover Campo Personalizado"
+msgstr "Benutzerdefiniertes Feld verschieben"
 
 # @ acf
 #: admin/field-group.php:186
 msgid "This field cannot be moved until its changes have been saved"
-msgstr "Este campo não pode ser movido até que suas alterações sejam salvas"
+msgstr "Diese Feld kann nicht verschoben werden, bevor es gesichert wurde."
 
 # @ acf
 #: admin/field-group.php:187
 msgid "Null"
-msgstr "Vazio"
+msgstr "Null"
 
+# @ acf
 #: admin/field-group.php:188 core/input.php:128
 msgid "The changes you made will be lost if you navigate away from this page"
-msgstr "As alterações feitas serão perdidas se você sair desta página"
+msgstr ""
+"Die vorgenommenen Änderungen gehen verloren wenn diese Seite verlassen wird."
 
+# @ acf
 #: admin/field-group.php:189
 msgid "The string \"field_\" may not be used at the start of a field name"
-msgstr ""
-"O termo \"field_\" não pode ser utilizado no início de um nome de campo"
+msgstr "Der Feldname darf nicht mit \"field_\" beginnen"
 
 # @ acf
 #: admin/field-group.php:214
 msgid "Location"
-msgstr "Local"
+msgstr "Position"
 
 #: admin/field-group.php:215
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Einstellungen"
 
 #: admin/field-group.php:253
 msgid "Field Keys"
-msgstr "Chaves dos Campos"
+msgstr "Feldschlüssel"
 
 #: admin/field-group.php:283 admin/views/field-group-options.php:12
 msgid "Active"
-msgstr "Ativo"
+msgstr "Aktiviert"
 
 # @ acf
 #: admin/field-group.php:752
 msgid "Front Page"
-msgstr "Página Inicial"
+msgstr "Startseite"
 
 # @ acf
 #: admin/field-group.php:753
 msgid "Posts Page"
-msgstr "Página de Posts"
+msgstr "Beitrags-Seite"
 
 # @ acf
 #: admin/field-group.php:754
 msgid "Top Level Page (no parent)"
-msgstr "Página de Nível mais Alto (sem mãe)"
+msgstr "Seite ohne übergeordnete Seiten"
 
 # @ acf
 #: admin/field-group.php:755
 msgid "Parent Page (has children)"
-msgstr "Página Mãe (tem filhos)"
+msgstr "Übergeordnete Seite (mit Unterseiten)"
 
 # @ acf
 #: admin/field-group.php:756
 msgid "Child Page (has parent)"
-msgstr "Página Filha (possui mãe)"
+msgstr "Unterseite (mit übergeordneter Seite)"
 
 # @ acf
 #: admin/field-group.php:772
 msgid "Default Template"
-msgstr "Modelo Padrão"
+msgstr "Standard-Template"
 
 # @ acf
 #: admin/field-group.php:794
 msgid "Logged in"
-msgstr "Logado"
+msgstr "ist angemeldet"
 
+# @ acf
 #: admin/field-group.php:795
 msgid "Viewing front end"
-msgstr "Visualizando frontend"
+msgstr "ist im Front-End"
 
+# @ acf
 #: admin/field-group.php:796
 msgid "Viewing back end"
-msgstr "Visualizando backend"
+msgstr "ist im Back-End"
 
-# @ default
+# @ acf
 #: admin/field-group.php:815
 msgid "Super Admin"
-msgstr "Super Admin"
+msgstr "Super-Admin"
 
 # @ acf
 #: admin/field-group.php:826 admin/field-group.php:834
@@ -315,88 +320,94 @@ msgstr "Super Admin"
 #: admin/field-group.php:870 admin/field-group.php:880 fields/file.php:235
 #: fields/image.php:226 pro/fields/gallery.php:661
 msgid "All"
-msgstr "Todos"
+msgstr "Alle"
 
 # @ acf
 #: admin/field-group.php:835
 msgid "Add / Edit"
-msgstr "Adicionar / Editar"
+msgstr "Hinzufügen / Bearbeiten"
 
 # @ acf
 #: admin/field-group.php:836
 msgid "Register"
-msgstr "Registrar"
+msgstr "Registrieren"
 
 # @ acf
 #: admin/field-group.php:1067
 msgid "Move Complete."
-msgstr "Movimentação realizada."
+msgstr "Verschieben erfolgreich abgeschlossen."
 
 # @ acf
 #: admin/field-group.php:1068
 #, php-format
 msgid "The %s field can now be found in the %s field group"
-msgstr "O campo %s pode agora ser encontrado no grupo de campos %s"
+msgstr "Das Feld \"%s\" wurde in die %s Feld-Gruppe verschoben"
 
 # @ acf
 #: admin/field-group.php:1070
 msgid "Close Window"
-msgstr "Fechar Janela"
+msgstr "Schließen"
 
 # @ acf
 #: admin/field-group.php:1105
 msgid "Please select the destination for this field"
-msgstr "Selecione o destino para este campo"
+msgstr "In welche Feld-Gruppe solle dieses Feld verschoben werden"
 
 # @ acf
 #: admin/field-group.php:1112
 msgid "Move Field"
-msgstr "Mover Campo"
+msgstr "Feld verschieben"
 
 #: admin/field-groups.php:74
 #, php-format
 msgid "Active <span class=\"count\">(%s)</span>"
 msgid_plural "Active <span class=\"count\">(%s)</span>"
-msgstr[0] "Ativo <span class=\"count\">(%s)</span>"
-msgstr[1] "Ativos <span class=\"count\">(%s)</span>"
+msgstr[0] "Veröffentlicht <span class=\"count\">(%s)</span>"
+msgstr[1] "Veröffentlicht <span class=\"count\">(%s)</span>"
 
+# @ acf
 #: admin/field-groups.php:142
 #, php-format
 msgid "Field group duplicated. %s"
-msgstr "Grupo de campos duplicado. %s"
+msgstr "Feld-Gruppe dupliziert: %s"
 
+# @ acf
 #: admin/field-groups.php:146
 #, php-format
 msgid "%s field group duplicated."
 msgid_plural "%s field groups duplicated."
-msgstr[0] "%s grupo de campos duplicado."
-msgstr[1] "%s grupos de campos duplicados."
+msgstr[0] "%s Feld-Gruppe dupliziert."
+msgstr[1] "%s Feld-Gruppen dupliziert."
 
+# @ acf
 #: admin/field-groups.php:228
 #, php-format
 msgid "Field group synchronised. %s"
-msgstr "Grupo de campos sincronizado. %s"
+msgstr "Feld-Gruppe synchronisiert: %s"
 
+# @ acf
 #: admin/field-groups.php:232
 #, php-format
 msgid "%s field group synchronised."
 msgid_plural "%s field groups synchronised."
-msgstr[0] "%s grupo de campos sincronizado."
-msgstr[1] "%s grupos de campos sincronizados."
+msgstr[0] "%s Feld-Gruppe synchronisiert."
+msgstr[1] "%s Feld-Gruppen synchronisiert."
 
+# @ acf
 #: admin/field-groups.php:412 admin/field-groups.php:576
 msgid "Sync available"
-msgstr "Sincronização disponível"
+msgstr "Synchronisierung verfügbar"
 
-# @ default
+# @ acf
 #: admin/field-groups.php:525
 msgid "Title"
-msgstr "Título"
+msgstr "Titel"
 
+# @ acf
 #: admin/field-groups.php:526 admin/views/field-group-options.php:93
 #: admin/views/update-network.php:20 admin/views/update-network.php:28
 msgid "Description"
-msgstr "Descrição"
+msgstr "Beschreibung"
 
 #: admin/field-groups.php:527 admin/views/field-group-options.php:5
 msgid "Status"
@@ -406,101 +417,105 @@ msgstr "Status"
 #: admin/field-groups.php:624 admin/settings-info.php:76
 #: pro/admin/views/settings-updates.php:111
 msgid "Changelog"
-msgstr "Changelog"
+msgstr "Versionshinweise"
 
 # @ acf
 #: admin/field-groups.php:625
 msgid "See what's new in"
-msgstr "Veja o que há de novo na"
+msgstr "Neuerungen in"
 
 # @ acf
 #: admin/field-groups.php:625
 msgid "version"
-msgstr "versão"
+msgstr "Version"
 
 # @ acf
 #: admin/field-groups.php:627
 msgid "Resources"
-msgstr "Fontes de Pesquisa (em inglês)"
+msgstr "Dokumentation (engl.)"
 
 # @ acf
 #: admin/field-groups.php:629
 msgid "Getting Started"
-msgstr "Primeiros Passos"
+msgstr "Erste Schritte"
 
 # @ acf
 #: admin/field-groups.php:630 pro/admin/settings-updates.php:73
 #: pro/admin/views/settings-updates.php:17
 msgid "Updates"
-msgstr "Atualizações"
+msgstr "Aktualisierungen"
 
 # @ acf
 #: admin/field-groups.php:631
 msgid "Field Types"
-msgstr "Tipos de Campos"
+msgstr "Feld-Typen"
 
 # @ acf
 #: admin/field-groups.php:632
 msgid "Functions"
-msgstr "Funções"
+msgstr "Funktionen"
 
 # @ acf
 #: admin/field-groups.php:633
 msgid "Actions"
-msgstr "Ações"
+msgstr "Aktionen"
 
 # @ acf
 #: admin/field-groups.php:634 fields/relationship.php:717
 msgid "Filters"
-msgstr "Filtros"
+msgstr "Filter"
 
 # @ acf
 #: admin/field-groups.php:635
 msgid "'How to' guides"
-msgstr "Guias práticos"
+msgstr "Kurzanleitungen"
 
 # @ acf
 #: admin/field-groups.php:636
 msgid "Tutorials"
-msgstr "Tutoriais"
+msgstr "Tutorials"
 
 # @ acf
 #: admin/field-groups.php:641
 msgid "Created by"
-msgstr "Criado por"
+msgstr "Erstellt von"
 
+# @ acf
 #: admin/field-groups.php:684
 msgid "Duplicate this item"
-msgstr "Duplicar este item"
+msgstr "Dieses Element duplizieren"
 
 # @ acf
 #: admin/field-groups.php:684 admin/field-groups.php:700
 #: admin/views/field-group-field.php:59 pro/fields/flexible-content.php:504
 msgid "Duplicate"
-msgstr "Duplicar"
+msgstr "Duplizieren"
 
+# @ acf
 #: admin/field-groups.php:746
 #, php-format
 msgid "Select %s"
-msgstr "Selecionar %s"
+msgstr "%s auswählen"
 
+# @ acf
 #: admin/field-groups.php:754
 msgid "Synchronise field group"
-msgstr "Sincronizar grupo de campos"
+msgstr "Synchronisiere Feld-Gruppe"
 
+# @ acf
 #: admin/field-groups.php:754 admin/field-groups.php:771
 msgid "Sync"
-msgstr "Sincronizar"
+msgstr "Synchronisieren"
 
 # @ acf
 #: admin/settings-addons.php:51 admin/views/settings-addons.php:9
 msgid "Add-ons"
-msgstr "Complementos"
+msgstr "Zusatz-Module"
 
 # @ acf
 #: admin/settings-addons.php:87
 msgid "<b>Error</b>. Could not load add-ons list"
-msgstr "<b>Erro</b>. Não foi possível carregar a lista de complementos"
+msgstr "<b>Fehler</b>. Die Liste der Zusatz-Module kann nicht geladen werden"
 
 # @ acf
 #: admin/settings-info.php:50
@@ -510,44 +525,43 @@ msgstr "Info"
 # @ acf
 #: admin/settings-info.php:75
 msgid "What's New"
-msgstr "O que há de novo"
+msgstr "Was gibt es Neues"
 
 #: admin/settings-tools.php:54 admin/views/settings-tools-export.php:28
 #: admin/views/settings-tools.php:31
 msgid "Tools"
-msgstr "Ferramentas"
+msgstr "Werkzeuge"
 
 # @ acf
 #: admin/settings-tools.php:151 admin/settings-tools.php:365
 msgid "No field groups selected"
-msgstr "Nenhum grupo de campos selecionado"
+msgstr "Keine Feld-Gruppe ausgewählt"
 
 # @ acf
 #: admin/settings-tools.php:188
 msgid "No file selected"
-msgstr "Nenhum arquivo selecionado"
+msgstr "Keine Datei ausgewählt"
 
 # @ acf
 #: admin/settings-tools.php:201
 msgid "Error uploading file. Please try again"
-msgstr "Ocorreu um erro ao realizar o upload do arquivo. Tente novamente"
+msgstr "Fehler beim Upload. Bitte erneut versuchen."
 
 # @ acf
 #: admin/settings-tools.php:210
 msgid "Incorrect file type"
-msgstr "Tipo de arquivo incorreto"
+msgstr "Falscher Dateityp"
 
 # @ acf
 #: admin/settings-tools.php:227
 msgid "Import file empty"
-msgstr "Importar arquivo vazio"
+msgstr "Die importierte Datei ist leer"
 
 # @ acf
 #: admin/settings-tools.php:323
 #, php-format
 msgid "<b>Success</b>. Import tool added %s field groups: %s"
-msgstr ""
-"<b>Successo</b>. A ferramenta de importação adicionou %s grupos de campos: %s"
+msgstr "<b>Erfolgreich</b>. Der Import hat %s Feld-Gruppen hinzugefügt: %s"
 
 # @ acf
 #: admin/settings-tools.php:332
@@ -556,30 +570,33 @@ msgid ""
 "<b>Warning</b>. Import tool detected %s field groups already exist and have "
 "been ignored: %s"
 msgstr ""
-"<b>Aviso</b>. A ferramenta de importação detectou %s grupos de campos que já "
-"existem e por isso foram ignorados: %s"
+"<b>Warnung</b>. Der Import hat %s Feld-Gruppen erkannt, die schon vorhanden "
+"sind und diese ignoriert: %s"
 
+# @ acf
 #: admin/update.php:113
 msgid "Upgrade ACF"
-msgstr "Atualizar ACF"
+msgstr "Aktualisiere ACF"
 
+# @ acf
 #: admin/update.php:143
 msgid "Review sites & upgrade"
-msgstr "Revisar sites e atualizar"
+msgstr "Übersicht Seiten & Aktualisierungen"
 
 # @ acf
 #: admin/update.php:298
 msgid "Upgrade"
-msgstr "Atualizar"
+msgstr "Aktualisieren"
 
+# @ acf
 #: admin/update.php:328
 msgid "Upgrade Database"
-msgstr "Atualizar Banco de Dados"
+msgstr "Aktualisiere Datenbank"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:29
 msgid "Conditional Logic"
-msgstr "Condições para exibição"
+msgstr "Bedingungen für die Anzeige"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:40
@@ -592,7 +609,7 @@ msgstr "Condições para exibição"
 #: fields/user.php:471 fields/wysiwyg.php:401
 #: pro/admin/views/settings-updates.php:93
 msgid "Yes"
-msgstr "Sim"
+msgstr "Ja"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:41
@@ -605,164 +622,169 @@ msgstr "Sim"
 #: fields/user.php:458 fields/user.php:472 fields/wysiwyg.php:402
 #: pro/admin/views/settings-updates.php:103
 msgid "No"
-msgstr "Não"
+msgstr "Nein"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:62
 msgid "Show this field if"
-msgstr "Mostrar este campo se"
+msgstr "Zeige dieses Feld, wenn"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:111
 #: admin/views/field-group-locations.php:34
 msgid "is equal to"
-msgstr "é igual a"
+msgstr "ist gleich"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:112
 #: admin/views/field-group-locations.php:35
 msgid "is not equal to"
-msgstr "não é igual a"
+msgstr "ist ungleich"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:149
 #: admin/views/field-group-locations.php:122
 msgid "and"
-msgstr "e"
+msgstr "und"
 
 # @ acf
 #: admin/views/field-group-field-conditional-logic.php:164
 #: admin/views/field-group-locations.php:137
 msgid "Add rule group"
-msgstr "Adicionar grupo de regras"
+msgstr "Regel-Gruppe hinzufügen"
 
 # @ acf
 #: admin/views/field-group-field.php:54 admin/views/field-group-field.php:58
 msgid "Edit field"
-msgstr "Editar campo"
+msgstr "Feld bearbeiten"
 
 # @ acf
 #: admin/views/field-group-field.php:58 pro/fields/gallery.php:363
 msgid "Edit"
-msgstr "Editar"
+msgstr "Bearbeiten"
 
 # @ acf
 #: admin/views/field-group-field.php:59
 msgid "Duplicate field"
-msgstr "Duplicar campo"
+msgstr "Feld duplizieren"
 
 # @ acf
 #: admin/views/field-group-field.php:60
 msgid "Move field to another group"
-msgstr "Mover campo para outro grupo"
+msgstr "Feld in eine andere Gruppe verschieben"
 
 # @ acf
 #: admin/views/field-group-field.php:60
 msgid "Move"
-msgstr "Mover"
+msgstr "Verschieben"
 
 # @ acf
 #: admin/views/field-group-field.php:61
 msgid "Delete field"
-msgstr "Excluir campo"
+msgstr "Feld löschen"
 
 # @ acf
 #: admin/views/field-group-field.php:61 pro/fields/flexible-content.php:503
 msgid "Delete"
-msgstr "Excluir"
+msgstr "Löschen"
 
 # @ acf
 #: admin/views/field-group-field.php:69 fields/oembed.php:212
 #: fields/taxonomy.php:912
 msgid "Error"
-msgstr "Erro"
+msgstr "Fehler"
 
 # @ acf
 #: admin/views/field-group-field.php:69
 msgid "Field type does not exist"
-msgstr "Tipo de campo não existe"
+msgstr "Feld-Typ existiert nicht"
 
 # @ acf
 #: admin/views/field-group-field.php:82
 msgid "Field Label"
-msgstr "Rótulo do Campo"
+msgstr "Bezeichnung"
 
 # @ acf
 #: admin/views/field-group-field.php:83
 msgid "This is the name which will appear on the EDIT page"
-msgstr "Este é o nome que irá aparecer na página de EDIÇÃO"
+msgstr "Dieser Name wird in der Bearbeitungs-Ansicht eines Beitrags angezeigt"
 
 # @ acf
 #: admin/views/field-group-field.php:95
 msgid "Field Name"
-msgstr "Nome do Campo"
+msgstr "Feld-Name"
 
 # @ acf
 #: admin/views/field-group-field.php:96
 msgid "Single word, no spaces. Underscores and dashes allowed"
 msgstr ""
-"Uma única palavra, sem espaços. Traço inferior (_) e traços (-) permitidos"
+"Nur ein Wort ohne Leerzeichen; es sind nur Unterstriche und Bindestriche als "
+"Sonderzeichen erlaubt"
 
 # @ acf
 #: admin/views/field-group-field.php:108
 msgid "Field Type"
-msgstr "Tipo de Campo"
+msgstr "Feld-Typ"
 
 # @ acf
 #: admin/views/field-group-field.php:122 fields/tab.php:134
 msgid "Instructions"
-msgstr "Instruções"
+msgstr "Anweisungen"
 
 # @ acf
 #: admin/views/field-group-field.php:123
 msgid "Instructions for authors. Shown when submitting data"
-msgstr "Instrução para os autores. Exibido quando se está enviando dados"
+msgstr "Anweisungen für Autoren werden in der Bearbeitungs-Ansicht angezeigt"
 
 # @ acf
 #: admin/views/field-group-field.php:134
 msgid "Required?"
-msgstr "Obrigatório?"
+msgstr "Erforderlich?"
 
+# @ acf
 #: admin/views/field-group-field.php:163
 msgid "Wrapper Attributes"
-msgstr "Atributos do Wrapper"
+msgstr "Wrapper-Attribute"
 
+# @ acf
 #: admin/views/field-group-field.php:169
 msgid "width"
-msgstr "largura"
+msgstr "Breite"
 
+# @ acf
 #: admin/views/field-group-field.php:183
 msgid "class"
-msgstr "classe"
+msgstr "Klasse"
 
+# @ acf
 #: admin/views/field-group-field.php:196
 msgid "id"
-msgstr "id"
+msgstr "ID"
 
 # @ acf
 #: admin/views/field-group-field.php:208
 msgid "Close Field"
-msgstr "Fechar Campo"
+msgstr "Feld schließen"
 
 # @ acf
 #: admin/views/field-group-fields.php:29
 msgid "Order"
-msgstr "Ordem"
+msgstr "Reihenfolge"
 
 # @ acf
 #: admin/views/field-group-fields.php:30 pro/fields/flexible-content.php:530
 msgid "Label"
-msgstr "Rótulo"
+msgstr "Name"
 
 # @ acf
 #: admin/views/field-group-fields.php:31 pro/fields/flexible-content.php:543
 msgid "Name"
-msgstr "Nome"
+msgstr "Feld-Name"
 
 # @ acf
 #: admin/views/field-group-fields.php:32
 msgid "Type"
-msgstr "Tipo"
+msgstr "Typ"
 
 # @ acf
 #: admin/views/field-group-fields.php:44
@@ -770,115 +792,115 @@ msgid ""
 "No fields. Click the <strong>+ Add Field</strong> button to create your "
 "first field."
 msgstr ""
-"Nenhum campo. Clique no botão <strong>+ Adicionar Campo</strong> para criar "
-"seu primeiro campo."
+"Es sind noch keine Felder angelegt. Klicken Sie den <strong>+ Feld "
+"hinzufügen-Button</strong> und erstellen Sie Ihr erstes Feld."
 
 # @ acf
 #: admin/views/field-group-fields.php:51
 msgid "Drag and drop to reorder"
-msgstr "Clique e arraste para reorganizar"
+msgstr "Mittels Drag-and-Drop die Reihenfolge ändern"
 
 # @ acf
 #: admin/views/field-group-fields.php:54
 msgid "+ Add Field"
-msgstr "+ Adicionar Campo"
+msgstr "+ Feld hinzufügen"
 
 # @ acf
 #: admin/views/field-group-locations.php:5
 #: admin/views/field-group-locations.php:11
 msgid "Post"
-msgstr "Post"
+msgstr "Beitrag"
 
 # @ acf
 #: admin/views/field-group-locations.php:6 fields/relationship.php:723
 msgid "Post Type"
-msgstr "Tipo de Post"
+msgstr "Beitrags-Typ"
 
 # @ acf
 #: admin/views/field-group-locations.php:7
 msgid "Post Status"
-msgstr "Status do Post"
+msgstr "Beitrags-Status"
 
 # @ acf
 #: admin/views/field-group-locations.php:8
 msgid "Post Format"
-msgstr "Formato de Post"
+msgstr "Beitrags-Format"
 
 # @ acf
 #: admin/views/field-group-locations.php:9
 msgid "Post Category"
-msgstr "Categoria de Post"
+msgstr "Beitrags-Kategorie"
 
 # @ acf
 #: admin/views/field-group-locations.php:10
 msgid "Post Taxonomy"
-msgstr "Taxonomia de Post"
+msgstr "Beitrags-Taxonomie"
 
 # @ acf
 #: admin/views/field-group-locations.php:13
 #: admin/views/field-group-locations.php:17
 msgid "Page"
-msgstr "Página"
+msgstr "Seite"
 
 # @ acf
 #: admin/views/field-group-locations.php:14
 msgid "Page Template"
-msgstr "Modelo de Página"
+msgstr "Seiten-Template"
 
 # @ acf
 #: admin/views/field-group-locations.php:15
 msgid "Page Type"
-msgstr "Tipo de Página"
+msgstr "Seitentyp"
 
 # @ acf
 #: admin/views/field-group-locations.php:16
 msgid "Page Parent"
-msgstr "Página Mãe"
+msgstr "Übergeordnete Seite"
 
 # @ acf
 #: admin/views/field-group-locations.php:19 fields/user.php:36
 msgid "User"
-msgstr "Usuário"
+msgstr "Benutzer"
 
 # @ acf
 #: admin/views/field-group-locations.php:20
 msgid "Current User"
-msgstr "Usuário atual"
+msgstr "Aktueller Benutzer"
 
 # @ acf
 #: admin/views/field-group-locations.php:21
 msgid "Current User Role"
-msgstr "Função do Usuário atual"
+msgstr "Aktuelle Benutzer-Rolle"
 
 # @ acf
 #: admin/views/field-group-locations.php:22
 msgid "User Form"
-msgstr "Formulário do Usuário"
+msgstr "Benutzer-Formular"
 
 # @ acf
 #: admin/views/field-group-locations.php:23
 msgid "User Role"
-msgstr "Função do Usuário"
+msgstr "Benutzerrolle"
 
 # @ acf
 #: admin/views/field-group-locations.php:25 pro/admin/options-page.php:48
 msgid "Forms"
-msgstr "Formulários"
+msgstr "Formulare"
 
 # @ acf
 #: admin/views/field-group-locations.php:26
 msgid "Attachment"
-msgstr "Anexo"
+msgstr "Dateianhang"
 
 # @ acf
 #: admin/views/field-group-locations.php:27
 msgid "Taxonomy Term"
-msgstr "Termo da Taxonomia"
+msgstr "Taxonomie"
 
 # @ acf
 #: admin/views/field-group-locations.php:28
 msgid "Comment"
-msgstr "Comentário"
+msgstr "Kommentar"
 
 # @ acf
 #: admin/views/field-group-locations.php:29
@@ -888,7 +910,7 @@ msgstr "Widget"
 # @ acf
 #: admin/views/field-group-locations.php:41
 msgid "Rules"
-msgstr "Regras"
+msgstr "Regeln"
 
 # @ acf
 #: admin/views/field-group-locations.php:42
@@ -896,102 +918,102 @@ msgid ""
 "Create a set of rules to determine which edit screens will use these "
 "advanced custom fields"
 msgstr ""
-"Crie um conjunto de regras para determinar quais telas de edição utilizarão "
-"estes campos"
+"Erstelle ein Regelwerk das festlegt welche Bearbeitungs-Ansichten diese Feld-"
+"Gruppe nutzen dürfen"
 
 # @ acf
 #: admin/views/field-group-locations.php:59
 msgid "Show this field group if"
-msgstr "Mostrar este grupo de campos se"
+msgstr "Zeige diese Felder, wenn"
 
 # @ acf
 #: admin/views/field-group-options.php:20
 msgid "Style"
-msgstr "Estilo"
+msgstr "Stil"
 
 # @ acf
 #: admin/views/field-group-options.php:27
 msgid "Standard (WP metabox)"
-msgstr "Padrão (metabox do WP)"
+msgstr "WP-Metabox (Standard)"
 
 # @ acf
 #: admin/views/field-group-options.php:28
 msgid "Seamless (no metabox)"
-msgstr "Sem bordas (sem metabox)"
+msgstr "Übergangslos ohne Metabox"
 
 # @ acf
 #: admin/views/field-group-options.php:35
 msgid "Position"
-msgstr "Posição"
+msgstr "Position"
 
 # @ acf
 #: admin/views/field-group-options.php:42
 msgid "High (after title)"
-msgstr "Superior (depois do título)"
+msgstr "Nach dem Titel vor dem Inhalt"
 
 # @ acf
 #: admin/views/field-group-options.php:43
 msgid "Normal (after content)"
-msgstr "Normal (depois do editor de conteúdo)"
+msgstr "Nach dem Inhalt (Standard)"
 
 # @ acf
 #: admin/views/field-group-options.php:44
 msgid "Side"
-msgstr "Lateral"
+msgstr "Seitlich neben dem Inhalt"
 
 # @ acf
 #: admin/views/field-group-options.php:52
 msgid "Label placement"
-msgstr "Posicionamento do rótulo"
+msgstr "Platzierung Beschriftung"
 
 # @ acf
 #: admin/views/field-group-options.php:59 fields/tab.php:148
 msgid "Top aligned"
-msgstr "Alinhado ao Topo"
+msgstr "Über dem Feld"
 
 # @ acf
 #: admin/views/field-group-options.php:60 fields/tab.php:149
 msgid "Left Aligned"
-msgstr "Alinhado à Esquerda"
+msgstr "Links neben dem Feld"
 
 # @ acf
 #: admin/views/field-group-options.php:67
 msgid "Instruction placement"
-msgstr "Posicionamento das instruções"
+msgstr "Platzierung der Hinweise"
 
 # @ acf
 #: admin/views/field-group-options.php:74
 msgid "Below labels"
-msgstr "Abaixo dos rótulos"
+msgstr "Unterhalb der Beschriftung"
 
 # @ acf
 #: admin/views/field-group-options.php:75
 msgid "Below fields"
-msgstr "Abaixo dos campos"
+msgstr "Unterhalb der Felder"
 
 # @ acf
 #: admin/views/field-group-options.php:82
 msgid "Order No."
-msgstr "Nº. de Ordem"
+msgstr "Reihenfolge"
 
 #: admin/views/field-group-options.php:83
 msgid "Field groups with a lower order will appear first"
-msgstr "Grupos de campos com a numeração menor aparecerão primeiro"
+msgstr "Feld-Gruppen mit einem niedrigeren Wert werden zuerst angezeigt"
 
 #: admin/views/field-group-options.php:94
 msgid "Shown in field group list"
-msgstr "Exibido na lista de grupos de campos"
+msgstr "Wird in der Feld-Gruppen-Liste angezeigt"
 
 # @ acf
 #: admin/views/field-group-options.php:104
 msgid "Hide on screen"
-msgstr "Ocultar na tela"
+msgstr "Verstecken"
 
 # @ acf
 #: admin/views/field-group-options.php:105
 msgid "<b>Select</b> items to <b>hide</b> them from the edit screen."
 msgstr ""
-"<b>Selecione</b> os itens que deverão ser <b>ocultados</b> da tela de edição"
+"<strong>Ausgewählte</strong> Elemente werden <strong>versteckt</strong>."
 
 # @ acf
 #: admin/views/field-group-options.php:105
@@ -999,44 +1021,44 @@ msgid ""
 "If multiple field groups appear on an edit screen, the first field group's "
 "options will be used (the one with the lowest order number)"
 msgstr ""
-"Se vários grupos de campos aparecem em uma tela de edição, as opções do "
-"primeiro grupo de campos é a que será utilizada. (aquele com o menor número "
-"de ordem)"
+"Sind für einen Bearbeiten-Dialog mehrere Felder-Gruppen definiert, werden "
+"die Optionen der ersten Felder-Gruppe angewendet (die mit der niedrigsten "
+"Nummer für die Reihenfolge)."
 
 # @ acf
 #: admin/views/field-group-options.php:112
 msgid "Permalink"
-msgstr "Link permanente"
+msgstr "Permalink"
 
 # @ acf
 #: admin/views/field-group-options.php:113
 msgid "Content Editor"
-msgstr "Editor de Conteúdo"
+msgstr "Inhalts-Editor"
 
 # @ acf
 #: admin/views/field-group-options.php:114
 msgid "Excerpt"
-msgstr "Resumo"
+msgstr "Kurzfassung"
 
 # @ acf
 #: admin/views/field-group-options.php:116
 msgid "Discussion"
-msgstr "Discussão"
+msgstr "Diskussion"
 
 # @ acf
 #: admin/views/field-group-options.php:117
 msgid "Comments"
-msgstr "Comentários"
+msgstr "Kommentare"
 
 # @ acf
 #: admin/views/field-group-options.php:118
 msgid "Revisions"
-msgstr "Revisões"
+msgstr "Revisionen"
 
 # @ acf
 #: admin/views/field-group-options.php:119
 msgid "Slug"
-msgstr "Slug"
+msgstr "Kurzlink"
 
 # @ acf
 #: admin/views/field-group-options.php:120
@@ -1046,47 +1068,47 @@ msgstr "Autor"
 # @ acf
 #: admin/views/field-group-options.php:121
 msgid "Format"
-msgstr "Formato"
+msgstr "Format"
 
 # @ acf
 #: admin/views/field-group-options.php:122
 msgid "Page Attributes"
-msgstr "Atributos da Página"
+msgstr "Seiten-Attribute"
 
 # @ acf
 #: admin/views/field-group-options.php:123 fields/relationship.php:736
 msgid "Featured Image"
-msgstr "Imagem Destacada"
+msgstr "Beitragsbild"
 
 # @ acf
 #: admin/views/field-group-options.php:124
 msgid "Categories"
-msgstr "Categorias"
+msgstr "Kategorien"
 
 # @ acf
 #: admin/views/field-group-options.php:125
 msgid "Tags"
-msgstr "Tags"
+msgstr "Schlagworte"
 
 # @ acf
 #: admin/views/field-group-options.php:126
 msgid "Send Trackbacks"
-msgstr "Enviar Trackbacks"
+msgstr "Sende Trackbacks"
 
 # @ acf
 #: admin/views/settings-addons.php:23
 msgid "Download & Install"
-msgstr "Fazer download & Instalar"
+msgstr "Download & Installieren"
 
 # @ acf
 #: admin/views/settings-addons.php:42
 msgid "Installed"
-msgstr "Instalado"
+msgstr "Installiert"
 
 # @ acf
 #: admin/views/settings-info.php:9
 msgid "Welcome to Advanced Custom Fields"
-msgstr "Bem-vindo ao Advanced Custom Fields"
+msgstr "Willkommen bei Advanced Custom Fields"
 
 # @ acf
 #: admin/views/settings-info.php:10
@@ -1095,18 +1117,19 @@ msgid ""
 "Thank you for updating! ACF %s is bigger and better than ever before. We "
 "hope you like it."
 msgstr ""
-"Obrigado por atualizar! O ACF %s está maior e melhor do que nunca. Esperamos "
-"que você goste."
+"Danke fürs Aktualisieren! ACF %s ist besser denn je. Wir hoffen es wird "
+"Ihnen genauso gut gefallen wie uns."
 
 # @ acf
 #: admin/views/settings-info.php:23
 msgid "A smoother custom field experience"
-msgstr "Uma experiência de uso mais simples e mais agradável"
+msgstr ""
+"Eine neue Dimension der reibungslosen Nutzung benutzerdefinierter Felder"
 
 # @ acf
 #: admin/views/settings-info.php:28
 msgid "Improved Usability"
-msgstr "Melhoria da Usabilidade"
+msgstr "Verbesserte Benutzerfreundlichkeit"
 
 # @ acf
 #: admin/views/settings-info.php:29
@@ -1115,14 +1138,15 @@ msgid ""
 "across a number of field types including post object, page link, taxonomy "
 "and select."
 msgstr ""
-"Incluir a popular biblioteca Select2 nos possibilitou aperfeiçoar a "
-"usabilidade e a performance de diversos tipos de campos, como o objeto do "
-"post, link da página, taxonomias e seleções."
+"Durch die Einführung der beliebten Select2 Bibliothek wurde sowohl die "
+"Benutzerfreundlichkeit als auch die Geschwindigkeit einiger Feldtypen wie "
+"Beitrags-Objekte, Seiten-Links, Taxonomien sowie von Auswahl-Feldern "
+"signifikant verbessert."
 
 # @ acf
 #: admin/views/settings-info.php:33
 msgid "Improved Design"
-msgstr "Melhorias no Design"
+msgstr "Verbessertes Design"
 
 # @ acf
 #: admin/views/settings-info.php:34
@@ -1131,14 +1155,14 @@ msgid ""
 "ever! Noticeable changes are seen on the gallery, relationship and oEmbed "
 "(new) fields!"
 msgstr ""
-"Muitos campos passaram por uma atualização visual para tornar o ACF mais "
-"bonito do que nunca! As mudanças mais visíveis podem ser vistas  na galeria, "
-"no campo de relação e no novo campo oEmbed!"
+"Viele Felder wurden visuell überarbeitet, damit ACF besser denn je aussieht! "
+"Die markantesten Änderungen erfuhren das Galerie-, Beziehungs- sowie das "
+"nagelneue oEmbed-Feld!"
 
 # @ acf
 #: admin/views/settings-info.php:38
 msgid "Improved Data"
-msgstr "Aprimoramento dos Dados"
+msgstr "Verbesserte Datenstruktur"
 
 # @ acf
 #: admin/views/settings-info.php:39
@@ -1147,27 +1171,28 @@ msgid ""
 "independently from their parents. This allows you to drag and drop fields in "
 "and out of parent fields!"
 msgstr ""
-"Ao redefinir a arquitetura de dados promovemos mais autonomia aos sub "
-"campos, que podem agora funcionar de forma mais independente e serem "
-"arrastados e reposicionados entre diferentes campos."
+"Die Neugestaltung der Datenarchitektur erlaubt es, dass Felder unabhängig "
+"von ihren übergeordneten Feldern existieren können. Dies ermöglicht, dass "
+"Felder per Drag-and-Drop, in und aus ihren übergeordneten Feldern verschoben "
+"werden können!"
 
 # @ acf
 #: admin/views/settings-info.php:45
 msgid "Goodbye Add-ons. Hello PRO"
-msgstr "Adeus Complementos. Olá PRO"
+msgstr "Macht's gut Add-ons&hellip; Hallo PRO!"
 
 # @ acf
 #: admin/views/settings-info.php:50
 msgid "Introducing ACF PRO"
-msgstr "Apresentando o ACF PRO"
+msgstr "Wir dürfen vorstellen&hellip; ACF PRO"
 
 # @ acf
 #: admin/views/settings-info.php:51
 msgid ""
 "We're changing the way premium functionality is delivered in an exciting way!"
 msgstr ""
-"Estamos mudando a forma como as funcionalidades premium são disponibilizadas "
-"para um modo ainda melhor!"
+"Wir haben die Art und Weise mit der die Premium-Funktionalität zur Verfügung "
+"gestellt wird geändert - das \"wie\" dürfte Sie begeistern!"
 
 # @ acf
 #: admin/views/settings-info.php:52
@@ -1177,14 +1202,15 @@ msgid ""
 "version of ACF</a>. With both personal and developer licenses available, "
 "premium functionality is more affordable and accessible than ever before!"
 msgstr ""
-"Todos os 4 add-ons premium foram combinados na nova <a href=\"%s\">versão "
-"Pro do ACF</a>. Com licenças pessoais e para desenvolvedores, as "
-"funcionalidades premium estão mais acessíveis do que nunca!"
+"Alle vier, vormals separat erhältlichen, Premium-Add-ons wurden in der neuen "
+"<a href=\"%s\">Pro-Version von ACF</a> zusammengefasst. Besagte Premium-"
+"Funktionalität, erhältlich in einer Einzel- sowie einer Entwickler-Lizenz, "
+"ist somit erschwinglicher denn je!"
 
 # @ acf
 #: admin/views/settings-info.php:56
 msgid "Powerful Features"
-msgstr "Funcionalidades poderosas"
+msgstr "Leistungsstarke Funktionen"
 
 # @ acf
 #: admin/views/settings-info.php:57
@@ -1193,21 +1219,20 @@ msgid ""
 "layouts, a beautiful gallery field and the ability to create extra admin "
 "options pages!"
 msgstr ""
-"O ACF PRO contém funcionalidades incríveis como o campo de dados "
-"repetitivos, layouts de conteúdo flexíveis, um belíssimo campo de galeria e "
-"a capacidade de criar páginas de opções adicionais!"
+"ACF PRO enthält leistungsstarke Funktionen wie wiederholbare Daten, Flexible "
+"Inhalte-Layouts, ein wunderschönes Galerie-Feld sowie die Möglichkeit "
+"zusätzliche Options-Seiten im Admin-Bereich anzulegen!"
 
 # @ acf
 #: admin/views/settings-info.php:58
 #, php-format
 msgid "Read more about <a href=\"%s\">ACF PRO features</a>."
-msgstr ""
-"Leia mais sobre as <a href=\"%s\">funcionalidades do ACF PRO</a> (em inglês)."
+msgstr "Lesen Sie mehr über die <a href=\"%s\">ACF PRO Funktionen</a>."
 
 # @ acf
 #: admin/views/settings-info.php:62
 msgid "Easy Upgrading"
-msgstr "Fácil Atualização"
+msgstr "Kinderleichte Aktualisierung"
 
 # @ acf
 #: admin/views/settings-info.php:63
@@ -1216,8 +1241,9 @@ msgid ""
 "To help make upgrading easy, <a href=\"%s\">login to your store account</a> "
 "and claim a free copy of ACF PRO!"
 msgstr ""
-"Para tornar a atualização mais fácil, <a href=\"%s\">faça o login na sua "
-"conta</a> e solicite sua cópia gratuita do ACF PRO!"
+"Wir haben den Aktualisierungsprozess so einfach wie möglich gehalten; <a "
+"href=\"%s\">melden Sie sich mit Ihrem Store-Account an</a> und fordern Sie "
+"ein Gratisexemplar von ACF PRO an!"
 
 # @ acf
 #: admin/views/settings-info.php:64
@@ -1227,52 +1253,54 @@ msgid ""
 "but if you do have one, please contact our support team via the <a href=\"%s"
 "\">help desk</a>"
 msgstr ""
-"Também escrevemos um <a href=\"%s\">guia de atualização</a> (em inglês) para "
-"esclarecer qualquer dúvida, mas se você tiver alguma questão, entre em "
-"contato com nosso time de suporte através do <a href=\"%s\">help desk</a>"
+"Um möglichen Fragen vorzubeugen haben wir haben eine <a href=\"%s\"> "
+"Anleitung für den Aktualisierungs-Prozess (Engl.)</a> verfasst. Sollten "
+"dennoch Fragen aufgeworfen werden, kontaktieren Sie bitte unser <a href=\"%s"
+"\"> Support-Team </a>."
 
 # @ acf
 #: admin/views/settings-info.php:72
 msgid "Under the Hood"
-msgstr "Nos bastidores"
+msgstr "Unter der Haube"
 
 # @ acf
 #: admin/views/settings-info.php:77
 msgid "Smarter field settings"
-msgstr "Definições de campo mais inteligentes"
+msgstr "Intelligentere Feld-Einstellungen"
 
 # @ acf
 #: admin/views/settings-info.php:78
 msgid "ACF now saves its field settings as individual post objects"
-msgstr "O ACF agora salva as definições dos campos como posts individuais"
+msgstr ""
+"ACF speichert nun die Feld-Einstellungen als individuelle Beitrags-Objekte"
 
 # @ acf
 #: admin/views/settings-info.php:82
 msgid "More AJAX"
-msgstr "Mais AJAX"
+msgstr "Mehr AJAX"
 
 # @ acf
 #: admin/views/settings-info.php:83
 msgid "More fields use AJAX powered search to speed up page loading"
 msgstr ""
-"Mais campos utilizam pesquisas em AJAX para acelerar o carregamento da página"
+"Mehr Felder verwenden nun eine AJAX-basierte Suche, die die Ladezeiten von "
+"Seiten deutlich verringert"
 
 # @ acf
 #: admin/views/settings-info.php:87
 msgid "Local JSON"
-msgstr "JSON Local"
+msgstr "Lokales JSON"
 
 # @ acf
 #: admin/views/settings-info.php:88
 msgid "New auto export to JSON feature improves speed"
 msgstr ""
-"Melhor performance com a nova funcionalidade de exportação automática para "
-"JSON"
+"Ein neuer automatischer Export nach JSON verbessert die Geschwindigkeit"
 
 # @ acf
 #: admin/views/settings-info.php:94
 msgid "Better version control"
-msgstr "Melhor controle de versão"
+msgstr "Verbesserte Versionskontrolle"
 
 # @ acf
 #: admin/views/settings-info.php:95
@@ -1280,51 +1308,51 @@ msgid ""
 "New auto export to JSON feature allows field settings to be version "
 "controlled"
 msgstr ""
-"A nova função de exportação automática para JSON permite que as definições "
-"do campo sejam controladas por versão"
+"Die neue JSON Export Funktionalität erlaubt die Versionskontrolle von Feld-"
+"Einstellungen"
 
 # @ acf
 #: admin/views/settings-info.php:99
 msgid "Swapped XML for JSON"
-msgstr "Troca de XML para JSON"
+msgstr "JSON ersetzt XML"
 
 # @ acf
 #: admin/views/settings-info.php:100
 msgid "Import / Export now uses JSON in favour of XML"
-msgstr ""
-"As funcionalidades de Importar/ Exportar agora utilizam JSON ao invés de XML"
+msgstr "Das Import- und Export-Modul nutzt nun JSON anstelle XML"
 
 # @ acf
 #: admin/views/settings-info.php:104
 msgid "New Forms"
-msgstr "Novos espaços de Formulários"
+msgstr "Neue Formulare"
 
 # @ acf
 #: admin/views/settings-info.php:105
 msgid "Fields can now be mapped to comments, widgets and all user forms!"
 msgstr ""
-"Os Campos agora podem ser inseridos nos comentários, widgets e em todos os "
-"formulários de usuários!"
+"Felder können nun auch Kommentaren, Widgets und allen Benutzer-Formularen "
+"zugeordnet werden!"
 
 # @ acf
 #: admin/views/settings-info.php:112
 msgid "A new field for embedding content has been added"
-msgstr "Foi adicionado o novo campo oEmbed para incorporar conteúdo"
+msgstr "Ein neues Feld für das Einbetten von Inhalten wurde hinzugefügt"
 
 # @ acf
 #: admin/views/settings-info.php:116
 msgid "New Gallery"
-msgstr "Nova Galeria"
+msgstr "Neue Galerie"
 
 # @ acf
 #: admin/views/settings-info.php:117
 msgid "The gallery field has undergone a much needed facelift"
-msgstr "O campo de Galeria passou por uma transformação muito necessária"
+msgstr ""
+"Das Galerie-Feld wurde einem längst überfälligen Face-Lifting unterzogen"
 
 # @ acf
 #: admin/views/settings-info.php:121
 msgid "New Settings"
-msgstr "Novas Definições"
+msgstr "Neue Einstellungen"
 
 # @ acf
 #: admin/views/settings-info.php:122
@@ -1332,48 +1360,48 @@ msgid ""
 "Field group settings have been added for label placement and instruction "
 "placement"
 msgstr ""
-"Opções de posicionamento do rótulo e da instrução foram adicionadas aos "
-"grupos de campos"
+"Die Feld-Gruppen wurden um die Einstellungen für die Platzierung von "
+"Beschriftungen und Hinweisen erweitert"
 
 # @ acf
 #: admin/views/settings-info.php:128
 msgid "Better Front End Forms"
-msgstr "Formulários Frontend aperfeiçoados"
+msgstr "Verbesserte Front-End-Formulare"
 
 # @ acf
 #: admin/views/settings-info.php:129
 msgid "acf_form() can now create a new post on submission"
-msgstr "acf_form() agora pode criar um novo post ao ser utilizado"
+msgstr "acf_form() kann jetzt einen neuen Beitrag direkt beim Senden erstellen"
 
 # @ acf
 #: admin/views/settings-info.php:133
 msgid "Better Validation"
-msgstr "Melhor Validação"
+msgstr "Bessere Validierung"
 
 # @ acf
 #: admin/views/settings-info.php:134
 msgid "Form validation is now done via PHP + AJAX in favour of only JS"
 msgstr ""
-"A validação dos formulários agora é feita através de PHP + AJAX ao invés de "
-"apenas JS"
+"Die Formular-Validierung wird nun mit Hilfe von PHP + AJAX erledigt, "
+"anstelle nur JS zu verwenden"
 
 # @ acf
 #: admin/views/settings-info.php:138
 msgid "Relationship Field"
-msgstr "Campo de Relação"
+msgstr "Beziehungs-Feld"
 
 # @ acf
 #: admin/views/settings-info.php:139
 msgid ""
 "New Relationship field setting for 'Filters' (Search, Post Type, Taxonomy)"
 msgstr ""
-"Nova função de 'Filtro' (Busca, Tipo de Post, Taxonomia) para o campo de "
-"Relação"
+"Neue Einstellungen innerhalb des Beziehungs-Feldes um nach Suche, Beitrags-"
+"Typ und oder Taxonomie filtern zu können"
 
 # @ acf
 #: admin/views/settings-info.php:145
 msgid "Moving Fields"
-msgstr "Movimentação de Campos"
+msgstr "Verschiebbare Felder"
 
 # @ acf
 #: admin/views/settings-info.php:146
@@ -1381,23 +1409,25 @@ msgid ""
 "New field group functionality allows you to move a field between groups & "
 "parents"
 msgstr ""
-"O novo recurso agora permite que você mova um campo entre diferentes grupos "
-"grupos (e até mesmo outros campos)"
+"Die neue Feld-Gruppen-Funktionalität erlaubt es ein Feld zwischen Gruppen "
+"und übergeordneten Gruppen frei zu verschieben"
 
 # @ acf
 #: admin/views/settings-info.php:150 fields/page_link.php:36
 msgid "Page Link"
-msgstr "Link da Página"
+msgstr "Seiten-Link"
 
 # @ acf
 #: admin/views/settings-info.php:151
 msgid "New archives group in page_link field selection"
-msgstr "Nova opção de selecionar Arquivos no campo de Link da Página"
+msgstr ""
+"Im neuen Seitenlink-Feld werden alle Archiv-URL's der verfügbaren Custom "
+"Post Types in einer Options-Gruppe zusammengefasst"
 
 # @ acf
 #: admin/views/settings-info.php:155
 msgid "Better Options Pages"
-msgstr "Páginas de Opções aperfeiçoadas"
+msgstr "Verbesserte Options-Seiten"
 
 # @ acf
 #: admin/views/settings-info.php:156
@@ -1405,20 +1435,21 @@ msgid ""
 "New functions for options page allow creation of both parent and child menu "
 "pages"
 msgstr ""
-"Novas funções para as páginas de opções permitem a criação tanto de páginas "
-"principais quanto de sub-páginas"
+"Neue Funktionen für die Options-Seite erlauben die Erstellung von Menüs für "
+"übergeordnete Seiten sowie Unterseiten"
 
 # @ acf
 #: admin/views/settings-info.php:165
 #, php-format
 msgid "We think you'll love the changes in %s."
-msgstr "Nós achamos que você vai adorar as mudanças na %s."
+msgstr "Wir glauben Sie werden die Änderungen in %s lieben."
 
 # @ acf
 #: admin/views/settings-tools-export.php:32
 msgid "Export Field Groups to PHP"
-msgstr "Exportar Grupos de Campos para PHP"
+msgstr "Exportieren der Feld-Gruppen nach PHP"
 
+# @ acf
 #: admin/views/settings-tools-export.php:36
 msgid ""
 "The following code can be used to register a local version of the selected "
@@ -1427,22 +1458,21 @@ msgid ""
 "the following code to your theme's functions.php file or include it within "
 "an external file."
 msgstr ""
-"O código a seguir poderá ser usado para registrar uma versão local do(s) "
-"grupo(s) de campo selecionado(s). Um grupo de campos local pode fornecer "
-"muitos benefícios, tais como um tempo de carregamento mais rápido, controle "
-"de versão e campos/configurações dinâmicas. Basta copiar e colar o seguinte "
-"código para o arquivo functions.php do seu tema ou incluí-lo dentro de um "
-"arquivo externo."
+"Der nachfolgende Code kann dazu verwendet werden eine lokale Version der "
+"ausgewählten Feld-Gruppe(n) zu registrieren. Eine lokale Feld-Gruppe bietet "
+"viele Vorteile; schnellere Ladezeiten, Versionskontrolle sowie dynamische "
+"Felder und Einstellungen. Kopieren Sie einfach folgenden Code und füge ihn "
+"in die functions.php oder eine externe Datei in Ihrem Theme ein."
 
 # @ acf
 #: admin/views/settings-tools.php:5
 msgid "Select Field Groups"
-msgstr "Selecionar Grupo de Campos"
+msgstr "Felder-Gruppen auswählen"
 
 # @ acf
 #: admin/views/settings-tools.php:35
 msgid "Export Field Groups"
-msgstr "Exportar Grupos de Campos"
+msgstr "Feld-Gruppen exportieren"
 
 # @ acf
 #: admin/views/settings-tools.php:38
@@ -1452,26 +1482,27 @@ msgid ""
 "import to another ACF installation. Use the generate button to export to PHP "
 "code which you can place in your theme."
 msgstr ""
-"Selecione os grupos de campos que deseja exportar e escolha o método de "
-"exportação. Para exportar um arquivo do tipo .json (que permitirá a "
-"importação dos grupos em uma outra instalação do ACF) utilize o botão de "
-"download. Para obter o código em PHP (que você poderá depois inserir em seu "
-"tema), utilize o botão de gerar o código."
+"Entscheiden Sie zuerst welche Felder-Gruppen Sie exportieren möchten und "
+"wählen im Anschluss das Format in das exportiert werden soll. Klicken Sie "
+"den \"JSON-Datei exportieren\"-Button, um eine JSON-Datei zu erhalten, "
+"welche Sie dann in einer anderen ACF-Installation importieren können. Wählen "
+"Sie den \"Erstelle PHP-Code\"-Button, um PHP-Code zu erhalten, den Sie im "
+"Anschluss in der functions.php Ihres Themes einfügen können."
 
 # @ acf
 #: admin/views/settings-tools.php:50
 msgid "Download export file"
-msgstr "Download do arquivo JSON"
+msgstr "JSON-Datei exportieren"
 
 # @ acf
 #: admin/views/settings-tools.php:51
 msgid "Generate export code"
-msgstr "Gerar código PHP"
+msgstr "Erstelle PHP-Code"
 
 # @ acf
 #: admin/views/settings-tools.php:64
 msgid "Import Field Groups"
-msgstr "Importar Grupos de Campos"
+msgstr "Feld-Gruppen importieren"
 
 # @ acf
 #: admin/views/settings-tools.php:67
@@ -1479,52 +1510,59 @@ msgid ""
 "Select the Advanced Custom Fields JSON file you would like to import. When "
 "you click the import button below, ACF will import the field groups."
 msgstr ""
-"Selecione o arquivo JSON do Advanced Custom Fields que deseja importar. "
-"Depois de clicar no botão importar abaixo, o ACF fará a importação dos "
-"grupos de campos."
+"Wählen Sie die Advanced Custom Fields JSON-Datei aus, welche Sie importieren "
+"möchten. Nach dem Klicken des Importieren-Buttons wird ACF die Felder-"
+"Gruppen hinzufügen."
 
 # @ acf
 #: admin/views/settings-tools.php:77 fields/file.php:46
 msgid "Select File"
-msgstr "Selecionar Arquivo"
+msgstr "Datei auswählen"
 
 # @ acf
 #: admin/views/settings-tools.php:86
 msgid "Import"
-msgstr "Importar"
+msgstr "Importieren"
 
+# @ acf
 #: admin/views/update-network.php:8 admin/views/update.php:8
 msgid "Advanced Custom Fields Database Upgrade"
-msgstr "Atualização do Banco de Dados do Advanced Custom Fields"
+msgstr "Advanced Custom Fields Datenbank Aktualisierung"
 
+# @ acf
 #: admin/views/update-network.php:10
 msgid ""
 "The following sites require a DB upgrade. Check the ones you want to update "
 "and then click “Upgrade Database”."
 msgstr ""
-"O banco de dados dos sites abaixo precisam ser atualizados. Verifique os que "
-"você deseja atualizar e clique em “Atualizar Banco de Dados“"
+"Die folgenden Seiten erfordern eine Datenbank- Aktualisierung. Markieren Sie "
+"die gewünschten Seiten und klicken \\\"Aktualisiere Datenbank\\\"."
 
+# @ acf
 #: admin/views/update-network.php:19 admin/views/update-network.php:27
 msgid "Site"
-msgstr "Site"
+msgstr "Seite"
 
+# @ acf
 #: admin/views/update-network.php:47
 #, php-format
 msgid "Site requires database upgrade from %s to %s"
-msgstr "Site requer atualização do banco de dados da versão %s para %s"
+msgstr "Die Seite erfordert eine Datenbank-Aktualisierung von %s auf %s"
 
+# @ acf
 #: admin/views/update-network.php:49
 msgid "Site is up to date"
-msgstr "Site está atualizado"
+msgstr "Seite ist aktuell"
 
+# @ acf
 #: admin/views/update-network.php:62 admin/views/update.php:16
 msgid "Database Upgrade complete"
-msgstr "Atualização do Banco de Dados realizada"
+msgstr "Datenbank-Aktualisierung fertiggestellt"
 
+# @ acf
 #: admin/views/update-network.php:62
 msgid "Return to network dashboard"
-msgstr "Retornar para o painel da rede"
+msgstr "Zum Netzwerk Dashboard"
 
 # @ acf
 #: admin/views/update-network.php:101 admin/views/update-notice.php:35
@@ -1532,27 +1570,29 @@ msgid ""
 "It is strongly recommended that you backup your database before proceeding. "
 "Are you sure you wish to run the updater now?"
 msgstr ""
-"É altamente recomendado fazer um backup do seu banco de dados antes de "
-"continuar. Você tem certeza que deseja executar o atualizador agora?"
+"Es wird dringend dazu angeraten, dass Sie Ihre Datenbank sichern, bevor Sie "
+"fortfahren. Sind Sie sicher, dass Sie die Aktualisierung jetzt durchführen "
+"wollen?"
 
+# @ default
 #: admin/views/update-network.php:157
 msgid "Upgrade complete"
-msgstr "Atualização realizada"
+msgstr "Aktualisierung abgeschlossen"
 
 #: admin/views/update-network.php:161
 msgid "Upgrading data to"
-msgstr "Atualizando dados para a versão"
+msgstr "Aktualisiere Daten auf"
 
 # @ acf
 #: admin/views/update-notice.php:23
 msgid "Database Upgrade Required"
-msgstr "Atualização do Banco de Dados Necessária"
+msgstr "Es ist eine Datenbank-Aktualisierung notwendig"
 
 # @ acf
 #: admin/views/update-notice.php:25
 #, php-format
 msgid "Thank you for updating to %s v%s!"
-msgstr "Obrigado por atualizar para o %s v%s!"
+msgstr "Danke für die Aktualisierung auf %s v%s!"
 
 # @ acf
 #: admin/views/update-notice.php:25
@@ -1560,118 +1600,126 @@ msgid ""
 "Before you start using the new awesome features, please update your database "
 "to the newest version."
 msgstr ""
-"Antes de começar a utilizar as novas e incríveis funcionalidades, por favor "
-"atualize seus banco de dados para a versão mais recente."
+"Bevor Sie die tollen neuen Funktionen nutzen können muss die Datenbank "
+"aktualisiert werden."
 
 # @ acf
 #: admin/views/update.php:12
 msgid "Reading upgrade tasks..."
-msgstr "Lendo as tarefas de atualização..."
+msgstr "Lese anstehende Aufgaben für die Aktualisierung..."
 
 # @ acf
 #: admin/views/update.php:14
 #, php-format
 msgid "Upgrading data to version %s"
-msgstr "Atualizando os dados para a versão %s"
+msgstr "Aktualisiere Daten auf Version %s"
 
 # @ acf
 #: admin/views/update.php:16
 msgid "See what's new"
-msgstr "Veja o que há de novo"
+msgstr "Was ist neu"
 
+# @ acf
 #: admin/views/update.php:110
 msgid "No updates available"
-msgstr "Nenhuma atualização disponível"
+msgstr "Keine Aktualisierungen verfügbar"
 
 # @ acf
 #: api/api-helpers.php:876
 msgid "Thumbnail"
-msgstr "Miniatura"
+msgstr "Miniaturbild"
 
 # @ acf
 #: api/api-helpers.php:877
 msgid "Medium"
-msgstr "Média"
+msgstr "Mittel"
 
 # @ acf
 #: api/api-helpers.php:878
 msgid "Large"
-msgstr "Grande"
+msgstr "Groß"
 
 # @ acf
 #: api/api-helpers.php:926
 msgid "Full Size"
-msgstr "Tamanho Original"
+msgstr "Volle Größe"
 
+# @ acf
 #: api/api-helpers.php:1636
 msgid "(no title)"
-msgstr "(sem título)"
+msgstr "(ohne Titel)"
 
+# @ acf
 #: api/api-helpers.php:3247
 #, php-format
 msgid "Image width must be at least %dpx."
-msgstr "A largura da imagem deve ter pelo menos %dpx."
+msgstr "Die Breite des Bildes muss mindestens %dpx sein."
 
+# @ acf
 #: api/api-helpers.php:3252
 #, php-format
 msgid "Image width must not exceed %dpx."
-msgstr "A largura da imagem não pode ser maior que %dpx."
+msgstr "Die Breite des Bildes darf %dpx nicht überschreiten."
 
+# @ acf
 #: api/api-helpers.php:3268
 #, php-format
 msgid "Image height must be at least %dpx."
-msgstr "A altura da imagem deve ter pelo menos %dpx."
+msgstr "Die Höhe des Bildes muss mindestens %dpx sein."
 
+# @ acf
 #: api/api-helpers.php:3273
 #, php-format
 msgid "Image height must not exceed %dpx."
-msgstr "A altura da imagem não pode ser maior que %dpx."
+msgstr "Die Höhe des Bild darf %dpx nicht überschreiten."
 
+# @ acf
 #: api/api-helpers.php:3291
 #, php-format
 msgid "File size must be at least %s."
-msgstr "O tamanho do arquivo deve ter pelo menos %s."
+msgstr "Die Dateigröße muss mindestens %s sein."
 
+# @ acf
 #: api/api-helpers.php:3296
 #, php-format
 msgid "File size must must not exceed %s."
-msgstr "O tamanho do arquivo não pode ser maior que %s."
+msgstr "Die Dateigröße darf %s nicht überschreiten."
 
 # @ acf
 #: api/api-helpers.php:3330
 #, php-format
 msgid "File type must be %s."
-msgstr "O tipo de arquivo deve ser %s."
+msgstr "Der Dateityp muss %s sein."
 
 # @ acf
 #: api/api-template.php:1262 pro/fields/gallery.php:572
 msgid "Update"
-msgstr "Atualizar"
+msgstr "Aktualisieren"
 
 # @ acf
 #: api/api-template.php:1263
 msgid "Post updated"
-msgstr "Post atualizado"
+msgstr "Beitrag aktualisiert"
 
 # @ acf
 #: core/field.php:131
 msgid "Basic"
-msgstr "Básico"
+msgstr "Grundlage"
 
 # @ acf
 #: core/field.php:132
 msgid "Content"
-msgstr "Conteúdo"
+msgstr "Inhalt"
 
 # @ acf
 #: core/field.php:133
 msgid "Choice"
-msgstr "Escolha"
+msgstr "Auswahl"
 
 # @ acf
 #: core/field.php:134
 msgid "Relational"
-msgstr "Relacional"
+msgstr "Relational"
 
 # @ acf
 #: core/field.php:135
@@ -1688,41 +1736,43 @@ msgstr "Layout"
 # @ acf
 #: core/input.php:129
 msgid "Expand Details"
-msgstr "Expandir Detalhes"
+msgstr "Details einblenden"
 
 # @ acf
 #: core/input.php:130
 msgid "Collapse Details"
-msgstr "Recolher Detalhes"
+msgstr "Details ausblenden"
 
 # @ acf
 #: core/input.php:131
 msgid "Validation successful"
-msgstr "Validação realizada com sucesso"
+msgstr "Überprüfung erfolgreich"
 
 # @ acf
 #: core/input.php:132
 msgid "Validation failed"
-msgstr "Falha na validação"
+msgstr "Überprüfung fehlgeschlagen"
 
+# @ acf
 #: core/input.php:133
 msgid "1 field requires attention"
-msgstr "1 campo requer sua atenção"
+msgstr "Für 1 Feld ist eine Aktualisierung notwendig"
 
+# @ acf
 #: core/input.php:134
 #, php-format
 msgid "%d fields require attention"
-msgstr "%d campos requerem sua atenção"
+msgstr "Für %d Felder ist eine Aktualisierung notwendig"
 
 #: core/input.php:135
 msgid "Restricted"
-msgstr "Restrito"
+msgstr "Eingeschränkt"
 
 # @ acf
 #: core/input.php:533
 #, php-format
 msgid "%s value is required"
-msgstr "É necessário preencher o campo %s"
+msgstr "%s Wert ist notwendig"
 
 # @ acf
 #: fields/checkbox.php:36 fields/taxonomy.php:778
@@ -1732,29 +1782,29 @@ msgstr "Checkbox"
 # @ acf
 #: fields/checkbox.php:144
 msgid "Toggle All"
-msgstr "Selecionar Tudo"
+msgstr "Alle auswählen"
 
 # @ acf
 #: fields/checkbox.php:208 fields/radio.php:193 fields/select.php:373
 msgid "Choices"
-msgstr "Escolhas"
+msgstr "Auswahlmöglichkeiten"
 
 # @ acf
 #: fields/checkbox.php:209 fields/radio.php:194 fields/select.php:374
 msgid "Enter each choice on a new line."
-msgstr "Digite cada opção em uma nova linha."
+msgstr "Jede Auswahlmöglichkeit in separater Zeile eingeben."
 
 # @ acf
 #: fields/checkbox.php:209 fields/radio.php:194 fields/select.php:374
 msgid "For more control, you may specify both a value and label like this:"
 msgstr ""
-"Para mais controle, você pode especificar tanto os valores quanto os "
-"rótulos, como nos exemplos:"
+"Für eine bessere Darstellung, können Sie auch einen Wert und dazu dessen "
+"Beschriftung definieren:"
 
 # @ acf
 #: fields/checkbox.php:209 fields/radio.php:194 fields/select.php:374
 msgid "red : Red"
-msgstr "vermelho : Vermelho"
+msgstr "rot : Rot"
 
 # @ acf
 #: fields/checkbox.php:217 fields/color_picker.php:158 fields/email.php:124
@@ -1762,17 +1812,17 @@ msgstr "vermelho : Vermelho"
 #: fields/text.php:148 fields/textarea.php:145 fields/true_false.php:115
 #: fields/url.php:117 fields/wysiwyg.php:362
 msgid "Default Value"
-msgstr "Valor Padrão"
+msgstr "Standardwert"
 
 # @ acf
 #: fields/checkbox.php:218 fields/select.php:383
 msgid "Enter each default value on a new line"
-msgstr "Digite cada valor padrão em uma nova linha"
+msgstr "Jeden Standardwert in einer neuen Zeile eingeben"
 
 # @ acf
 #: fields/checkbox.php:232 fields/radio.php:237
 msgid "Vertical"
-msgstr "Vertical"
+msgstr "Vertikal"
 
 # @ acf
 #: fields/checkbox.php:233 fields/radio.php:238
@@ -1781,279 +1831,285 @@ msgstr "Horizontal"
 
 #: fields/checkbox.php:240
 msgid "Toggle"
-msgstr "Selecionar Tudo"
+msgstr "Auswählen"
 
 #: fields/checkbox.php:241
 msgid "Prepend an extra checkbox to toggle all choices"
-msgstr "Inclui um checkbox extra que marca (ou desmarca) todas as opções"
+msgstr ""
+"Hänge eine zusätzliche Checkbox an mit der man alle Optionen auswählen kann"
 
 # @ acf
 #: fields/color_picker.php:36
 msgid "Color Picker"
-msgstr "Seletor de Cor"
+msgstr "Farbe"
 
-# @ default
+# @ acf
 #: fields/color_picker.php:94
 msgid "Clear"
-msgstr "Limpar"
+msgstr "Leeren"
 
-# @ default
+# @ acf
 #: fields/color_picker.php:95
 msgid "Default"
-msgstr "Padrão"
+msgstr "Standard"
 
-# @ default
+# @ acf
 #: fields/color_picker.php:96
 msgid "Select Color"
-msgstr "Selecionar cor"
+msgstr "Farbe auswählen"
 
 # @ acf
 #: fields/date_picker.php:36
 msgid "Date Picker"
-msgstr "Seletor de Datas"
+msgstr "Datum"
 
 # @ acf
 #: fields/date_picker.php:72
 msgid "Done"
-msgstr "Concluído"
+msgstr "Fertig"
 
 # @ acf
 #: fields/date_picker.php:73
 msgid "Today"
-msgstr "Hoje"
+msgstr "Heute"
 
 # @ acf
 #: fields/date_picker.php:76
 msgid "Show a different month"
-msgstr "Mostrar um mês diferente"
+msgstr "Zeige einen anderen Monat"
 
 # @ acf
 #: fields/date_picker.php:149
 msgid "Display format"
-msgstr "Formato de exibição"
+msgstr "Darstellungs-Format"
 
 # @ acf
 #: fields/date_picker.php:150
 msgid "The format displayed when editing a post"
-msgstr "O formato que será exibido enquanto se edita um post"
+msgstr "Das Datums-Format für die Anzeige in der Bearbeitungs-Ansicht"
 
 # @ acf
 #: fields/date_picker.php:164
 msgid "Return format"
-msgstr "Formato retornado"
+msgstr "Rückgabe-Format"
 
 # @ acf
 #: fields/date_picker.php:165
 msgid "The format returned via template functions"
-msgstr "O formato que será retornado através das funções de template"
+msgstr "Das Datums-Format für die Ausgabe in den Template-Funktionen"
 
 # @ acf
 #: fields/date_picker.php:180
 msgid "Week Starts On"
-msgstr "Semana começa em"
+msgstr "Die Woche beginnt am"
 
 # @ acf
 #: fields/email.php:36
 msgid "Email"
-msgstr "Email"
+msgstr "E-Mail"
 
 # @ acf
 #: fields/email.php:125 fields/number.php:151 fields/radio.php:223
 #: fields/text.php:149 fields/textarea.php:146 fields/url.php:118
 #: fields/wysiwyg.php:363
 msgid "Appears when creating a new post"
-msgstr "Aparece quando é criado o novo post"
+msgstr "Erscheint bei der Erstellung eines neuen Beitrags"
 
 # @ acf
 #: fields/email.php:133 fields/number.php:159 fields/password.php:137
 #: fields/text.php:157 fields/textarea.php:154 fields/url.php:126
 msgid "Placeholder Text"
-msgstr "Texto Placeholder"
+msgstr "Platzhalter-Text"
 
 # @ acf
 #: fields/email.php:134 fields/number.php:160 fields/password.php:138
 #: fields/text.php:158 fields/textarea.php:155 fields/url.php:127
 msgid "Appears within the input"
-msgstr "Texto que aparecerá dentro do campo (até que algo seja digitado)"
+msgstr "Platzhalter-Text solange keine Eingabe im Feld vorgenommen wurde"
 
 # @ acf
 #: fields/email.php:142 fields/number.php:168 fields/password.php:146
 #: fields/text.php:166
 msgid "Prepend"
-msgstr "Prefixo"
+msgstr "Voranstellen"
 
 # @ acf
 #: fields/email.php:143 fields/number.php:169 fields/password.php:147
 #: fields/text.php:167
 msgid "Appears before the input"
-msgstr "Texto que aparecerá antes do campo"
+msgstr "Wird dem Eingabefeld vorangestellt"
 
 # @ acf
 #: fields/email.php:151 fields/number.php:177 fields/password.php:155
 #: fields/text.php:175
 msgid "Append"
-msgstr "Sufixo"
+msgstr "Anhängen"
 
 # @ acf
 #: fields/email.php:152 fields/number.php:178 fields/password.php:156
 #: fields/text.php:176
 msgid "Appears after the input"
-msgstr "Texto que aparecerá após o campo"
+msgstr "Wird dem Eingabefeld hinten angestellt"
 
 # @ acf
 #: fields/file.php:36
 msgid "File"
-msgstr "Arquivo"
+msgstr "Datei"
 
 # @ acf
 #: fields/file.php:47
 msgid "Edit File"
-msgstr "Editar Arquivo"
+msgstr "Datei bearbeiten"
 
 # @ acf
 #: fields/file.php:48
 msgid "Update File"
-msgstr "Atualizar Arquivo"
+msgstr "Datei aktualisieren"
 
 # @ acf
 #: fields/file.php:49 pro/fields/gallery.php:55
 msgid "uploaded to this post"
-msgstr "anexada a este post"
+msgstr "zu diesem Beitrag hochgeladen"
 
 # @ acf
 #: fields/file.php:142
 msgid "File Name"
-msgstr "Nome do Arquivo"
+msgstr "Dateiname"
 
 # @ acf
 #: fields/file.php:146
 msgid "File Size"
-msgstr "Tamanho do Arquivo"
+msgstr "Dateigröße"
 
 # @ acf
 #: fields/file.php:169
 msgid "No File selected"
-msgstr "Nenhum Arquivo selecionado"
+msgstr "Keine Datei ausgewählt"
 
 # @ acf
 #: fields/file.php:169
 msgid "Add File"
-msgstr "Adicionar Arquivo"
+msgstr "Datei hinzufügen"
 
 # @ acf
 #: fields/file.php:214 fields/image.php:195 fields/taxonomy.php:847
 msgid "Return Value"
-msgstr "Valor Retornado"
+msgstr "Rückgabewert"
 
 # @ acf
 #: fields/file.php:215 fields/image.php:196
 msgid "Specify the returned value on front end"
-msgstr "Especifique a forma com os valores serão retornados no front-end"
+msgstr "Legt den Rückgabewert für das Front-End fest"
 
 # @ acf
 #: fields/file.php:220
 msgid "File Array"
-msgstr "Array do arquivo"
+msgstr "Datei-Array"
 
 # @ acf
 #: fields/file.php:221
 msgid "File URL"
-msgstr "URL do Arquivo"
+msgstr "Datei-URL"
 
 # @ acf
 #: fields/file.php:222
 msgid "File ID"
-msgstr "ID do Arquivo"
+msgstr "Datei-ID"
 
 # @ acf
 #: fields/file.php:229 fields/image.php:220 pro/fields/gallery.php:655
 msgid "Library"
-msgstr "Biblioteca"
+msgstr "Medienübersicht"
 
 # @ acf
 #: fields/file.php:230 fields/image.php:221 pro/fields/gallery.php:656
 msgid "Limit the media library choice"
-msgstr "Determinar a escolha da biblioteca de mídia"
+msgstr "Beschränkt die Auswahl in der Medienübersicht"
 
 # @ acf
 #: fields/file.php:236 fields/image.php:227 pro/fields/gallery.php:662
 msgid "Uploaded to post"
-msgstr "Anexado ao post"
+msgstr "Für den Beitrag hochgeladen"
 
 # @ acf
 #: fields/file.php:243 fields/image.php:234 pro/fields/gallery.php:669
 msgid "Minimum"
-msgstr "Valores Mínimos"
+msgstr "Minimum"
 
+# @ acf
 #: fields/file.php:244 fields/file.php:255
 msgid "Restrict which files can be uploaded"
-msgstr "Limita os arquivos que poderão ser carregados"
+msgstr ""
+"Erlaubt nur das Hochladen von Dateien die die angegebenen Eigenschaften "
+"erfüllen"
 
 # @ acf
 #: fields/file.php:247 fields/file.php:258 fields/image.php:257
 #: fields/image.php:290 pro/fields/gallery.php:692 pro/fields/gallery.php:725
 msgid "File size"
-msgstr "Tamanho"
+msgstr "Dateigröße"
 
 # @ acf
 #: fields/file.php:254 fields/image.php:267 pro/fields/gallery.php:702
 msgid "Maximum"
-msgstr "Valores Máximos"
+msgstr "Maximum"
 
 # @ acf
 #: fields/file.php:265 fields/image.php:300 pro/fields/gallery.php:735
 msgid "Allowed file types"
-msgstr "Tipos de arquivos permitidos"
+msgstr "Erlaubte Datei-Formate"
 
+# @ acf
 #: fields/file.php:266 fields/image.php:301 pro/fields/gallery.php:736
 msgid "Comma separated list. Leave blank for all types"
-msgstr "Lista separada por vírgulas. Deixe em branco para todos os tipos"
+msgstr ""
+"Komma separierte Liste; ein leeres Feld bedeutet alle Dateiformate sind "
+"erlaubt"
 
 # @ acf
 #: fields/google-map.php:36
 msgid "Google Map"
-msgstr "Mapa do Google"
+msgstr "Google Maps"
 
 # @ acf
 #: fields/google-map.php:51
 msgid "Locating"
-msgstr "Localizando"
+msgstr "Lokalisiere"
 
 # @ acf
 #: fields/google-map.php:52
 msgid "Sorry, this browser does not support geolocation"
-msgstr ""
-"Lamentamos, mas o seu navegador não suporta o recurso de geolocalização"
+msgstr "Dieser Browser unterstützt keine Geo-Lokation"
 
 # @ acf
 #: fields/google-map.php:133 fields/relationship.php:722
 msgid "Search"
-msgstr "Pesquisa"
+msgstr "Suchen"
 
 # @ acf
 #: fields/google-map.php:134
 msgid "Clear location"
-msgstr "Limpar a localização"
+msgstr "Position löschen"
 
 # @ acf
 #: fields/google-map.php:135
 msgid "Find current location"
-msgstr "Encontre a localização atual"
+msgstr "Aktuelle Position finden"
 
 # @ acf
 #: fields/google-map.php:138
 msgid "Search for address..."
-msgstr "Pesquisar endereço..."
+msgstr "Nach der Adresse suchen..."
 
 # @ acf
 #: fields/google-map.php:168 fields/google-map.php:179
 msgid "Center"
-msgstr "Centro"
+msgstr "Kartenmittelpunkt"
 
 # @ acf
 #: fields/google-map.php:169 fields/google-map.php:180
 msgid "Center the initial map"
-msgstr "Centro inicial do mapa"
+msgstr "Der Mittelpunkt der Ausgangskarte"
 
 # @ acf
 #: fields/google-map.php:193
@@ -2063,170 +2119,176 @@ msgstr "Zoom"
 # @ acf
 #: fields/google-map.php:194
 msgid "Set the initial zoom level"
-msgstr "Definir o nível do zoom inicial"
+msgstr "Legt die Zoomstufe der Karte fest"
 
 # @ acf
 #: fields/google-map.php:203 fields/image.php:246 fields/image.php:279
 #: fields/oembed.php:262 pro/fields/gallery.php:681 pro/fields/gallery.php:714
 msgid "Height"
-msgstr "Altura"
+msgstr "Höhe"
 
 # @ acf
 #: fields/google-map.php:204
 msgid "Customise the map height"
-msgstr "Personalizar a altura do mapa"
+msgstr "Legt die Höhe der Karte fest"
 
 # @ acf
 #: fields/image.php:36
 msgid "Image"
-msgstr "Imagem"
+msgstr "Bild"
 
 # @ acf
 #: fields/image.php:51
 msgid "Select Image"
-msgstr "Selecionar Imagem"
+msgstr "Bild auswählen"
 
 # @ acf
 #: fields/image.php:52 pro/fields/gallery.php:53
 msgid "Edit Image"
-msgstr "Editar Imagem"
+msgstr "Bild bearbeiten"
 
 # @ acf
 #: fields/image.php:53 pro/fields/gallery.php:54
 msgid "Update Image"
-msgstr "Atualizar Imagem"
+msgstr "Bild aktualisieren"
 
 # @ acf
 #: fields/image.php:54
 msgid "Uploaded to this post"
-msgstr "Anexada a este post"
+msgstr "Zu diesem Beitrag hochgeladen"
 
 # @ acf
 #: fields/image.php:55
 msgid "All images"
-msgstr "Todas as imagens"
+msgstr "Alle Bilder"
 
 # @ acf
 #: fields/image.php:147
 msgid "No image selected"
-msgstr "Nenhuma imagem selecionada"
+msgstr "Kein Bild ausgewählt"
 
 # @ acf
 #: fields/image.php:147
 msgid "Add Image"
-msgstr "Adicionar Imagem"
+msgstr "Bild hinzufügen"
 
 # @ acf
 #: fields/image.php:201
 msgid "Image Array"
-msgstr "Array da Imagem"
+msgstr "Bild-Array"
 
 # @ acf
 #: fields/image.php:202
 msgid "Image URL"
-msgstr "URL da Imagem"
+msgstr "Bild-URL"
 
 # @ acf
 #: fields/image.php:203
 msgid "Image ID"
-msgstr "ID da Imagem"
+msgstr "Bild-ID"
 
 # @ acf
 #: fields/image.php:210 pro/fields/gallery.php:645
 msgid "Preview Size"
-msgstr "Tamanho da Pré-visualização"
+msgstr "Maße der Vorschau"
 
 # @ acf
 #: fields/image.php:211 pro/fields/gallery.php:646
 msgid "Shown when entering data"
-msgstr "Exibido ao inserir os dados"
+msgstr "Legt fest welche Maße die Vorschau in der Bearbeitungs-Ansicht hat"
 
+# @ acf
 #: fields/image.php:235 fields/image.php:268 pro/fields/gallery.php:670
 #: pro/fields/gallery.php:703
 msgid "Restrict which images can be uploaded"
-msgstr "Limita as imagens que poderão ser carregadas"
+msgstr ""
+"Erlaubt nur das Hochladen von Bildern die die angegebenen Eigenschaften "
+"erfüllen"
 
+# @ acf
 #: fields/image.php:238 fields/image.php:271 fields/oembed.php:251
 #: pro/fields/gallery.php:673 pro/fields/gallery.php:706
 msgid "Width"
-msgstr "Largura"
+msgstr "Breite"
 
 # @ acf
 #: fields/message.php:36 fields/message.php:116 fields/true_false.php:106
 msgid "Message"
-msgstr "Mensagem"
+msgstr "Nachricht"
 
 # @ acf
 #: fields/message.php:125 fields/textarea.php:182
 msgid "New Lines"
-msgstr "Novas Linhas"
+msgstr "Neue Zeilen"
 
 # @ acf
 #: fields/message.php:126 fields/textarea.php:183
 msgid "Controls how new lines are rendered"
-msgstr "Controla como as novas linhas são renderizadas"
+msgstr "Legt fest wie Zeilenumbrüche gehandhabt werden"
 
 # @ acf
 #: fields/message.php:130 fields/textarea.php:187
 msgid "Automatically add paragraphs"
-msgstr "Adicionar parágrafos automaticamente"
+msgstr "Absätze automatisch hinzufügen"
 
 # @ acf
 #: fields/message.php:131 fields/textarea.php:188
 msgid "Automatically add &lt;br&gt;"
-msgstr "Adicionar &lt;br&gt; automaticamente"
+msgstr "Zeilenumbrüche ( &lt;br&gt; ) automatisch hinzufügen"
 
 # @ acf
 #: fields/message.php:132 fields/textarea.php:189
 msgid "No Formatting"
-msgstr "Sem Formatação"
+msgstr "Keine Formatierung"
 
+# @ acf
 #: fields/message.php:139
 msgid "Escape HTML"
-msgstr "Ignorar HTML"
+msgstr "HTML enkodieren"
 
+# @ acf
 #: fields/message.php:140
 msgid "Allow HTML markup to display as visible text instead of rendering"
 msgstr ""
-"Permitir que a marcação HTML seja exibida como texto ao invés de ser "
-"renderizada"
+"Bei aktiver Option wird HTML Code als solcher angezeigt und nicht "
+"interpretiert"
 
 # @ acf
 #: fields/number.php:36
 msgid "Number"
-msgstr "Número"
+msgstr "Numerisch"
 
 # @ acf
 #: fields/number.php:186
 msgid "Minimum Value"
-msgstr "Valor Mínimo"
+msgstr "Mindestwert"
 
 # @ acf
 #: fields/number.php:195
 msgid "Maximum Value"
-msgstr "Valor Máximo"
+msgstr "Maximalwert"
 
 # @ acf
 #: fields/number.php:204
 msgid "Step Size"
-msgstr "Tamanho das frações"
+msgstr "Schrittweite"
 
 # @ acf
 #: fields/number.php:242
 msgid "Value must be a number"
-msgstr "O valor deve ser um número"
+msgstr "Wert muss eine Zahl sein"
 
 # @ acf
 #: fields/number.php:260
 #, php-format
 msgid "Value must be equal to or higher than %d"
-msgstr "O valor deve ser igual ou maior que %d"
+msgstr "Wert muss größer oder gleich %d sein"
 
 # @ acf
 #: fields/number.php:268
 #, php-format
 msgid "Value must be equal to or lower than %d"
-msgstr "O valor deve ser igual ou menor que %d"
+msgstr "Wert muss kleiner oder gleich %d sein"
 
 # @ acf
 #: fields/oembed.php:36
@@ -2236,199 +2298,199 @@ msgstr "oEmbed"
 # @ acf
 #: fields/oembed.php:199
 msgid "Enter URL"
-msgstr "Digite a URL"
+msgstr "URL eingeben"
 
 # @ acf
 #: fields/oembed.php:212
 msgid "No embed found for the given URL"
-msgstr "Nenhuma mídia incorporada encontrada na URL fornecida"
+msgstr "Keine Inhalte für die eingegebene URL gefunden"
 
 # @ acf
 #: fields/oembed.php:248 fields/oembed.php:259
 msgid "Embed Size"
-msgstr "Tamanho da Mídia incorporada"
+msgstr "Maße"
 
 # @ acf
 #: fields/page_link.php:197
 msgid "Archives"
-msgstr "Arquivos"
+msgstr "Archive"
 
 # @ acf
 #: fields/page_link.php:520 fields/post_object.php:386
 #: fields/relationship.php:689
 msgid "Filter by Post Type"
-msgstr "Filtrar por Tipo de Post"
+msgstr "Nach Post Types filtern"
 
 # @ acf
 #: fields/page_link.php:528 fields/post_object.php:394
 #: fields/relationship.php:697
 msgid "All post types"
-msgstr "Todos os tipos de posts"
+msgstr "Alle verfügbaren Post Types"
 
 # @ acf
 #: fields/page_link.php:534 fields/post_object.php:400
 #: fields/relationship.php:703
 msgid "Filter by Taxonomy"
-msgstr "Filtrar por Taxonomia"
+msgstr "Nach Taxonomien filtern"
 
 # @ acf
 #: fields/page_link.php:542 fields/post_object.php:408
 #: fields/relationship.php:711
 msgid "All taxonomies"
-msgstr "Todas as taxonomias"
+msgstr "Alle Taxonomien"
 
 # @ acf
 #: fields/page_link.php:548 fields/post_object.php:414 fields/select.php:391
 #: fields/taxonomy.php:791 fields/user.php:452
 msgid "Allow Null?"
-msgstr "Permitir Nulo?"
+msgstr "NULL-Werte zulassen?"
 
 # @ acf
 #: fields/page_link.php:562 fields/post_object.php:428 fields/select.php:405
 #: fields/user.php:466
 msgid "Select multiple values?"
-msgstr "Selecionar vários valores?"
+msgstr "Mehrere Werte auswählbar?"
 
 # @ acf
 #: fields/password.php:36
 msgid "Password"
-msgstr "Senha"
+msgstr "Passwort"
 
 # @ acf
 #: fields/post_object.php:36 fields/post_object.php:447
 #: fields/relationship.php:768
 msgid "Post Object"
-msgstr "Objeto do Post"
+msgstr "Beitrags-Objekt"
 
 # @ acf
 #: fields/post_object.php:442 fields/relationship.php:763
 msgid "Return Format"
-msgstr "Formato dos Dados"
+msgstr "Rückgabewert"
 
 # @ acf
 #: fields/post_object.php:448 fields/relationship.php:769
 msgid "Post ID"
-msgstr "ID do Post"
+msgstr "Beitrags-ID"
 
 # @ acf
 #: fields/radio.php:36
 msgid "Radio Button"
-msgstr "Botão de Rádio"
+msgstr "Radio-Button"
 
 # @ acf
 #: fields/radio.php:202
 msgid "Other"
-msgstr "Outro"
+msgstr "Sonstige"
 
 # @ acf
 #: fields/radio.php:206
 msgid "Add 'other' choice to allow for custom values"
 msgstr ""
-"Adicionar uma opção 'Outro' (que irá permitir a inserção de valores "
-"personalizados)"
+"Fügt die Option 'Sonstige' hinzu welche erlaubt benutzerdefinierte Werte "
+"hinzuzufügen"
 
 # @ acf
 #: fields/radio.php:212
 msgid "Save Other"
-msgstr "Salvar Outro"
+msgstr "'Sonstige' speichern"
 
 # @ acf
 #: fields/radio.php:216
 msgid "Save 'other' values to the field's choices"
-msgstr ""
-"Salvar os valores personalizados inseridos na opção 'Outros' na lista de "
-"escolhas"
+msgstr "Füge 'Sonstige'-Werte zu den Auswahl Optionen hinzu"
 
 # @ acf
 #: fields/relationship.php:36
 msgid "Relationship"
-msgstr "Relação"
+msgstr "Beziehung"
 
+# @ acf
 #: fields/relationship.php:48
 msgid "Minimum values reached ( {min} values )"
-msgstr "Quantidade mínima atingida ( {min} item(s) )"
+msgstr "Minimum der Einträge mit ({min} Einträge) erreicht"
 
 # @ acf
 #: fields/relationship.php:49
 msgid "Maximum values reached ( {max} values )"
-msgstr "Quantidade máxima atingida ( {max} item(s) )"
+msgstr "Maximum der Einträge mit ({max} Einträge) erreicht"
 
 # @ acf
 #: fields/relationship.php:50
 msgid "Loading"
-msgstr "Carregando"
+msgstr "Lade"
 
 # @ acf
 #: fields/relationship.php:51
 msgid "No matches found"
-msgstr "Nenhuma correspondência encontrada"
+msgstr "Keine Übereinstimmung gefunden"
 
 # @ acf
 #: fields/relationship.php:570
 msgid "Search..."
-msgstr "Pesquisar..."
+msgstr "Suchen..."
 
 # @ acf
 #: fields/relationship.php:579
 msgid "Select post type"
-msgstr "Selecione o tipo de post"
+msgstr "Beitrag-Typ auswählen"
 
 # @ acf
 #: fields/relationship.php:592
 msgid "Select taxonomy"
-msgstr "Selecione a taxonomia"
+msgstr "Taxonomie auswählen"
 
 # @ acf
 #: fields/relationship.php:724 fields/taxonomy.php:36 fields/taxonomy.php:761
 msgid "Taxonomy"
-msgstr "Taxonomia"
+msgstr "Taxonomie"
 
 # @ acf
 #: fields/relationship.php:731
 msgid "Elements"
-msgstr "Elementos"
+msgstr "Elemente"
 
 # @ acf
 #: fields/relationship.php:732
 msgid "Selected elements will be displayed in each result"
-msgstr "Os elementos selecionados serão exibidos em cada resultado do filtro"
+msgstr "Die ausgewählten Elemente werden in jedem Ergebnis mit angezeigt"
 
+# @ acf
 #: fields/relationship.php:743
 msgid "Minimum posts"
-msgstr "Qtde. mínima de posts"
+msgstr "Min. Anzahl der Beiträge"
 
 # @ acf
 #: fields/relationship.php:752
 msgid "Maximum posts"
-msgstr "Qtde. máxima de posts"
+msgstr "Max. Anzahl der Beiträge"
 
 # @ acf
 #: fields/relationship.php:856 pro/fields/gallery.php:817
 #, php-format
 msgid "%s requires at least %s selection"
 msgid_plural "%s requires at least %s selections"
-msgstr[0] "%s requer a seleção de ao menos %s item"
-msgstr[1] "%s requer a seleção de ao menos %s itens"
+msgstr[0] "%s benötigt mindestens %s Selektion"
+msgstr[1] "%s benötigt mindestens %s Selektionen"
 
 # @ acf
 #: fields/select.php:36 fields/select.php:174 fields/taxonomy.php:783
 msgid "Select"
-msgstr "Seleção"
+msgstr "Auswahlmenü"
 
 # @ acf
 #: fields/select.php:419
 msgid "Stylised UI"
-msgstr "Interface do campo aprimorada"
+msgstr "Modernes Auswahlfeld"
 
 # @ acf
 #: fields/select.php:433
 msgid "Use AJAX to lazy load choices?"
-msgstr "Utilizar AJAX para carregar opções demoradas?"
+msgstr "AJAX zum Laden der Einträge aktivieren"
 
 # @ acf
 #: fields/tab.php:36
 msgid "Tab"
-msgstr "Aba"
+msgstr "Tab"
 
 # @ acf
 #: fields/tab.php:128
@@ -2436,8 +2498,8 @@ msgid ""
 "The tab field will display incorrectly when added to a Table style repeater "
 "field or flexible content field layout"
 msgstr ""
-"O campo Aba será exibido incorretamente quando adicionado em um layout do "
-"tipo Tabela de campos repetidores ou de conteúdos flexíveis"
+"Ein Tab-Feld wird nicht korrekt dargestellt, wenn es zu einem Wiederholung- "
+"oder Flexible-Inhalte-Feld im Tabellen-Layout eingebunden ist"
 
 # @ acf
 #: fields/tab.php:129
@@ -2445,8 +2507,8 @@ msgid ""
 "Use \"Tab Fields\" to better organize your edit screen by grouping fields "
 "together."
 msgstr ""
-"Utilize o campo \"Aba\" para agrupar seus campos e organizar melhor sua tela "
-"de edição."
+"Mit \"Tab Feldern\" können Felder für eine bessere Struktur im Editor in "
+"Tabs zusammengefasst werden."
 
 # @ acf
 #: fields/tab.php:130
@@ -2455,223 +2517,239 @@ msgid ""
 "defined) will be grouped together using this field's label as the tab "
 "heading."
 msgstr ""
-"Todos os campos que seguirem este campo \"Aba\" (ou até que outra \"Aba\" "
-"seja definida) ficarão juntos em um grupo que utilizará o rótulo deste campo "
-"como título da guia."
+"Alle Felder, die auf dieses \"Tab Feld\" folgen (oder bis ein weiteres \"Tab "
+"Feld\" definiert ist), werden in einem Tab mit dem Namen dieses Felds "
+"zusammengefasst."
 
 # @ acf
 #: fields/tab.php:144
 msgid "Placement"
-msgstr "Posicionamento"
+msgstr "Platzierung Tabs"
 
 #: fields/tab.php:156
 msgid "End-point"
-msgstr "Ponto final"
+msgstr "Abschluss"
 
 #: fields/tab.php:157
 msgid "Use this field as an end-point and start a new group of tabs"
-msgstr ""
-"Utilizar este campo como um ponto final e iniciar um novo grupo de abas"
+msgstr "Benutze das Feld als einen Abschluss und starte eine Gruppe an Tabs"
 
+# @ acf
 #: fields/taxonomy.php:591
 #, php-format
 msgid "Add new %s "
-msgstr "Adicionar novo(a) %s "
+msgstr "Neue %s "
 
 # @ acf
 #: fields/taxonomy.php:730
 msgid "None"
-msgstr "Nenhuma"
+msgstr "Nur Text"
 
+# @ acf
 #: fields/taxonomy.php:762
 msgid "Select the taxonomy to be displayed"
-msgstr "Selecione a taxonomia que será exibida"
+msgstr "Wähle die Taxonomie, welche angezeigt werden soll"
 
+# @ acf
 #: fields/taxonomy.php:771
 msgid "Appearance"
-msgstr "Aparência"
+msgstr "Anzeige"
 
+# @ acf
 #: fields/taxonomy.php:772
 msgid "Select the appearance of this field"
-msgstr "Selecione a aparência deste campo"
+msgstr "Wähle das Aussehen für dieses Feld"
 
 # @ acf
 #: fields/taxonomy.php:777
 msgid "Multiple Values"
-msgstr "Vários valores"
+msgstr "Mehrere Werte auswählen?"
 
 # @ acf
 #: fields/taxonomy.php:779
 msgid "Multi Select"
-msgstr "Seleção Múltipla"
+msgstr "Auswahlmenü"
 
 # @ acf
 #: fields/taxonomy.php:781
 msgid "Single Value"
-msgstr "Um único valor"
+msgstr "Einzelne Werte"
 
 # @ acf
 #: fields/taxonomy.php:782
 msgid "Radio Buttons"
-msgstr "Botões de Rádio"
+msgstr "Radio Button"
 
+# @ acf
 #: fields/taxonomy.php:805
 msgid "Create Terms"
-msgstr "Criar Termos"
+msgstr "Neue Einträge erlauben"
 
+# @ acf
 #: fields/taxonomy.php:806
 msgid "Allow new terms to be created whilst editing"
-msgstr "Permite que novos termos sejam criados diretamente na tela de edição"
+msgstr "Erlaube das Erstellen neuer Einträge beim Editieren"
 
 #: fields/taxonomy.php:819
 msgid "Save Terms"
-msgstr "Salvar Termos"
+msgstr "Einträge speichern"
 
+# @ acf
 #: fields/taxonomy.php:820
 msgid "Connect selected terms to the post"
-msgstr "Atribui e conecta os termos selecionados ao post"
+msgstr "Speichert die ausgewählten Einträge auch im Beitrag"
 
 #: fields/taxonomy.php:833
 msgid "Load Terms"
-msgstr "Carregar Termos"
+msgstr "Einträge laden"
 
 #: fields/taxonomy.php:834
 msgid "Load value from posts terms"
-msgstr "Carrega os termos que estão atribuídos ao post"
+msgstr "Den Wert von den Einträgen des Beitrags laden"
 
 # @ acf
 #: fields/taxonomy.php:852
 msgid "Term Object"
-msgstr "Objeto do Termo"
+msgstr "Begriffs-Objekt"
 
 # @ acf
 #: fields/taxonomy.php:853
 msgid "Term ID"
-msgstr "ID do Termo"
+msgstr "Begriffs-ID"
 
+# @ acf
 #: fields/taxonomy.php:912
 #, php-format
 msgid "User unable to add new %s"
-msgstr "Usuário incapaz de adicionar novo(a) %s"
+msgstr "Der Benutzer kann keine neue %s hinzufügen"
 
+# @ acf
 #: fields/taxonomy.php:925
 #, php-format
 msgid "%s already exists"
-msgstr "%s já existe"
+msgstr "%s ist bereits vorhanden"
 
+# @ acf
 #: fields/taxonomy.php:966
 #, php-format
 msgid "%s added"
-msgstr "%s adicionado(a)"
+msgstr "%s hinzugefügt"
 
+# @ acf
 #: fields/taxonomy.php:1011
 msgid "Add"
-msgstr "Adicionar"
+msgstr "Hinzufügen"
 
 # @ acf
 #: fields/text.php:36
 msgid "Text"
-msgstr "Texto"
+msgstr "Text einzeilig"
 
 # @ acf
 #: fields/text.php:184 fields/textarea.php:163
 msgid "Character Limit"
-msgstr "Limite de Caracteres"
+msgstr "Zeichenbegrenzung"
 
 # @ acf
 #: fields/text.php:185 fields/textarea.php:164
 msgid "Leave blank for no limit"
-msgstr "Deixe em branco para nenhum limite"
+msgstr "Ein leeres Eingabefeld bedeutet keine Begrenzung"
 
 # @ acf
 #: fields/textarea.php:36
 msgid "Text Area"
-msgstr "Área de Texto"
+msgstr "Text mehrzeilig"
 
 # @ acf
 #: fields/textarea.php:172
 msgid "Rows"
-msgstr "Linhas"
+msgstr "Zeilenanzahl"
 
 # @ acf
 #: fields/textarea.php:173
 msgid "Sets the textarea height"
-msgstr "Define a altura da área de texto"
+msgstr "Definiert die Höhe des Textfelds"
 
 # @ acf
 #: fields/true_false.php:36
 msgid "True / False"
-msgstr "Verdadeiro / Falso"
+msgstr "Ja/Nein"
 
 # @ acf
 #: fields/true_false.php:107
 msgid "eg. Show extra content"
-msgstr "ex.: Mostrar conteúdo adicional"
+msgstr "z.B. Zeige zusätzliche Inhalte"
 
+# @ acf
 #: fields/url.php:36
 msgid "Url"
-msgstr "Url"
+msgstr "URL"
 
+# @ acf
 #: fields/url.php:168
 msgid "Value must be a valid URL"
-msgstr "Você deve fornecer uma URL válida"
+msgstr "Bitte eine gültige URL eingeben"
 
 # @ acf
 #: fields/user.php:437
 msgid "Filter by role"
-msgstr "Filtrar por função"
+msgstr "Filtere nach Benutzerrollen"
 
 # @ acf
 #: fields/user.php:445
 msgid "All user roles"
-msgstr "Todas as funções de usuários"
+msgstr "Alle Benutzerrollen"
 
 # @ acf
 #: fields/wysiwyg.php:37
 msgid "Wysiwyg Editor"
-msgstr "Editor Wysiwyg"
+msgstr "WYSIWYG-Editor"
 
-# @ default
+# @ acf
 #: fields/wysiwyg.php:314
 msgid "Visual"
-msgstr "Visual"
+msgstr "Visuell"
 
-# @ default
+# @ acf
 #: fields/wysiwyg.php:315
 msgctxt "Name for the Text editor tab (formerly HTML)"
 msgid "Text"
-msgstr "Texto"
+msgstr "Text"
 
+# @ acf
 #: fields/wysiwyg.php:371
 msgid "Tabs"
-msgstr "Abas"
+msgstr "Tabs"
 
+# @ acf
 #: fields/wysiwyg.php:376
 msgid "Visual & Text"
-msgstr "Visual & Texto"
+msgstr "Visuell & Text"
 
+# @ acf
 #: fields/wysiwyg.php:377
 msgid "Visual Only"
-msgstr "Apenas Visual"
+msgstr "Nur Visuell"
 
+# @ acf
 #: fields/wysiwyg.php:378
 msgid "Text Only"
-msgstr "Apenas Texto"
+msgstr "Nur Text"
 
 # @ acf
 #: fields/wysiwyg.php:385
 msgid "Toolbar"
-msgstr "Barra de Ferramentas"
+msgstr "Werkzeugleiste"
 
 # @ acf
 #: fields/wysiwyg.php:395
 msgid "Show Media Upload Buttons?"
-msgstr "Mostrar Botões de Upload de Mídia?"
+msgstr "Button zum Hochladen von Medien anzeigen?"
 
 # @ acf
 #: forms/post.php:298 pro/admin/options-page.php:374
 msgid "Edit field group"
-msgstr "Editar Grupo de Campos"
+msgstr "Feld-Gruppen bearbeiten"
 
 # @ acf
 #: pro/acf-pro.php:24
@@ -2681,68 +2759,70 @@ msgstr "Advanced Custom Fields PRO"
 # @ acf
 #: pro/acf-pro.php:192
 msgid "Flexible Content requires at least 1 layout"
-msgstr "O campo de Conteúdo Flexível exige pelo menos 1 layout"
+msgstr "Flexibler Inhalt benötigt mindestens ein Layout"
 
 # @ acf
 #: pro/admin/options-page.php:48
 msgid "Options Page"
-msgstr "Página de Opções"
+msgstr "Options-Seite"
 
 # @ acf
 #: pro/admin/options-page.php:83
 msgid "No options pages exist"
-msgstr "Não existem Páginas de Opções disponíveis"
+msgstr "Keine Options-Seiten vorhanden"
 
 # @ acf
 #: pro/admin/options-page.php:298
 msgid "Options Updated"
-msgstr "Opções Atualizadas"
+msgstr "Optionen aktualisiert"
 
 # @ acf
 #: pro/admin/options-page.php:304
 msgid "No Custom Field Groups found for this options page"
-msgstr ""
-"Nenhum Grupo de Campos Personalizados encontrado para esta página de opções"
+msgstr "Keine Feld-Gruppen für die Options-Seite gefunden"
 
 # @ acf
 #: pro/admin/options-page.php:304
 msgid "Create a Custom Field Group"
-msgstr "Criar um Grupo de Campos Personalizados"
+msgstr "Erstelle eine Feld-Gruppe"
 
 # @ acf
 #: pro/admin/settings-updates.php:137
 msgid "<b>Error</b>. Could not connect to update server"
-msgstr "<b>Erro</b>. Não foi possível conectar ao servidor de atualização"
+msgstr ""
+"<b>Fehler</b>. Verbindung zum Update-Server konnte nicht hergestellt werden."
 
 # @ acf
 #: pro/admin/settings-updates.php:267 pro/admin/settings-updates.php:338
 msgid "<b>Connection Error</b>. Sorry, please try again"
-msgstr "<b>Erro de Conexão</b>. Tente novamente"
+msgstr ""
+"<b>Verbindungsfehler</b>. Entschuldigung, versuchen Sie es bitte später noch "
+"einmal"
 
 # @ acf
 #: pro/admin/views/options-page.php:48
 msgid "Publish"
-msgstr "Publicar"
+msgstr "Veröffentlichen"
 
 # @ acf
 #: pro/admin/views/options-page.php:54
 msgid "Save Options"
-msgstr "Salvar Opções"
+msgstr "Optionen speichern"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:11
 msgid "Deactivate License"
-msgstr "Desativar Licença"
+msgstr "Lizenz deaktivieren"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:11
 msgid "Activate License"
-msgstr "Ativar Licença"
+msgstr "Lizenz aktivieren"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:21
 msgid "License"
-msgstr "- Licença"
+msgstr "Lizenz"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:24
@@ -2750,63 +2830,66 @@ msgid ""
 "To unlock updates, please enter your license key below. If you don't have a "
 "licence key, please see"
 msgstr ""
-"Para desbloquear as atualizações, digite sua chave de licença abaixo. Se "
-"você ainda não possui uma licença, consulte os"
+"Um die Aktualisierungs-Fähigkeit freizuschalten, tragen Sie bitte Ihren "
+"Lizenzschlüssel im darunterliegenden Feld ein. Sollten Sie noch keinen "
+"Lizenzschlüssel besitzen, informieren Sie sich bitte hier über die"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:24
 msgid "details & pricing"
-msgstr "detalhes & preços"
+msgstr "Details und Preise."
 
 # @ acf
 #: pro/admin/views/settings-updates.php:33
 msgid "License Key"
-msgstr "Chave de Licença"
+msgstr "Lizenzschlüssel"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:65
 msgid "Update Information"
-msgstr "Informações de Atualização"
+msgstr "Aktualisierungsinformationen"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:72
 msgid "Current Version"
-msgstr "Versão Atual"
+msgstr "Installierte Version"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:80
 msgid "Latest Version"
-msgstr "Versão mais Recente"
+msgstr "Aktuellste Version"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:88
 msgid "Update Available"
-msgstr "Atualização Disponível"
+msgstr "Aktualisierung verfügbar"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:96
 msgid "Update Plugin"
-msgstr "Atualizar Plugin"
+msgstr "Plugin aktualisieren"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:98
 msgid "Please enter your license key above to unlock updates"
-msgstr "Digite sua chave de licença acima para desbloquear atualizações"
+msgstr ""
+"Bitte geben Sie oben Ihren Lizenzschlüssel ein um die Update-Fähigkeit "
+"freizuschalten"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:104
 msgid "Check Again"
-msgstr "Verificar Novamente"
+msgstr "Erneut suchen"
 
 # @ acf
 #: pro/admin/views/settings-updates.php:121
 msgid "Upgrade Notice"
-msgstr "Aviso de Atualização"
+msgstr "Aktualisierungs-Hinweis"
 
 # @ acf
 #: pro/api/api-options-page.php:22 pro/api/api-options-page.php:23
 msgid "Options"
-msgstr "Opções"
+msgstr "Optionen"
 
 # @ acf
 #: pro/core/updates.php:186
@@ -2816,270 +2899,275 @@ msgid ""
 "\">Updates</a> page. If you don't have a licence key, please see <a href=\"%s"
 "\">details & pricing</a>"
 msgstr ""
-"Para ativar atualizações, digite sua chave de licença  na página <a href=\"%s"
-"\">Atualizações</a>. Se você não possui uma licença, consulte <a href=\"%s"
-"\">detalhes & preços</a>"
+"Um die Aktualisierungen freizuschalten, tragen Sie bitte Ihren "
+"Lizenzschlüssel auf der <a href=\"%s\">Aktualisierungen</a>-Seite ein. "
+"Sollten Sie noch keinen Lizenzschlüssel besitzen, informieren Sie sich bitte "
+"hier über die <a href=\"%s\">Details und Preise</a>"
 
 # @ acf
 #: pro/fields/flexible-content.php:36
 msgid "Flexible Content"
-msgstr "Conteúdo Flexível"
+msgstr "Flexible Inhalte"
 
 # @ acf
 #: pro/fields/flexible-content.php:42 pro/fields/repeater.php:43
 msgid "Add Row"
-msgstr "Adicionar Linha"
+msgstr "Eintrag hinzufügen"
 
 # @ acf
 #: pro/fields/flexible-content.php:45
 msgid "layout"
-msgstr "layout"
+msgstr "Eintrag"
 
 # @ acf
 #: pro/fields/flexible-content.php:46
 msgid "layouts"
-msgstr "layouts"
+msgstr "Einträge"
 
 # @ acf
 #: pro/fields/flexible-content.php:47
 msgid "remove {layout}?"
-msgstr "remover {layout}?"
+msgstr "{layout} löschen?"
 
 # @ acf
 #: pro/fields/flexible-content.php:48
 msgid "This field requires at least {min} {identifier}"
-msgstr "Este campo requer ao menos {min} {identifier}"
+msgstr "Dieses Feld erfordert mindestens {min} {identifier}"
 
 # @ acf
 #: pro/fields/flexible-content.php:49
 msgid "This field has a limit of {max} {identifier}"
-msgstr "Este campo tem um limite de {max} {identifier}"
+msgstr "Diesem Feld dürfen maximal {max} {identifier} hinzugefügt werden."
 
 # @ acf
 #: pro/fields/flexible-content.php:50
 msgid "This field requires at least {min} {label} {identifier}"
-msgstr "Este campo requer ao menos {min} {label} {identifier}"
+msgstr "Dieses Feld erfordert mindestens {min} {label} {identifier}"
 
 # @ acf
 #: pro/fields/flexible-content.php:51
 msgid "Maximum {label} limit reached ({max} {identifier})"
-msgstr "A quantidade máxima de {label} foi atingida ({max} {identifier})"
+msgstr "Maximale {label}-Anzahl erreicht ({max} {identifier})"
 
 # @ acf
 #: pro/fields/flexible-content.php:52
 msgid "{available} {label} {identifier} available (max {max})"
-msgstr "{available} {label} {identifier} disponível (máx {max})"
+msgstr "{available} {label} {identifier} möglich (max {max})"
 
 # @ acf
 #: pro/fields/flexible-content.php:53
 msgid "{required} {label} {identifier} required (min {min})"
-msgstr "{required} {label} {identifier} obrigatório (mín {min})"
+msgstr "{required} {label} {identifier} erforderlich (min {min})"
 
 # @ acf
 #: pro/fields/flexible-content.php:211
 #, php-format
 msgid "Click the \"%s\" button below to start creating your layout"
-msgstr "Clique no botão \"%s\" abaixo para iniciar a criação do seu layout"
+msgstr "Klicke \"%s\" zum Erstellen des Layouts"
 
 # @ acf
 #: pro/fields/flexible-content.php:356
 msgid "Add layout"
-msgstr "Adicionar layout"
+msgstr "Layout hinzufügen"
 
 # @ acf
 #: pro/fields/flexible-content.php:359
 msgid "Remove layout"
-msgstr "Remover layout"
+msgstr "Layout entfernen"
 
 #: pro/fields/flexible-content.php:362 pro/fields/repeater.php:325
 msgid "Click to toggle"
-msgstr "Clique para alternar"
+msgstr "Zum Auswählen anklicken"
 
 # @ acf
 #: pro/fields/flexible-content.php:502
 msgid "Reorder Layout"
-msgstr "Reordenar Layout"
+msgstr "Layout sortieren"
 
 # @ acf
 #: pro/fields/flexible-content.php:502
 msgid "Reorder"
-msgstr "Reordenar"
+msgstr "Sortieren"
 
 # @ acf
 #: pro/fields/flexible-content.php:503
 msgid "Delete Layout"
-msgstr "Excluir Layout"
+msgstr "Layout löschen"
 
 # @ acf
 #: pro/fields/flexible-content.php:504
 msgid "Duplicate Layout"
-msgstr "Duplicar Layout"
+msgstr "Layout duplizieren"
 
 # @ acf
 #: pro/fields/flexible-content.php:505
 msgid "Add New Layout"
-msgstr "Adicionar Novo Layout"
+msgstr "Neues Layout hinzufügen"
 
 # @ acf
 #: pro/fields/flexible-content.php:559 pro/fields/repeater.php:487
 msgid "Table"
-msgstr "Tabela"
+msgstr "Tabelle"
 
 # @ acf
 #: pro/fields/flexible-content.php:560 pro/fields/repeater.php:488
 msgid "Block"
-msgstr "Bloco"
+msgstr "Block"
 
+# @ acf
 #: pro/fields/flexible-content.php:561 pro/fields/repeater.php:489
 msgid "Row"
-msgstr "Linha"
+msgstr "Reihe"
 
 # @ acf
 #: pro/fields/flexible-content.php:576
 msgid "Min"
-msgstr "Mín."
+msgstr "Min"
 
 # @ acf
 #: pro/fields/flexible-content.php:589
 msgid "Max"
-msgstr "Máx."
+msgstr "Max"
 
 # @ acf
 #: pro/fields/flexible-content.php:617 pro/fields/repeater.php:496
 msgid "Button Label"
-msgstr "Rótulo do Botão"
+msgstr "Button-Beschriftung"
 
 # @ acf
 #: pro/fields/flexible-content.php:626
 msgid "Minimum Layouts"
-msgstr "Qtde. Mínima de Layouts"
+msgstr "Minimum Layouts"
 
 # @ acf
 #: pro/fields/flexible-content.php:635
 msgid "Maximum Layouts"
-msgstr "Qtde. Máxima de Layouts"
+msgstr "Maximum Layouts"
 
 # @ acf
 #: pro/fields/gallery.php:36
 msgid "Gallery"
-msgstr "Galeria"
+msgstr "Galerie"
 
 # @ acf
 #: pro/fields/gallery.php:52
 msgid "Add Image to Gallery"
-msgstr "Adicionar Imagem à Galeria"
+msgstr "Bild zur Galerie hinzufügen"
 
 # @ acf
 #: pro/fields/gallery.php:56
 msgid "Maximum selection reached"
-msgstr "A quantidade máxima de seleções foi atingida"
+msgstr "Maximale Auswahl erreicht"
 
+# @ acf
 #: pro/fields/gallery.php:343
 msgid "Length"
-msgstr "Duração"
+msgstr "Länge"
 
 # @ acf
 #: pro/fields/gallery.php:363
 msgid "Remove"
-msgstr "Remover"
+msgstr "Entfernen"
 
 # @ acf
 #: pro/fields/gallery.php:543
 msgid "Add to gallery"
-msgstr "Adicionar imagem à galeria"
+msgstr "Zur Galerie hinzufügen"
 
 # @ acf
 #: pro/fields/gallery.php:547
 msgid "Bulk actions"
-msgstr "Ações em massa"
+msgstr "Massenverarbeitung"
 
 # @ acf
 #: pro/fields/gallery.php:548
 msgid "Sort by date uploaded"
-msgstr "Ordenar por data de envio"
+msgstr "Sortiere nach Upload-Datum"
 
 # @ acf
 #: pro/fields/gallery.php:549
 msgid "Sort by date modified"
-msgstr "Ordenar por data de modificação"
+msgstr "Sortiere nach Änderungs-Datum"
 
 # @ acf
 #: pro/fields/gallery.php:550
 msgid "Sort by title"
-msgstr "Ordenar por título"
+msgstr "Sortiere nach Titel"
 
 # @ acf
 #: pro/fields/gallery.php:551
 msgid "Reverse current order"
-msgstr "Inverter ordem atual"
+msgstr "Aktuelle Sortierung umkehren"
 
 # @ acf
 #: pro/fields/gallery.php:569
 msgid "Close"
-msgstr "Fechar"
+msgstr "Schließen"
 
 # @ acf
 #: pro/fields/gallery.php:627
 msgid "Minimum Selection"
-msgstr "Qtde. Mínima de Seleções"
+msgstr "Minimale Auswahl"
 
 # @ acf
 #: pro/fields/gallery.php:636
 msgid "Maximum Selection"
-msgstr "Qtde. Máxima de Seleções"
+msgstr "Maximale Auswahl"
 
 # @ acf
 #: pro/fields/repeater.php:36
 msgid "Repeater"
-msgstr "Repetidor"
+msgstr "Wiederholung"
 
 # @ acf
 #: pro/fields/repeater.php:47
 msgid "Minimum rows reached ({min} rows)"
-msgstr "Quantidade mínima atingida ( {min} linha(s) )"
+msgstr "Minimum der Einträge mit ({min} Reihen) erreicht"
 
 # @ acf
 #: pro/fields/repeater.php:48
 msgid "Maximum rows reached ({max} rows)"
-msgstr "Quantidade máxima atingida ( {max} linha(s) )"
+msgstr "Maximum der Einträge mit ({max} Reihen) erreicht"
 
 # @ acf
 #: pro/fields/repeater.php:323
 msgid "Drag to reorder"
-msgstr "Arraste para reorganizar"
+msgstr "Ziehen zum Sortieren"
 
 # @ acf
 #: pro/fields/repeater.php:370
 msgid "Add row"
-msgstr "Adicionar linha"
+msgstr "Eintrag hinzufügen"
 
 # @ acf
 #: pro/fields/repeater.php:371
 msgid "Remove row"
-msgstr "Remover linha"
+msgstr "Eintrag löschen"
 
 # @ acf
 #: pro/fields/repeater.php:419
 msgid "Sub Fields"
-msgstr "Sub Campos"
+msgstr "Wiederholungsfelder"
 
 #: pro/fields/repeater.php:449
 msgid "Collapsed"
-msgstr "Recolher"
+msgstr "Zugeklappt"
 
 #: pro/fields/repeater.php:450
 msgid "Select a sub field to show when row is collapsed"
-msgstr "Selecione um sub campo para exibir quando a linha estiver recolhida"
+msgstr ""
+"Wählen Sie welches der Wiederholungsfelder im zugeklappten Zustand angezeigt "
+"werden soll"
 
 # @ acf
 #: pro/fields/repeater.php:460
 msgid "Minimum Rows"
-msgstr "Qtde. Mínima de Linhas"
+msgstr "Minimum der Einträge"
 
 # @ acf
 #: pro/fields/repeater.php:470
 msgid "Maximum Rows"
-msgstr "Qtde. Máxima de Linhas"
+msgstr "Maximum der Einträge"
 
 # @ acf
 #. Plugin Name of the plugin/theme
@@ -3091,11 +3179,12 @@ msgstr "Advanced Custom Fields Pro"
 msgid "http://www.advancedcustomfields.com/"
 msgstr "http://www.advancedcustomfields.com/"
 
+# @ acf
 #. Description of the plugin/theme
 msgid "Customise WordPress with powerful, professional and intuitive fields"
 msgstr ""
-"Personalize o WordPress com profissionais, intuitivos e incríveis campos "
-"personalizados"
+"Passe WordPress durch leistungsfähige, professionelle und zugleich intuitive "
+"Felder an"
 
 # @ acf
 #. Author of the plugin/theme
@@ -3107,234 +3196,46 @@ msgstr "elliot condon"
 msgid "http://www.elliotcondon.com/"
 msgstr "http://www.elliotcondon.com/"
 
+#~ msgid "Sync Available"
+#~ msgstr "Synchronisierung verfügbar"
+
 # @ acf
 #~ msgid ""
 #~ "Please note that all text will first be passed through the wp function "
-#~ msgstr "Antes, todo o texto irá passar pela função "
+#~ msgstr ""
+#~ "Bitte beachten Sie, dass der gesamte Text zuerst durch eine WordPress "
+#~ "Funktion gefiltert wird. Siehe: "
 
 # @ acf
 #~ msgid "Warning"
-#~ msgstr "Aviso"
+#~ msgstr "Warnung"
 
 # @ acf
 #~ msgid "Display"
-#~ msgstr "Exibição"
+#~ msgstr "Anzeige"
 
 # @ acf
 #~ msgid "Show Field Keys"
-#~ msgstr "Mostrar Chaves do Campo"
+#~ msgstr "Zeige Feld-Schlüssel"
 
 # @ acf
-#, fuzzy
 #~ msgid "Field groups are created in order from lowest to highest"
 #~ msgstr ""
-#~ "Grupos de campo são criados na ordem <br />do menor para o maior valor"
-
-# @ acf
-#, fuzzy
-#~ msgid "flexible_content"
-#~ msgstr "Conteúdo Flexível"
-
-# @ acf
-#, fuzzy
-#~ msgid "gallery"
-#~ msgstr "Galeria"
-
-# @ acf
-#, fuzzy
-#~ msgid "image"
-#~ msgstr "Imagem"
-
-# @ acf
-#, fuzzy
-#~ msgid "repeater"
-#~ msgstr "Repetidor"
-
-# @ acf
-#~ msgid "Hide / Show All"
-#~ msgstr "Ocultar / Mostrar todos"
-
-# @ acf
-#~ msgid "Pending Review"
-#~ msgstr "Revisão Pendente"
-
-# @ acf
-#~ msgid "Draft"
-#~ msgstr "Rascunho"
-
-# @ acf
-#~ msgid "Future"
-#~ msgstr "Futuro"
-
-# @ acf
-#~ msgid "Private"
-#~ msgstr "Privado"
-
-# @ acf
-#~ msgid "Revision"
-#~ msgstr "Revisão"
-
-# @ acf
-#~ msgid "Trash"
-#~ msgstr "Lixeira"
+#~ "Felder-Gruppen werden nach diesem Wert sortiert, vom niedrigsten zum "
+#~ "höchsten Wert."
 
 # @ acf
 #~ msgid "Import / Export"
-#~ msgstr "Importar / Exportar"
+#~ msgstr "Import / Export"
 
 # @ acf
-#~ msgid "ACF PRO Required"
-#~ msgstr "É necessário o ACF PRO"
+#~ msgid "Hide / Show All"
+#~ msgstr "Alle Verstecken"
 
 # @ acf
-#~ msgid ""
-#~ "We have detected an issue which requires your attention: This website "
-#~ "makes use of premium add-ons (%s) which are no longer compatible with ACF."
-#~ msgstr ""
-#~ "Detectamos um problema que requer sua atenção: Este website usa Add-ons "
-#~ "Premium (%s) que não são mais compatíveis com o ACF."
+#~ msgid "5.2.6"
+#~ msgstr "5.2.6"
 
 # @ acf
-#~ msgid ""
-#~ "Don't panic, you can simply roll back the plugin and continue using ACF "
-#~ "as you know it!"
-#~ msgstr ""
-#~ "Não se preocupe, você pode voltar para a versão anterior e continuar "
-#~ "usando o ACF que estava acostumado!"
-
-# @ acf
-#~ msgid "Roll back to ACF v%s"
-#~ msgstr "Voltar para a versão v%s do ACF"
-
-# @ acf
-#~ msgid "Learn why ACF PRO is required for my site"
-#~ msgstr "Saiba por que é necessário utilizar o ACF PRO em meu site"
-
-# @ acf
-#~ msgid "Update Database"
-#~ msgstr "Atualizar Banco de Dados"
-
-# @ acf
-#~ msgid "Data Upgrade"
-#~ msgstr "Atualização de Dados"
-
-# @ acf
-#~ msgid "Data upgraded successfully."
-#~ msgstr "Dados atualizados com sucesso."
-
-# @ acf
-#~ msgid "Data is at the latest version."
-#~ msgstr "Os dados estão na versão mais recente."
-
-# @ acf
-#~ msgid "1 required field below is empty"
-#~ msgid_plural "%s required fields below are empty"
-#~ msgstr[0] "1 campo obrigatório abaixo está vazio"
-#~ msgstr[1] "%s campos obrigatórios abaixo estão vazios"
-
-# @ acf
-#~ msgid "Load & Save Terms to Post"
-#~ msgstr "Carregar & Salvar Termos do Post"
-
-# @ acf
-#~ msgid ""
-#~ "Load value based on the post's terms and update the post's terms on save"
-#~ msgstr ""
-#~ "Carregar opções com base nos termos do post, e atualizá-los ao salvar."
-
-# @ acf
-#, fuzzy
-#~ msgid "expand_details"
-#~ msgstr "Expandir Detalhes"
-
-# @ acf
-#, fuzzy
-#~ msgid "collapse_details"
-#~ msgstr "Recolher Detalhes"
-
-# @ acf
-#, fuzzy
-#~ msgid "relationship"
-#~ msgstr "Relação"
-
-# @ acf
-#, fuzzy
-#~ msgid "title_is_required"
-#~ msgstr "O título do grupo de campos é obrigatório"
-
-# @ acf
-#, fuzzy
-#~ msgid "move_field"
-#~ msgstr "Mover Campo"
-
-# @ acf
-#, fuzzy
-#~ msgid "Controls how HTML tags are rendered"
-#~ msgstr "Controla como as novas linhas são renderizadas"
-
-# @ acf
-#~ msgid "Attachment Details"
-#~ msgstr "Detalhes do Anexo"
-
-# @ acf
-#~ msgid "Validation Failed. One or more fields below are required."
-#~ msgstr "Falha na Validação. Um ou mais campos abaixo são obrigatórios."
-
-# @ acf
-#~ msgid "Field group duplicated! Edit the new \"%s\" field group."
-#~ msgstr "Grupo de campos duplicado! Edite o nome grupo de campos \"%s\"."
-
-# @ acf
-#~ msgid "Import/Export"
-#~ msgstr "Importar/Exportar"
-
-# @ acf
-#~ msgid ""
-#~ "The following code can be used to register a local version of the "
-#~ "selected field group(s). A local field group can provide many benefits "
-#~ "such as faster load times, version control & dynamic fields/settings. "
-#~ "Simply copy and paste the following code to your theme's functions.php "
-#~ "file"
-#~ msgstr ""
-#~ "O código abaixo pode ser utilizado para registrar uma versão local do(s) "
-#~ "grupo(s) de campos selecionado(s). Um grupo de campos local pode oferecer "
-#~ "diversos benefícios, como carregar mais rapidamente, permitir o controle "
-#~ "de versão, além de possibilitar ainda mais dinamismo nos campos e "
-#~ "definições. Basta copiar e colar o seguinte código no arquivo functions."
-#~ "php do seu tema."
-
-# @ acf
-#~ msgid "form_attributes"
-#~ msgstr "form_attributes"
-
-# @ acf
-#~ msgid "classlayout"
-#~ msgstr "classlayout"
-
-# @ acf
-#~ msgid "Column Width"
-#~ msgstr "Largura da Coluna"
-
-# @ acf
-#~ msgid ""
-#~ "Fully customise WordPress edit screens with powerful fields. Boasting a "
-#~ "professional interface and a powerful API, it’s a must have for any web "
-#~ "developer working with WordPress. Field types include: Wysiwyg, text, "
-#~ "textarea, image, file, select, checkbox, page link, post object, date "
-#~ "picker, color picker, repeater, flexible content, gallery and more!"
-#~ msgstr ""
-#~ "Personaliza totalmente as telas de edição do WordPress com incríveis "
-#~ "campos personalizados. Fazendo uso de uma interface profissional e uma "
-#~ "poderosa API, é um plugin essencial para qualquer desenvolvedor que "
-#~ "trabalha com WordPress. Dentre os tipos de campos personalizados, estão "
-#~ "incluidos: editor Wysiwyg, texto simples, área de texto, imagem, arquivo, "
-#~ "menu de seleção, checkbox, link de página, objeto do post, seletor de "
-#~ "data, seletor de cor, repetidor, conteúdo flexível, galeria dentro outros!"
-
-# @ acf
-#~ msgid "Custom field updated."
-#~ msgstr "Campo atualizado."
-
-# @ acf
-#~ msgid "Custom field deleted."
-#~ msgstr "Campo excluído."
+#~ msgid "Sync Terms"
+#~ msgstr "Einträge synchronisieren"

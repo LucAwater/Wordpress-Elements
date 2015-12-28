@@ -1,6 +1,6 @@
 === Advanced Custom Fields Pro ===
 Contributors: elliotcondon
-Tags: custom, field, custom field, advanced, simple fields, magic fields, more fields, repeater, matrix, post, type, text, textarea, file, image, edit, admin
+Tags: acf, advanced, custom, field, fields, custom field, custom fields, simple fields, magic fields, more fields, repeater, edit
 Requires at least: 3.6.0
 Tested up to: 4.3
 License: GPLv2 or later
@@ -10,7 +10,7 @@ Customise WordPress with powerful, professional and intuitive fields
 
 == Description ==
 
-Advanced Custom Fields is the perfect solution for any wordpress website which needs more flexible data like other Content Management Systems. 
+Advanced Custom Fields is the perfect solution for any WordPress website which needs more flexible data like other Content Management Systems. 
 
 * Visually create your Fields
 * Select from multiple input types (text, textarea, wysiwyg, image, file, page link, post object, relationship, select, checkbox, radio buttons, date picker, true / false, repeater, flexible content, gallery and more to come!)
@@ -25,7 +25,7 @@ Advanced Custom Fields is the perfect solution for any wordpress website which n
 * Number (type number, api returns integer)
 * Email (type email, api returns text)
 * Password (type password, api returns text)
-* WYSIWYG (a wordpress wysiwyg editor, api returns html)
+* WYSIWYG (a WordPress wysiwyg editor, api returns html)
 * Image (upload an image, api returns the url)
 * File (upload a file, api returns the url)
 * Select (drop down list of choices, api returns chosen item)
@@ -106,6 +106,61 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+= 5.3.2.2 =
+* Core: Fixed PHP error when registering a local field missing one of more settings
+* Core: Fixed incorrect json load_path setting when WPML is active
+* Language: Updated Polish translation - thanks to Michal Lepiarz
+
+= 5.3.2.1 =
+* Core: Fixed bug causing issues when loading values from an options page, widget or taxonomy term
+
+= 5.3.2 =
+* Repeater field: Added new setting and icon to collapse row
+* Google Maps: Improved google API loading for better theme compatibility
+* Taxonomy field: Fixed bug where 'Add new term' popup only showed 20 parent terms
+* Core: Added new setting 'export_translate' to customise which field settings should be wrapped in __()
+* Core: Improved efficiency of AJAX call when finding new field groups when editing a post
+* API: Added new functions add_row(), update_row() and delete_row()
+* Language: Updated German translation - thanks to Ralf Koller
+* Language: Updated Italian translation - thanks to Davide Pantè
+* Language: Updated Dutch translation - thanks to Derk Oosterveld
+* Language: Updated Portuguese translation - thanks to Augusto Simão
+
+= 5.3.1 =
+* Flexible Content field: added toggle icons to show layout open/close state
+* Gallery field: Fixed bug where images could not save a blank title value
+* Taxonomy field: Added pagination when rendered as a Select2 element
+* Relationship field: Changed validation to better edit values when a minimum is set
+* Google map field: Fixed minor autocomplete bugs and added search icon
+* Message field: Added new_lines setting
+* Core: Added '*' to required fields when editing a field group
+* Core: Prevented updates to .json file when syncing
+* Core: Fields now render as div (instead of table) when labels are left aligned
+* Core: Minor fixes and improvements
+* Language: Updated .po headers - thanks to Ralf Koller
+
+= 5.3.0 =
+* WYSIWYG field: Fixed 'Visual/Text' toggle bug with WP 4.3
+* Select field: Fixed Select2 bug hiding selected choices
+
+= 5.2.9 =
+* Field group: Added new 'status' setting to enable/disable
+* Field group: Added new 'description' setting shown to developers when viewing the field group list
+* Field group: Moved 'Show field keys' Screen Option within existing 'Show on Screen' checkboxes
+* Tab field: Fixed missing min-height to left aligned tab wrapper
+* Relationship field: Added timeout to reduce AJAX requests whilst typing in search
+* Flexible Content field: Fixed minor JS bug where removing a layout would not update the order numbers
+* Core: Fixed bug validating uppercase file extensions
+* Core: Renamed menu items
+* Core: Replace sprite icons with font
+* Core: Added new setting 'export_textdomain' to add __() to generated export code
+* Core: Fixed conflict with Post Type Order plugin causing issues when querying posts
+* Core: Fixed conflict with WPML causing issues when querying posts
+* Core: Added compatibility for WP 4.3
+* Core: Minor fixes and improvements
+* Language: Updated German translation - thanks to Ralf Koller
+* Language: Updated Italian translation - thanks to Davide Pantè
+
 = 5.2.8 =
 * Image field: Added selection restrictions in media popup (width, height, size, type)
 * File field: Same as above
@@ -122,7 +177,7 @@ http://support.advancedcustomfields.com/
 * Core: Fixed bug hiding Select2 choices when multiple found with the same label
 * Core: Minor fixes and improvements
 * Language: Updated Italian translation - thanks to Davide Pantè & Francesco Mazzola
-* Language: Updated German translation - thanks to Ralk Koller
+* Language: Updated German translation - thanks to Ralf Koller
 * Language: Updating Finnish translation - thanks to Sauli Rajala
 
 = 5.2.7 =

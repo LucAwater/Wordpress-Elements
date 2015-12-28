@@ -1,6 +1,34 @@
+<?php 
+
+// vars
+$field = array(
+	'label'		=> __('Select Field Groups', 'acf'),
+	'type'		=> 'checkbox',
+	'name'		=> 'acf_export_keys',
+	'prefix'	=> false,
+	'value'		=> false,
+	'toggle'	=> true,
+	'choices'	=> array(),
+);
+
+$field_groups = acf_get_field_groups();
+
+
+// populate choices
+if( $field_groups ) {
+	
+	foreach( $field_groups as $field_group ) {
+		
+		$field['choices'][ $field_group['key'] ] = $field_group['title'];
+		
+	}
+	
+}
+
+?>
 <div class="wrap acf-settings-wrap">
 	
-	<h2><?php _e('Import / Export', 'acf'); ?></h2>
+	<h1><?php _e('Tools', 'acf'); ?></h1>
 	
 	<div class="acf-box" id="acf-export-field-groups">
 		<div class="title">
@@ -15,41 +43,7 @@
 			</div>
 			<table class="form-table">
                 <tbody>
-                	<tr>
-                    	<th>
-                    		<label><?php _e('Select Field Groups', 'acf'); ?></label>
-                    	</th>
-						<td>
-							<?php 
-							
-							// vars
-							$choices = array();
-							$field_groups = acf_get_field_groups();
-							
-							
-							// populate choices
-							if( !empty($field_groups) )
-							{
-								foreach( $field_groups as $field_group )
-								{
-									$choices[ $field_group['key'] ] = $field_group['title'];
-								}
-							}
-							
-							
-							// render field
-							acf_render_field(array(
-								'type'		=> 'checkbox',
-								'name'		=> 'acf_export_keys',
-								'prefix'	=> false,
-								'value'		=> false,
-								'toggle'	=> true,
-								'choices'	=> $choices,
-							));
-							
-							?>
-						</td>
-					</tr>
+	                <?php acf_render_field_wrap( $field, 'tr' ); ?>
 					<tr>
 						<th></th>
 						<td>
@@ -62,46 +56,6 @@
 			</form>
             
 		</div>
-		<script type="text/javascript">
-		(function($) {
-			
-			// vars
-			var $ul = $('#acf-export-field-groups .acf-checkbox-list'),
-				$inputs = $ul.find('input[name]');
-					
-			
-			// event
-			$ul.on('change', 'input', function(){
-				
-				// vars
-				checked = $(this).is(':checked');
-				
-				
-				// is toggle?
-				if( $(this).hasClass('acf-checkbox-toggle') ) {
-					
-					// toggle all
-					$inputs.prop('checked', checked);
-					
-					
-					// return
-					return;
-					
-				}
-				
-				
-				// determine if all inputs are checked
-				var checked = ( $inputs.not(':checked').length == 0 );
-				
-				
-				// update toggle
-				$ul.find('.acf-checkbox-toggle').prop('checked', checked);
-				
-			});
-						
-		})(jQuery);	
-		</script>
-		
 	</div>
 
 	

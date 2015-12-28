@@ -149,9 +149,9 @@ class acf_field_file extends acf_field {
 			
 			<ul class="acf-hl acf-soh-target">
 				<?php if( $uploader != 'basic' ): ?>
-					<li><a class="acf-icon dark" data-name="edit" href="#"><i class="acf-sprite-edit"></i></a></li>
+					<li><a class="acf-icon -pencil dark" data-name="edit" href="#"></a></li>
 				<?php endif; ?>
-				<li><a class="acf-icon dark" data-name="remove" href="#"><i class="acf-sprite-delete"></i></a></li>
+				<li><a class="acf-icon -cancel dark" data-name="remove" href="#"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -292,8 +292,16 @@ class acf_field_file extends acf_field {
 		// bail early if no value
 		if( empty($value) ) {
 		
-			return $value;
+			return false;
 			
+		}
+		
+		
+		// bail early if not numeric (error message)
+		if( !is_numeric($value) ) {
+			
+			return false;
+				
 		}
 		
 		
