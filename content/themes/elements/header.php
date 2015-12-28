@@ -32,7 +32,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('is-loading'); ?>>
+<body <?php body_class(); ?>>
   <!-- Header -->
   <header>
     <a class="link-logo" href="<?php echo home_url(); ?>">

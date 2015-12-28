@@ -1,4 +1,6 @@
 <?php
+global $i_anchor;
+
 // Options (variables)
 $o_b_width = get_sub_field( 'image_o_b_width' );
 $o_b_pos = get_sub_field( 'image_o_b_pos' );

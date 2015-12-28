@@ -1,4 +1,6 @@
 <?php
+global $i_anchor, $i_par, $detect;
+
 // Content (variables)
 $id = "parallax-" . $i_par;
 $b_image = get_sub_field( 'parallax_b_image' );

@@ -1,4 +1,6 @@
 <?php
+global $i_anchor;
+
 // Options (variables)
 $o_menu = get_sub_field( 'gridSec_o_menu' );
 

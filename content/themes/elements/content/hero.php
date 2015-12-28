@@ -1,4 +1,6 @@
 <?php
+global $i_anchor;
+
 // Options (variables)
 $o_b_textColor = get_sub_field( 'hero_o_b_textColor' );
 
