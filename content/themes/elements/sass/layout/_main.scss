@@ -1,8 +1,11 @@
 main{
+  z-index: $zIndex-main;
+
   height: auto !important;
   height: 100%;
   min-height: 100%;
   overflow: hidden;
-  background: $white;
-  z-index: $zIndex-main;
+  padding-top: $header_height;
+
+  background-color: $white;
 }
