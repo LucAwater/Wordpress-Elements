@@ -1,5 +1,6 @@
 section.hero{
-  height: 90vh;
+  height: 100vh;
+  margin-top: 0;
   overflow: hidden;
 
   .section-body{
@@ -15,30 +16,36 @@ section.hero{
 
 // Scroll arrow
 .arrow-scroll{
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: $white;
-  border-radius: 100%;
   left: 0;
   right: 0;
-  margin: auto;
+  bottom: 30px;
+  position: absolute;
   z-index: $zIndex-arrow;
 
+  width: 60px;
+  height: 60px;
+  margin: auto;
+
+  background-color: $white;
+  border-radius: 100%;
+
   img{
-    width: 30px;
+    @include transition( .2s );
+    @include transform( rotate(90deg) );
+
     top: 20px;
     left: 15px;
     position: absolute;
     z-index: $zIndex-arrow;
-    @include transition( .3s );
-    @include transform( rotate(90deg) );
+
+    width: 30px;
   }
 
   &:hover{
     img{
+      @include transition( .2s );
+
       top: 25px;
-      @include transition( .3s );
     }
   }
 }

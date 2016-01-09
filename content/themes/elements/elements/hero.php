@@ -12,7 +12,7 @@ $b_title = get_sub_field( 'hero_b_title' );
 $b_text = preg_replace( '/<p>/', '<p class="is-' . $o_b_textColor . '">', get_sub_field( 'hero_b_text' ) );
 
 // Output
-echo '<section class="hero has-no-pad">';
+echo '<section id="hero" class="hero has-no-pad">';
 
   // Hero background image
   if( $banner ):
@@ -44,7 +44,6 @@ echo '<section class="hero has-no-pad">';
     echo '</div>';
   endif;
 
+  echo '<a href="javascript:;" class="arrow arrow-scroll"><img src="' . bloginfo( 'template_directory' ) . '/img/arrow.svg"></a>';
 echo '</section>';
-
-// <a href="javascript:;" class="arrow arrow-scroll"><img src="<?php echo bloginfo( 'template_directory' ) . /img/arrow.svg"></a>
 ?>

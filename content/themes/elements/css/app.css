@@ -1627,7 +1627,8 @@ section {
     margin-bottom: 3.125rem; }
 
 section.hero {
-  height: 90vh;
+  height: 100vh;
+  margin-top: 0;
   overflow: hidden; }
   section.hero .section-body {
     -moz-transform: translate(-50%, -50%);
@@ -1641,38 +1642,39 @@ section.hero {
     margin: auto; }
 
 .arrow-scroll {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: white;
-  border-radius: 100%;
   left: 0;
   right: 0;
+  bottom: 30px;
+  position: absolute;
+  z-index: 1100;
+  width: 60px;
+  height: 60px;
   margin: auto;
-  z-index: 1100; }
+  background-color: white;
+  border-radius: 100%; }
   .arrow-scroll img {
-    width: 30px;
-    top: 20px;
-    left: 15px;
-    position: absolute;
-    z-index: 1100;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
+    transform: rotate(90deg);
+    top: 20px;
+    left: 15px;
+    position: absolute;
+    z-index: 1100;
+    width: 30px; }
   .arrow-scroll:hover img {
-    top: 25px;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    top: 25px; }
 
 body.is-mobile section.hero .hero-banner {
   position: relative; }
