@@ -793,7 +793,7 @@ main {
   min-height: 100%;
   overflow: hidden;
   padding-top: 60px;
-  background-color: #f3f4f5; }
+  background-color: white; }
 
 body > header {
   display: -webkit-box;
@@ -1168,7 +1168,7 @@ section.parallax .section-body,
 
 ul.posts li div {
   padding: 15px 30px;
-  background-color: white; }
+  background-color: #f3f4f5; }
   ul.posts li div .post-category {
     margin-bottom: 1em; }
   ul.posts li div .post-title {
@@ -1176,6 +1176,7 @@ ul.posts li div {
 ul.posts li div:first-child {
   padding-bottom: 200px; }
 ul.posts li img {
+  display: block;
   margin-top: -185px; }
 
 /*

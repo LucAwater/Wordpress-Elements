@@ -3,7 +3,7 @@ ul.posts{
     div{
       padding: 15px 30px;
 
-      background-color: $white;
+      background-color: $grey-light;
 
       .post-category{
         margin-bottom: 1em;
@@ -19,6 +19,7 @@ ul.posts{
     }
 
     img{
+      display: block;
       margin-top: -185px;
     }
   }
