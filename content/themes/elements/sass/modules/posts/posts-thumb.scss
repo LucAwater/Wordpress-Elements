@@ -6,7 +6,10 @@ ul.posts{
       background-color: $grey-light;
 
       .post-category{
-        margin-bottom: 1em;
+        margin-bottom: 10px;
+        display: block;
+
+        text-decoration: none;
       }
 
       .post-title{

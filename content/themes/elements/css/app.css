@@ -1170,7 +1170,9 @@ ul.posts li div {
   padding: 15px 30px;
   background-color: #f3f4f5; }
   ul.posts li div .post-category {
-    margin-bottom: 1em; }
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none; }
   ul.posts li div .post-title {
     display: block; }
 ul.posts li div:first-child {
