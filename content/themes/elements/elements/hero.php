@@ -11,22 +11,20 @@ $b_image = get_sub_field( 'hero_b_image' );
 $b_title = get_sub_field( 'hero_b_title' );
 $b_text = preg_replace( '/<p>/', '<p class="is-' . $o_b_textColor . '">', get_sub_field( 'hero_b_text' ) );
 
-// Output
-echo '<section id="hero" class="hero has-no-pad">';
+// Classes
+$class_section = 'hero has-no-pad';
+$class_banner = 'hero-banner';
+$class_body = 'section-body';
+?>
 
-  // Hero background image
-  if( $banner ):
-    echo
-    '<div class="hero-banner is-stretched-wrapper">
-      <img class="is-stretched-object" src="' . $banner['sizes']['large'] . '" width="' . $banner['width'] . '" height="' . $banner['height'] . '">
-    </div>';
-  endif;
+<section class="<?php echo $class_section; ?>">
+  <div class="<?php echo $class_banner; ?>">
+    <img src="<?php echo $banner['sizes']['large']; ?>" width="<?php echo $banner['width']; ?>" height="<?php echo $banner['height']; ?>">
+  </div>
 
-  // Hero content container
-  if( $b_image || $b_title || $b_text ):
-    echo '<div class="section-body">';
-
-      // Logo
+  <?php if( $b_image || $b_title || $b_text ): ?>
+    <div class="<?php echo $class_body; ?>">
+      <?php
       if( $b_image ):
         echo '<img src="' . $b_image['sizes']['medium'] . '" width="' . $b_image['width'] . '" height="' .   $b_image['height'] . '">';
       endif;
@@ -40,10 +38,9 @@ echo '<section id="hero" class="hero has-no-pad">';
       if( $b_text ):
         echo $b_text;
       endif;
+      ?>
+    </div>
+  <?php endif; ?>
 
-    echo '</div>';
-  endif;
-
-  echo '<a href="javascript:;" class="arrow arrow-scroll"><img src="' . bloginfo( 'template_directory' ) . '/img/arrow.svg"></a>';
-echo '</section>';
-?>
+  <a class="arrow arrow-scroll"><img src="<?php echo bloginfo( 'template_directory' ); ?>'/img/arrow.svg"></a>
+</section>
