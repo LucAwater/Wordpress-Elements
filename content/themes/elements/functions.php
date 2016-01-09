@@ -12,6 +12,8 @@ require_once('includes/admin/menu.php');
 require_once('includes/admin/acf-page.php');
 require_once('includes/admin/tutorial.php');
 
+require_once('includes/posts.php');
+
 // Woocommerce includes
 require_once('includes/cart-update.php');
 require_once('woocommerce/woo-functions.php');

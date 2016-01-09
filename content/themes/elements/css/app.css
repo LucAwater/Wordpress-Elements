@@ -1367,11 +1367,9 @@ body {
   min-height: 100%;
   background: white; }
 
-body > * {
-  padding: 0 6.25rem; }
-
 main > * {
   margin: 3.125rem 0;
+  padding: 0 6.25rem;
   display: inline-block !important; }
   main > *:first-child {
     margin-top: 6.25rem; }
@@ -1392,7 +1390,7 @@ main {
   background: white;
   z-index: 900; }
 
-header {
+body > header {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -1417,7 +1415,7 @@ header {
   width: 100%;
   height: 60px;
   background-color: #f6f6f6; }
-  header .link-logo {
+  body > header .link-logo {
     width: 50px; }
 
 footer {
@@ -1426,12 +1424,6 @@ footer {
   background: black; }
   footer p, footer a {
     color: white; }
-
-main {
-  background-color: #f6f6f6; }
-  main > * {
-    padding: 6.25rem 6.25rem;
-    background-color: white; }
 
 body.error404 #error404-content {
   max-width: 800px;
@@ -1637,19 +1629,16 @@ section {
 section.hero {
   height: 90vh;
   overflow: hidden; }
-  section.hero .hero-banner {
-    position: fixed;
-    overflow: hidden; }
   section.hero .section-body {
-    top: 50%;
-    left: 50%;
-    margin: auto;
-    position: absolute;
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin: auto; }
 
 .arrow-scroll {
   position: absolute;

@@ -1,4 +1,4 @@
-header{
+body > header{
   @include flex;
   @include align-items( center );
   @include justify-content( space-between );

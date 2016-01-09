@@ -1,6 +1,8 @@
 <?php
-/**
- * @package WordPress
+/*
+ * The template for displaying the header
+ *
+ * Displays all of the head element and everything up until the main tag.
  */
 ?>
 
@@ -43,27 +45,6 @@
 
     <!-- <a class="trigger trigger-menu"><i></i></a> -->
   </header>
-
-  <?php
-  // Hero section must be placed before main
-  if( have_posts() ):
-    while( have_posts() ): the_post();
-
-      // Loop into ACF groups
-      if( have_rows('page') ):
-        while( have_rows('page') ): the_row();
-
-          if( get_row_layout() == 'hero' ):
-            echo '<!-- Hero -->';
-            get_template_part( 'content/hero' );
-          endif;
-
-        endwhile;
-      endif;
-
-    endwhile;
-  endif;
-  ?>
 
   <!-- Main content -->
   <main role="main">

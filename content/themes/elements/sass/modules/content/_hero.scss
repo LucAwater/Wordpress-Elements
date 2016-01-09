@@ -1,18 +1,15 @@
 section.hero{
   height: 90vh;
   overflow: hidden;
-  
-  .hero-banner{
-    position: fixed;
-    overflow: hidden;
-  }
-  
+
   .section-body{
+    @include transform( translate(-50%, -50%) );
+
     top: 50%;
     left: 50%;
-    margin: auto;
     position: absolute;
-    @include transform( translate(-50%, -50%) );
+
+    margin: auto;
   }
 }
 
@@ -27,7 +24,7 @@ section.hero{
   right: 0;
   margin: auto;
   z-index: $zIndex-arrow;
-  
+
   img{
     width: 30px;
     top: 20px;
@@ -37,7 +34,7 @@ section.hero{
     @include transition( .3s );
     @include transform( rotate(90deg) );
   }
-  
+
   &:hover{
     img{
       top: 25px;
