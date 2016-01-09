@@ -1,0 +1,25 @@
+ul.posts{
+  li{
+    div{
+      padding: 15px 30px;
+
+      background-color: $white;
+
+      .post-category{
+        margin-bottom: 1em;
+      }
+
+      .post-title{
+        display: block;
+      }
+    }
+
+    div:first-child{
+      padding-bottom: 200px;
+    }
+
+    img{
+      margin-top: -185px;
+    }
+  }
+}

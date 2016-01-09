@@ -19,6 +19,8 @@ h2{
 
 p{
   @extend %base;
+
+  font-size: .9em;
 }
 
 a{
@@ -28,10 +30,7 @@ a{
   text-decoration: underline;
   cursor: pointer;
 
-  &.link-h1,
-  &.link-h2,
-  &.link-h3,
-  &.link-p{
+  &.has-content{
     text-decoration: none;
   }
 }

@@ -753,11 +753,14 @@ h1, h2 {
 h2 {
   font-size: 2em; }
 
+p {
+  font-size: .9em; }
+
 a {
   color: black;
   text-decoration: underline;
   cursor: pointer; }
-  a.link-h1, a.link-h2, a.link-h3, a.link-p {
+  a.has-content {
     text-decoration: none; }
 
 html,
@@ -790,7 +793,7 @@ main {
   min-height: 100%;
   overflow: hidden;
   padding-top: 60px;
-  background-color: white; }
+  background-color: #f3f4f5; }
 
 body > header {
   display: -webkit-box;
@@ -1162,6 +1165,18 @@ section.parallax .section-body,
   background-attachment: fixed;
   background-size: cover;
   width: 100%; }
+
+ul.posts li div {
+  padding: 15px 30px;
+  background-color: white; }
+  ul.posts li div .post-category {
+    margin-bottom: 1em; }
+  ul.posts li div .post-title {
+    display: block; }
+ul.posts li div:first-child {
+  padding-bottom: 200px; }
+ul.posts li img {
+  margin-top: -185px; }
 
 /*
  * Show and Hide class functions
