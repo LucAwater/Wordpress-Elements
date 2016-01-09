@@ -39,7 +39,7 @@
       <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo.svg">
     </a>
 
-    <?php include( 'includes/nav.php' ); ?>
+    <?php get_template_part( 'includes/nav' ); ?>
 
     <!-- <a class="trigger trigger-menu"><i></i></a> -->
   </header>
@@ -55,7 +55,7 @@
 
           if( get_row_layout() == 'hero' ):
             echo '<!-- Hero -->';
-            include_once( locate_template('content/hero.php') );
+            get_template_part( 'content/hero' );
           endif;
 
         endwhile;

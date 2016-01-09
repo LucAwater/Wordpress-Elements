@@ -10,48 +10,38 @@ $o_b_layout = get_sub_field( 'gridSec_o_b_layout' );
 
 // Content (variables)
 $h_title = get_sub_field( 'gridSec_h_title' );
-$h_text = preg_replace( '/<p>/', '<p class="s-4 columns is-aligned-' . $o_h_align . '">', get_sub_field( 'gridSec_h_text' ) );
+$h_text = preg_replace( '/<p>/', '<p class="is-aligned-' . $o_h_align . '">', get_sub_field( 'gridSec_h_text' ) );
 $b_item = get_sub_field( 'gridSec_b_item' );
 
-// Output
-echo '<section class="grid grid-sec' . (( $o_menu == true ) ? ' has-anchor" id="anchor-' . $i_anchor : "") . '">';
+// Classes
+$class_section = 'grid grid-sec';
+$class_header = 'section-header is-pos-' . $o_h_pos;
+$class_body = 'section-body';
 
-  // Grid header
-  if( $h_title || $h_text ):
-    echo
-    '<div class="section-header row is-pos-' . $o_h_pos . '">
-      <h2 class="s-4 columns is-aligned-' . $o_h_align . '">' . $h_title . '</h2>
-      ' . $h_text . '
-    </div>';
-  endif;
-
-  // Grid content
-  if( have_rows('gridSec_b_item') ):
-    echo '<div class="section-body">';
-
-    if( $o_b_layout == 'masonry' ){
-      echo '<ul class="s-grid-1 m-grid-2 l-grid-4 row isotope isotope-masonry">';
-    } else {
-      echo '<ul class="s-grid-1 m-grid-2 l-grid-4 row">';
-    }
-
-        while( have_rows('gridSec_b_item') ): the_row();
-          $image = get_sub_field( 'gridSec_b_item_image' );
-          $title = get_sub_field( 'gridSec_b_item_title' );
-          $text = preg_replace( '/<p>/', '<p class="is-aligned-' . $o_h_align . '">', get_sub_field( 'gridSec_b_item_text' ) );
-
-          echo
-          '<li>
-            <img src="' . $image['sizes']['medium'] . '" width="' . $image['width'] . '" height="' . $image['height'] . '">
-            <h2 class="is-aligned-' . $o_h_align . '">' . $title . '</h2>
-            ' . $text . '
-          </li>';
-        endwhile;
-
-      echo '</ul>';
-
-    echo '</div>';
-  endif;
-
-echo '</section>';
+$class_grid = 's-grid-1 m-grid-2 l-grid-4 row';
+if( $o_b_layout == 'masonry' ){
+  $class_grid = 's-grid-1 m-grid-2 l-grid-4 row isotope isotope-masonry';
+}
 ?>
+
+<section class="<?php echo $class_section; ?>">
+  <?php if( $h_title || $h_text ): ?>
+    <div class="<?php echo $class_header; ?>">
+      <h2 class="is-aligned-<?php echo $o_h_align; ?>"><?php echo $h_title; ?></h2>
+      <?php echo $h_text; ?>
+    </div>
+  <?php endif; ?>
+
+  <div class="<?php echo $class_body; ?>">
+    <ul class="<?php echo $class_grid; ?>">
+      <?php
+      if( have_rows('gridSec_b_item') ):
+        while( have_rows('gridSec_b_item') ): the_row();
+          set_query_var( 'o_h_align', $o_h_align );
+          get_template_part('content/gridSec', 'content');
+        endwhile;
+      endif;
+      ?>
+    </ul>
+  </div>
+</section>

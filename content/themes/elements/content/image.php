@@ -9,23 +9,19 @@ $o_b_pos = get_sub_field( 'image_o_b_pos' );
 $image = get_sub_field( 'image_b_image' );
 $caption = get_sub_field( 'image_b_caption' );
 
-// Output
-echo '<section class="image' . ( ($o_b_width == 'fullwidth') ? ' is-fullwidth' : "") . '">';
+// Classes
+$class_section = 'image is-' . $o_b_width;
+$class_body = 'section-body is-pos-' . $o_b_pos;
+?>
 
-  // Image body
-  echo '<div class="section-body is-pos-' . $o_b_pos . '">';
-    echo '<figure>';
+<section class="<?php echo $class_section; ?>">
+  <div class="<?php echo $class_body; ?>">
+    <figure>
+      <img src="<?php echo $image['sizes']['large']; ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>">
 
-      // Image
-      echo '<img src="' . $image['sizes']['large'] . '" width="' . $image['width'] . '" height="' . $image['height'] . '">';
-
-      // Image caption
-      echo
-      '<figcaption>
-        <p class="is-small is-italic">' . $caption . '</p>
-      </figcaption>';
-
-    echo '</figure>';
-  echo '</div>';
-
-echo '</section>';
+      <figcaption>
+        <p class="is-small is-italic"><?php echo $caption; ?></p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
