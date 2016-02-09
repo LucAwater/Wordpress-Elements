@@ -4,7 +4,7 @@ footer{
 }
 
 main > *{
-  padding: $space-section $space-sides;
+  padding: ($space-section / 2) $space-sides;
 
   &:first-child{
     padding-top: $space-section;

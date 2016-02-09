@@ -12,7 +12,7 @@ $b_title = get_sub_field( 'hero_b_title' );
 $b_text = preg_replace( '/<p>/', '<p class="is-' . $o_b_textColor . '">', get_sub_field( 'hero_b_text' ) );
 
 // Classes
-$class_section = 'hero has-no-pad is-fullwidth';
+$class_section = 'hero is-fullwidth';
 $class_banner = 'hero-banner';
 $class_body = 'section-body';
 ?>

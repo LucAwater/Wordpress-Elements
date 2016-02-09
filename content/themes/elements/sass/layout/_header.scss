@@ -3,7 +3,6 @@ body > header{
   @include align-items( center );
   @include justify-content( space-between );
 
-  left: 0;
   position: fixed;
   z-index: $zIndex-header;
 

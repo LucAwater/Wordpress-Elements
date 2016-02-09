@@ -22,10 +22,11 @@
 
     // Scroll arrow
     var trigger = $('.arrow-scroll');
+    var header = $('body > header');
 
     trigger.click( function() {
       $('body').animate({
-        scrollTop: hero.height()
+        scrollTop: hero.height() - header.height()
       }, 500);
     });
   };

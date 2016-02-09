@@ -16,7 +16,7 @@ require_once('woocommerce/woo-functions.php');
 // Add support for WooCommerce
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
+  add_theme_support( 'woocommerce' );
 }
 
 // Change the WooCommerce paypal icon

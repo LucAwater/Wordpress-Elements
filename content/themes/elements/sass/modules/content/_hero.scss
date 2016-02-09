@@ -1,6 +1,8 @@
 section.hero{
   height: 100vh;
   margin-top: 0;
+  margin-bottom: ($space-section / 2);
+  padding: 0;
   overflow: hidden;
 
   .hero-banner{

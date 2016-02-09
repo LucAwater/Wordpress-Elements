@@ -776,7 +776,7 @@ footer {
   padding: 0 6.25rem; }
 
 main > * {
-  padding: 6.25rem 6.25rem; }
+  padding: 3.125rem 6.25rem; }
   main > *:first-child {
     padding-top: 6.25rem; }
   main > *:last-child {
@@ -815,7 +815,6 @@ body > header {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
-  left: 0;
   position: fixed;
   z-index: 1100;
   width: 100%;
@@ -1078,6 +1077,8 @@ section {
 section.hero {
   height: 100vh;
   margin-top: 0;
+  margin-bottom: 3.125rem;
+  padding: 0;
   overflow: hidden; }
   section.hero .hero-banner {
     width: 100%;
