@@ -1,7 +1,9 @@
 <?php
 get_header();
 
-get_template_part( 'page' );
+if( have_posts() ):
+  get_template_part( 'archive' );
+endif;
 
 get_footer();
 ?>
