@@ -188,12 +188,21 @@ $option_theme = get_option('tamed_theme', 'default');
                 echo '<li data-page="' . $item[2] . '" draggable="true"><p>' . preg_replace('/[0-9]+/', '', $item[0]) . '</p><span>remove</span></li>';
               }
             }
-
           echo '</ul>';
+
+          $items_removed = json_decode(get_option('tamed_menu_removals'), true);
+
+          if( $items_removed ):
+            echo '<ul id="tamed-menu-removals">';
+              foreach( $items_removed as $item ){
+                echo '<li data-page="' . $item['page'] . '" draggable="true"><p>' . preg_replace('/[0-9]+/', '', $item['name']) . '</p><span>restore</span></li>';
+              }
+            echo '</ul>';
+          endif;
         }
         menu_print();
         ?>
-        <input type="hidden" name="tamed_menu_order_2" id="tamed_menu_list_input" value="<?php echo json_decode(get_option('tamed_menu_order')); ?>" />
+        <input type="hidden" name="tamed_menu_order" id="tamed_menu_list_input" value="<?php echo json_decode(get_option('tamed_menu_order')); ?>" />
         <input type="hidden" name="tamed_menu_removals" id="tamed_menu_removals_input" value='<?php echo get_option('tamed_menu_removals'); ?>' />
 
         <input id="remove_menuOrder_button" class="button" type="button" value="Reset to default" />

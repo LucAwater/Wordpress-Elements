@@ -395,6 +395,16 @@ img.help_tip {
   -o-transition: 0s;
   transition: 0s; }
 
+body.tamed-theme-clean #adminmenu .wp-not-current-submenu .wp-submenu {
+  left: 0 !important;
+  height: 0;
+  opacity: 0; }
+body.tamed-theme-clean #adminmenu .wp-has-submenu.tamed-menu-open ul {
+  top: 0 !important;
+  position: relative;
+  height: auto;
+  opacity: 1; }
+
 #wpadminbar {
   height: 44px; }
   #wpadminbar li#wp-admin-bar-wp-logo {
@@ -597,6 +607,8 @@ img.help_tip {
     margin-bottom: 0; }
 
 .tamed-wrap #tamed-custom-menu ul {
+  float: left;
+  width: calc(50% - 30px);
   margin-bottom: 30px; }
   .tamed-wrap #tamed-custom-menu ul.reset {
     opacity: .5;
@@ -619,3 +631,22 @@ img.help_tip {
   .tamed-wrap #tamed-custom-menu ul li span:hover {
     color: red;
     cursor: pointer; }
+.tamed-wrap #tamed-custom-menu ul:first-child {
+  padding-right: 15px; }
+.tamed-wrap #tamed-custom-menu ul:nth-child(2) {
+  padding-left: 15px; }
+.tamed-wrap #tamed-custom-menu #tamed-menu-removals li {
+  opacity: 0.5; }
+  .tamed-wrap #tamed-custom-menu #tamed-menu-removals li:hover {
+    opacity: 1; }
+  .tamed-wrap #tamed-custom-menu #tamed-menu-removals li span:hover {
+    color: green; }
+  .tamed-wrap #tamed-custom-menu #tamed-menu-removals li.tamed-reAdd {
+    opacity: 1;
+    pointer-events: none;
+    cursor: default; }
+    .tamed-wrap #tamed-custom-menu #tamed-menu-removals li.tamed-reAdd span:hover {
+      color: black; }
+.tamed-wrap #tamed-custom-menu #remove_menuOrder_button {
+  clear: both;
+  display: block; }
