@@ -895,6 +895,8 @@ nav ul {
     padding-right: 1em; }
     nav ul li a {
       text-decoration: none; }
+    nav ul li:last-child {
+      padding-right: 0; }
 
 nav ul li.current {
   text-decoration: underline; }
