@@ -6,13 +6,8 @@
 // Includes
 require_once('includes/scripts.php');
 
-require_once('includes/admin/login.php');
-require_once('includes/admin/removal.php');
-require_once('includes/admin/menu.php');
-require_once('includes/admin/acf-page.php');
-require_once('includes/admin/tutorial.php');
-
 require_once('includes/posts.php');
+require_once('includes/admin/acf-page.php');
 
 // Woocommerce includes
 require_once('includes/cart-update.php');
@@ -33,7 +28,7 @@ function custom_woocommerce_paypal_icon( $url ) {
 }
 
 // Initialize mobile detect
-require_once('includes/Mobile_Detect.php');
+require_once('includes/mobile-detect.php');
 $detect = new Mobile_Detect;
 
 // Hide admin bar
