@@ -1,5 +1,5 @@
 body > header{
-  @include flex;
+  @include flexbox;
   @include align-items( center );
   @include justify-content( space-between );
 
@@ -10,7 +10,7 @@ body > header{
   width: 100%;
   height: $header-height;
 
-  background-color: $white;
+  background-color: $grey-light;
 
   .link-logo{
     width: 50px;

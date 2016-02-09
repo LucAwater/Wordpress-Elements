@@ -802,10 +802,11 @@ main {
   background-color: white; }
 
 body > header {
-  -webkit-box-flex: auto;
-  -webkit-flex: auto;
-  -ms-flex: auto;
-  flex: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -819,7 +820,7 @@ body > header {
   z-index: 1100;
   width: 100%;
   height: 60px;
-  background-color: white; }
+  background-color: #f3f4f5; }
   body > header .link-logo {
     width: 50px; }
 
