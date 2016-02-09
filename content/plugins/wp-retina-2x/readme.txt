@@ -1,23 +1,26 @@
 === WP Retina 2x ===
 Contributors: TigrouMeow
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H2S7S3G4XMJ6J
-Tags: retina, images, image, admin, attachment, media, files, iphone, ipad, plugin, picture, pictures
-License: GPLv2 or later
+Tags: retina, images, image, responsive, admin, attachment, media, files, iphone, ipad, high-dpi
 Requires at least: 3.5
-Tested up to: 4.2.2
-Stable tag: 3.4.2
+Tested up to: 4.4.1
+Stable tag: 4.4.4
 
-Make your website look beautiful and crisp on Retina / High DPI displays.
+Make your website look beautiful and crisp on modern displays by creating and displaying retina images. WP 4.4+ is also supported and enhanced.
 
 == Description ==
 
-This plugin creates the image files required by the Retina (High DPI) devices and displays them to your visitors accordingly. Your website will look beautiful and crisp on every device! The retina images will be generated for you automatically - though you can also do it manually - and served to the retina devices.
+This plugin creates the image files required by the High-DPI devices and displays them to your visitors accordingly. Your website will look beautiful and crisp on every device! The retina images will be generated for you automatically - though you can also do it manually - and served to the retina devices.
+
+From version 4.4, WordPress has support for Responsive Images. WP Retina 2x handles this well and nicely adds the retina images in the src-set created by WordPress. The HTML for the images not handled by WP 4.4 will also be handled by the plugin. Moreover, the plugin also has two options specific to WP 4.4+. One is to disable the Responsive Image support, the second one is to disable the additional image size called Medium Large.
+
+The concept of retina for full-size image is a feature that only exists with this plugin and can't be simulate easily without it.
 
 It supports different methods to serve the images to your visitors, for instance: PictureFill (future HTML standard + its JS polyfill), Retina.js (JS only), IMG Rewrite (on-the-fly HTML rewrite) and Retina-Images (server handler). A lazy-loading option is available as well. Pick the one that works best with your hosting and WordPress environment. Multi-site are also supported.
 
 The plugin is very fast and optimized. It doesn't create anything in the database. In most cases, it doesn't even require any configuration. More information and tutorial available one http://apps.meow.fr/wp-retina-2x/.
 
-Languages: English, French.
+PS: The plugin cannot add retina support to your CSS, and therefore your CSS background images. If your themes are using them heavily, you can contact the theme author and kindly ask him to use WP Retina 2x API to add retina support to those background images (that is possible this way). Please note that a few gallery and slider plugins are using CSS background images as well.
 
 = Quickstart =
 
@@ -27,9 +30,53 @@ Languages: English, French.
 
 == Changelog ==
 
+= 4.4.4 =
+* Update: During bulk, doesn't stop in case of errors anymore but display an errors counter.
+
+= 4.4.1 =
+* Update: Ignore Responsive Images support if the media ID is not existent (in case of broken HTML).
+* Info: If you like the plugin, please leave a little review: https://wordpress.org/support/view/plugin-reviews/wp-retina-2x#postform. Thanks a lot and have a nice and happy end of year.
+
+= 4.4.0 =
+* Info: Please read my blog post about WP 4.4 + Retina on http://apps.meow.fr/wordpress-4-4-retina/.
+* Add: New "Responsive Images" method.
+* Add: Lot more information is available in the Retina settings, to help the newbies :)
+* Update: Headers are compliant to WP 4.4.
+* Info: I have published a new book and it is available on Amazon! It is called "Abandoned Japan". Here: https://goo.gl/dQJpJW. Have a look :)
+
+= 4.0.3 =
+* Add: Display the image size name and the retina width x height when hovering the little squares.
+* Add: Option to disable the new Medium Large image size brought by WP 4.4.
+* Add: Option to disable the automatic handling of responsive image (src-set) by WP 4.4.
+* Add: Add the Retina images in the Responsive Image tag created by WP 4.4.
+* Update: Retina information has been moved to the Media Library directly.
+* Update: Dashboard has been revamped for Pro users. Standard users can still use Bulk functions.
+* Update: Support for WP 4.4.
+
+= 3.5.4 =
+* Update: PictureFill 3.0.1 (full codebase rewrite).
+
+= 3.5.2 =
+* Update: Little modification for SmushIt (https://wordpress.org/support/topic/wp-retina-2x-support-in-wp-smush?replies=1#post-7460268).
+
+= 3.5.0 =
+* Update: Towards using the new WP translation system.
+
+= 3.4.8 =
+* Update: For WordPress 4.3.
+* Update: RetinaImages to 1.7.2.
+
+= 3.4.6 =
+* Fix: Search string not null but empty induces error.
+* Change: User Agent used for Pro authentication.
+
+= 3.4.4 =
+* Fix: Issues with class containing trailing spaces. Fixed in in SimpleHTMLDOM.
+* Fix: Used to show weird numbers when using 9999 as width or height.
+* Add: Filter and default filter to avoid certain IMG SRC to be checked/parsed by the plugin while rendering.
+
 = 3.4.2 =
 * Fix: Full-Size Retina wasn't removed when the original file was deleted from WP.
-* Info: If you use Lightroom and WordPress, please have a look at http://apps.meow.fr/wplr-sync/ :)
 
 = 3.4.0 =
 * Fix: Images set up with a 0x0 size must be skipped.
@@ -113,7 +160,7 @@ Fix: Very minor issue (one of the debug line had a bug).
 * Change: Enhanced logs (in debug mode), much easier to read.
 * Change: Dashboard enhanced, more clear, possibility of having many image sizes on the screen.
 * Fix: Better handing of non-image media and image detection.
-* Fix: Rounding issues always been present, they are now fixed with an 2px error margin. 
+* Fix: Rounding issues always been present, they are now fixed with an 2px error margin.
 * Fix: Warnings and issues in case of broken metadata and images.
 * Add: (PRO) New pop-up screen with detailed information.
 * Add: (PRO) Added Retina for Full-Size with upload feature. Please note that Full-Size Retina also works with the normal version but you will have to manually resize and upload them.
@@ -337,6 +384,7 @@ Developers, WP Retina 2x has a little API. Here are a few filters and actions yo
 * wr2x_img_url: you can check and potentially override the $wr2x_img_url (normal/original image from the src) that will be used in the srcset for 1x
 * wr2x_img_retina_url: you can check and potentially override the $wr2x_img_retina_url (retina image) that will be used in the srcset for 2x
 * wr2x_img_src: you can check and potentially override the $wr2x_img_src that will be used in the img's src (only used in Pro version)
+* wr2x_validate_src: the img src is passed; return it if it is valid, return null if it should be skipped
 
 == Upgrade Notice ==
 

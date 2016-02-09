@@ -7,22 +7,24 @@ add_action( 'admin_init', 'wr2x_admin_init' );
  * SETTINGS PAGE
  *
  */
- 
-function wr2x_settings_page() {
-    global $wr2x_settings_api;
-	echo '<div class="wrap">';
-    jordy_meow_donation(true);
-	$method = wr2x_getoption( "method", "wr2x_advanced", 'Picturefill' );
 
-	echo "<div id='icon-options-general' class='icon32'><br></div><h2>Retina";
-    by_jordy_meow();
-    echo "</h2>";
+function wr2x_settings_page() {
+  global $wr2x_settings_api;
+	echo '<div class="wrap">';
+  jordy_meow_donation(true);
+	$method = wr2x_getoption( "method", "wr2x_advanced", 'Picturefill' );
+	echo "<h1>Retina";
+  by_jordy_meow();
+  echo "</h1>";
 	if ( $method == 'retina.js' ) {
 		echo "<p><span>" . __( "Current method:", 'wp-retina-2x' ) . " <u>" . __( "Client side", 'wp-retina-2x' ) . "</u>.</span>";
 	}
-    if ( $method == 'Picturefill' ) {
-        echo "<p><span>" . __( "Current method:", 'wp-retina-2x' ) . " <u>" . __( "PictureFill", 'wp-retina-2x' ) . "</u>.</span>";
-    }
+  if ( $method == 'Picturefill' ) {
+      echo "<p><span>" . __( "Current method:", 'wp-retina-2x' ) . " <u>" . __( "PictureFill", 'wp-retina-2x' ) . "</u>.</span>";
+  }
+  if ( $method == 'Responsive' ) {
+      echo "<p><span>" . __( "Current method:", 'wp-retina-2x' ) . " <u>" . __( "Responsive Images", 'wp-retina-2x' ) . "</u>.</span>";
+  }
 	if ( $method == 'Retina-Images' ) {
         echo "<p><span>" . __( "Current method:", 'wp-retina-2x' ) . " <u>" . __( "Server side", 'wp-retina-2x' ) . "</u>.</span>";
         if ( defined( 'MULTISITE' ) && MULTISITE == true  ) {
@@ -32,13 +34,13 @@ function wr2x_settings_page() {
                 echo " <span style='color: red;'>" . __( "By the way, you are using a <b>WordPress Multi-Site installation</b>! You must edit your .htaccess manually and add '<b>RewriteRule ^files/(.+) wp-content/plugins/wp-retina-2x/wr2x_image.php?ms=true&file=$1 [L]</b>' as the first RewriteRule if you want the server-side to work.", 'wp-retina-2x' ) . "</span>";
             }
             else
-                echo " <span style='color: red;'>" . __( "By the way, you are using a <b>WordPress Multi-Site installation</b>! You must edit your .htaccess manually and add '<b>RewriteRule ^(wp-content/.+\.(png|gif|jpg|jpeg|bmp|PNG|GIF|JPG|JPEG|BMP)) wp-content/plugins/wp-retina-2x/wr2x_image.php?ms=true&file=$1 [L]</b>' as the first RewriteRule if you want the server-side to work.", 'wp-retina-2x' ) . "</span>";   
+                echo " <span style='color: red;'>" . __( "By the way, you are using a <b>WordPress Multi-Site installation</b>! You must edit your .htaccess manually and add '<b>RewriteRule ^(wp-content/.+\.(png|gif|jpg|jpeg|bmp|PNG|GIF|JPG|JPEG|BMP)) wp-content/plugins/wp-retina-2x/wr2x_image.php?ms=true&file=$1 [L]</b>' as the first RewriteRule if you want the server-side to work.", 'wp-retina-2x' ) . "</span>";
         }
 		echo "</p>";
 		if ( !get_option('permalink_structure') )
 			echo "<p><span style='color: red;'>" . __( "The permalinks are not enabled. They need to be enabled in order to use the server-side method.", 'wp-retina-2x' ) . "</span>";
 	}
-	
+
     //settings_errors();
     $wr2x_settings_api->show_navigation();
     $wr2x_settings_api->show_forms();
@@ -70,21 +72,21 @@ function wr2x_getoption( $option, $section, $default = '' ) {
 }
 
 function wr2x_admin_init() {
-    if ( isset( $_POST ) && isset( $_POST['wr2x_pro'] ) )
-        wr2x_validate_pro( $_POST['wr2x_pro']['subscr_id'] );
-    $pro_status = get_option( 'wr2x_pro_status', "Not Pro." );
+  if ( isset( $_POST ) && isset( $_POST['wr2x_pro'] ) )
+      wr2x_validate_pro( $_POST['wr2x_pro']['subscr_id'] );
+  $pro_status = get_option( 'wr2x_pro_status', "Not Pro." );
 	require( 'wr2x_class.settings-api.php' );
 	if ( delete_transient( 'wr2x_flush_rules' ) ) {
 		global $wp_rewrite;
 		wr2x_generate_rewrite_rules( $wp_rewrite, true );
 	}
-	
+
 	$sections = array(
         array(
             'id' => 'wr2x_basics',
             'title' => __( 'Basics', 'wp-retina-2x' )
         ),
-		array(
+		    array(
             'id' => 'wr2x_advanced',
             'title' => __( 'Advanced', 'wp-retina-2x' )
         ),
@@ -93,7 +95,7 @@ function wr2x_admin_init() {
             'title' => __( 'Pro', 'wp-retina-2x' )
         )
     );
-	
+
     // Default Auto-Generate
     $auto_generate = wr2x_getoption( 'auto_generate', 'wr2x_basics', null );
     if ( $auto_generate === null )
@@ -102,45 +104,66 @@ function wr2x_admin_init() {
 	$wpsizes = wr2x_get_image_sizes();
 	$sizes = array();
 	foreach ( $wpsizes as $name => $attr )
-		$sizes["$name"] = sprintf( "%s (%dx%d)", $name, $attr['width'], $attr['height'] );
-	
+		$sizes["$name"] = sprintf( "<div style='float: left; text-align: right; margin-right: 5px; width: 20px;'>%s</div> <b>%s</b> <small>(Normal: %dx%d, Retina: %dx%d)</small>", wr2x_size_shortname( $name ), $name, $attr['width'], $attr['height'], $attr['width'] * 2, $attr['height'] * 2 );
+
 	$fields = array(
-        'wr2x_basics' => array(
-			array(
-                'name' => 'ignore_sizes',
-                'label' => __( 'Disabled Sizes', 'wp-retina-2x' ),
-                'desc' => __( '<br />The selected sizes will not have their retina equivalent generated.', 'wp-retina-2x' ),
-                'type' => 'multicheck',
-                'options' => $sizes
-            ),
-			array(
-                'name' => 'auto_generate',
-                'label' => __( 'Auto Generate', 'wp-retina-2x' ),
-                'desc' => __( 'Generate retina images automatically when images are uploaded or re-generated.<br /><small>The \'Disabled Sizes\' will be skipped.</small>', 'wp-retina-2x' ),
-                'type' => 'checkbox',
-                'default' => true
-            ),
-            array(
-                'name' => 'full_size',
-                'label' => __( 'Full Size Retina (Pro)', 'wp-retina-2x' ),
-                'desc' => __( 'Retina for the full-size image will be considered required.<br /><small>Checks for Full-Size retina will be enabled and upload features made available.</small>', 'wp-retina-2x' ),
-                'type' => 'checkbox',
-                'default' => false
-            )
+    'wr2x_basics' => array(
+         array(
+            'name' => 'ignore_sizes',
+            'label' => __( 'Disabled Sizes', 'wp-retina-2x' ),
+            'desc' => __( '<br />The selected sizes will not have their retina equivalent generated.', 'wp-retina-2x' ),
+            'type' => 'multicheck',
+            'options' => $sizes
         ),
+        array(
+            'name' => 'auto_generate',
+            'label' => __( 'Auto Generate', 'wp-retina-2x' ),
+            'desc' => __( 'Generate retina images automatically when images are uploaded or re-generated.<br /><small>The \'Disabled Sizes\' will be skipped.</small>', 'wp-retina-2x' ),
+            'type' => 'checkbox',
+            'default' => true
+        ),
+        array(
+            'name' => 'disable_responsive',
+            'label' => __( 'Disable Responsive<br/>(WP 4.4+)', 'wp-retina-2x' ),
+            'desc' => __( 'Disable the Responsive Images feature of WordPress 4.4+.<br /><small>This feature can be quite messy for many websites as it creates a src-set automatically with all your image sizes in it. You can disable it completely here and get back control over your HTML as it is in the editor (while keeping the plugin adding Retina support, of course).</small>', 'wp-retina-2x' ),
+            'type' => 'checkbox',
+            'default' => false
+        ),
+        array(
+            'name' => 'disable_medium_large',
+            'label' => __( 'Disable Medium Large<br/>(WP 4.4+)', 'wp-retina-2x' ),
+            'desc' => __( 'Disable the image size called "Medium Large" created by in WordPress 4.4+.<br /><small>You probably don\'t need this and it creates additional images. Be careful however, future themes might use it.</small>', 'wp-retina-2x' ),
+            'type' => 'checkbox',
+            'default' => false
+        ),
+        array(
+            'name' => 'full_size',
+            'label' => __( 'Full Size Retina (Pro)', 'wp-retina-2x' ),
+            'desc' => __( 'Retina for the full-size image will be considered required.<br /><small>Checks for Full-Size retina will be enabled and upload features made available.</small>', 'wp-retina-2x' ),
+            'type' => 'checkbox',
+            'default' => false
+        )
+    ),
 		'wr2x_advanced' => array(
-			array(
+		    array(
                 'name' => 'method',
                 'label' => __( 'Method', 'wp-retina-2x' ),
-                'desc' => __( '<br />Check the <a href="http://apps.meow.fr/wp-retina-2x/">plugin official page</a> if you want to know more about the methods to deliver the retina images.', 'wp-retina-2x' ),
+                'desc' => __( '<br />In all cases (including "None"), Retina support will be added to the Responsive Images created by WP 4.4.<br />Check the <a href="http://apps.meow.fr/wp-retina-2x/retina-methods/">Retina Methods</a> page if you want to know more about those methods.', 'wp-retina-2x' ),
                 'type' => 'radio',
                 'default' => 'Picturefill',
                 'options' => array(
-                    'Picturefill' => __( "Picturefill (Recommended)", 'wp-retina-2x' ),
-                    'retina.js' => __( "Retina.js", 'wp-retina-2x' ),
-                    'HTML Rewrite' => __( "IMG Rewrite", 'wp-retina-2x' ),
-					'Retina-Images' => __( "Retina-Images", 'wp-retina-2x' ),
-					'none' => __( "None", 'wp-retina-2x' )
+
+                    'Picturefill' => __( "Picturefill<br /><small>Rewrite HTML to upgrade IMG tags to src-set (responsive). From WP 4.4+, it also adds the retina images in the existing src-set. Finally, it loads the <a href='https://github.com/scottjehl/picturefill' target='_blank'>PictureFill</a> script to bring src-set support to all browsers and devices. <b>This is the recommended method.</b></small><br />", 'wp-retina-2x' ),
+
+                    'Responsive' => __( "Responsive Images<br /><small>Adds the retina images in the existing src-set. It's clean, fast, works for everything if your theme and plugins support WP 4.4. <b>If you are not using WP 4.4+, that will do nothing at all.</b></small><br />", 'wp-retina-2x' ),
+
+                    'retina.js' => __( "Retina.js<br /><small>Loads the <a href='https://github.com/imulus/retinajs' target='_blank'>retina.js</a> script. Your images are loaded normally then the Retina.js script check for the retina images and load them instead if they are found. It is a failsafe method that works better with older themes, gallery and slider plugins.</small><br />", 'wp-retina-2x' ),
+
+                    'HTML Rewrite' => __( "IMG Rewrite<br /><small>When a retina device is detected, the HTML is rewritten with the retina images instead of the normal ones. It could be a great method, unfortunately it doesn't work with caching (except if your caching system supports it).</small><br />", 'wp-retina-2x' ),
+
+          					'Retina-Images' => __( "Retina-Images<br /><small>This sets up a server handler for the images. Basically, the server sends retina images to retina devices under the same filenames. Depending on your install, it might be tricky to use, please make sur you check the official page of <a href='https://github.com/Retina-Images/Retina-Images/' target='_blank'>Retina-Images</a>. The .htaccess is modified automatically by WP Retina 2x but needs to be checked. <b>For advanced users only.</b></small><br />", 'wp-retina-2x' ),
+
+          					'none' => __( "None", 'wp-retina-2x' ),
                 )
             ),
             array(
@@ -172,8 +195,8 @@ function wr2x_admin_init() {
             ),
             array(
                 'name' => 'picturefill_keep_src',
-                'label' => __( 'Keep IMG SRC (Pro)', 'wp-retina-2x' ),
-                'desc' => __( 'Excellent for SEO. But Retina devices will get both normal and retina images.<br /><small>With PictureFill, <b>src</b> tags are replaced by <b>src-set</b> tags and consequently search engines might not be able to find and reference those images.</small>', 'wp-retina-2x' ),
+                'label' => __( 'Keep IMG SRC', 'wp-retina-2x' ),
+                'desc' => __( 'Excellent for SEO. But Retina devices will get both normal and retina images.<br /><small>With PictureFill, <b>src</b> tags are replaced by <b>src-set</b> tags and consequently search engines might not be able to find and reference those images. WP 4.4+ forces this IMG SRC to be present.</small>', 'wp-retina-2x' ),
                 'type' => 'checkbox',
                 'default' => false
             ),
@@ -187,7 +210,7 @@ function wr2x_admin_init() {
             array(
                 'name' => 'picturefill_noscript',
                 'label' => __( 'No Picturefill Script', 'wp-retina-2x' ),
-                'desc' => __( 'The script for Picturefill will not be loaded.<br /><small>Only the browsers with src-set support (e.g. Chrome) will display images. You can also load the Picturefill script manually.</small>', 'wp-retina-2x' ),
+                'desc' => __( 'The script for Picturefill will not be loaded.<br /><small>Only the browsers with src-set support will display images. You can also choose this if you want to load the Picturefill script manually or if it is already loaded by your theme.</small>', 'wp-retina-2x' ),
                 'type' => 'checkbox',
                 'default' => false
             ),
@@ -197,14 +220,14 @@ function wr2x_admin_init() {
                 'desc' => __( '<h2>Admin Screens</h2>', 'wp-retina-2x' ),
                 'type' => 'html'
             ),
-			array(
+			      array(
                 'name' => 'hide_retina_column',
                 'label' => __( 'Hide \'Retina\' column', 'wp-retina-2x' ),
                 'desc' => __( 'Will hide the \'Retina Column\' from the Media Library.', 'wp-retina-2x' ),
                 'type' => 'checkbox',
                 'default' => false
             ),
-			array(
+			      array(
                 'name' => 'hide_retina_dashboard',
                 'label' => __( 'Hide Retina Dashboard', 'wp-retina-2x' ),
                 'desc' => __( 'Doesn\'t show the Retina Dashboard menu and tools.', 'wp-retina-2x' ),
@@ -227,11 +250,11 @@ function wr2x_admin_init() {
             array(
                 'name' => 'ignore_mobile',
                 'label' => __( 'Ignore Mobile', 'wp-retina-2x' ),
-                'desc' => __( 'Doesn\'t deliver Retina images to mobiles.<br /><small>PictureFill doesn\'t support it and cache will also prevent it from working.</small>', 'wp-retina-2x' ),
+                'desc' => __( 'Doesn\'t deliver Retina images to mobiles.<br /><small>Only works with the IMG Rewrite method and cache will prevent it from working, unless the caching system supports it.</small>', 'wp-retina-2x' ),
                 'type' => 'checkbox',
                 'default' => false
             ),
-		),
+		    ),
         'wr2x_pro' => array(
             array(
                 'name' => 'pro',
@@ -269,13 +292,13 @@ function wr2x_generate_rewrite_rules( $wp_rewrite, $flush = false ) {
 		// MODIFICATION: docwhat
 		// get_home_url() -> trailingslashit(site_url())
 		// REFERENCE: http://wordpress.org/support/topic/plugin-wp-retina-2x-htaccess-generated-with-incorrect-rewriterule
-		
-		// MODIFICATION BY h4ir9 
+
+		// MODIFICATION BY h4ir9
 		// .*\.(jpg|jpeg|gif|png|bmp) -> (.+.(?:jpe?g|gif|png))
 		// REFERENCE: http://wordpress.org/support/topic/great-but-needs-a-little-update
-		
+
 		$handlerurl = str_replace( trailingslashit(site_url()), '', plugins_url( 'wr2x_image.php', __FILE__ ) );
-		add_rewrite_rule( '(.+.(?:jpe?g|gif|png))', $handlerurl, 'top' );		
+		add_rewrite_rule( '(.+.(?:jpe?g|gif|png))', $handlerurl, 'top' );
 	}
 	if ( $flush == true ) {
 		$wp_rewrite->flush_rules();
