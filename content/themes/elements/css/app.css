@@ -739,6 +739,10 @@ ul {
 .row {
   max-width: none; }
 
+[class*='grid-'] {
+  width: calc( 100% + 1.875rem );
+  margin-left: -0.9375rem; }
+
 h1, h2, p, a {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;

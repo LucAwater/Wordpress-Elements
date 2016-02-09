@@ -28,3 +28,8 @@ ul{
 .row{
   max-width: none;
 }
+
+[class*='grid-']{
+  width: calc( 100% + #{$block-grid-default-spacing} );
+  margin-left: -($block-grid-default-spacing / 2);
+}
