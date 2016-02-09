@@ -2,97 +2,79 @@
 /**
  * Variable product add to cart
  *
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product/add-to-cart/variable.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you (the theme developer).
+ * will need to copy the new files to your theme to maintain compatibility. We try to do this.
+ * as little as possible, but it does happen. When this occurs the version of the template file will.
+ * be bumped and the readme will list any important changes.
+ *
+ * @see 	http://docs.woothemes.com/document/template-structure/
+ * @author  WooThemes
+ * @package WooCommerce/Templates
+ * @version 2.5.0
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+global $product;
 
-global $woocommerce, $product, $post;
-?>
+$attribute_keys = array_keys( $attributes );
 
-<script type="text/javascript">
-    var product_variations_<?php echo $post->ID; ?> = <?php echo json_encode( $available_variations ) ?>;
-</script>
+do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->id ); ?>" data-product_variations="<?php echo htmlspecialchars( json_encode( $available_variations ) ) ?>">
+	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
-<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
+	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
+		<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
+	<?php else : ?>
+		<table class="variations" cellspacing="0">
+			<tbody>
+				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
+					<tr>
+						<td class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></td>
+						<td class="value">
+							<?php
+								$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) : $product->get_variation_default_attribute( $attribute_name );
+								wc_dropdown_variation_attribute_options( array( 'options' => $options, 'attribute' => $attribute_name, 'product' => $product, 'selected' => $selected ) );
+								echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . __( 'Clear', 'woocommerce' ) . '</a>' ) : '';
+							?>
+						</td>
+					</tr>
+		        <?php endforeach;?>
+			</tbody>
+		</table>
 
-  <!-- Variations -->
-  <?php if ( ! empty( $available_variations ) ) : ?>
-    <?php $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
-      <div class="variations">
-        <fieldset>
-          <?php
-          if ( is_array( $options ) ) {
+		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-            if ( empty( $_POST ) )
-              $selected_value = ( isset( $selected_attributes[ sanitize_title( $name ) ] ) ) ? $selected_attributes[ sanitize_title( $name ) ] : '';
-            else
-              $selected_value = isset( $_POST[ 'attribute_' . sanitize_title( $name ) ] ) ? $_POST[ 'attribute_' . sanitize_title( $name ) ] : '';
-              //echo   $selected_value;
-              // Get terms if this is a taxonomy - ordered
-              if ( taxonomy_exists( sanitize_title( $name ) ) ) {
-                $terms = get_terms( sanitize_title($name), array('menu_order' => 'ASC') );
+		<div class="single_variation_wrap">
+			<?php
+				/**
+				 * woocommerce_before_single_variation Hook.
+				 */
+				do_action( 'woocommerce_before_single_variation' );
 
-                foreach ( $terms as $term ) {
-                  if ( ! in_array( $term->slug, $options ) ) continue;
+				/**
+				 * woocommerce_single_variation hook. Used to output the cart button and placeholder for variation data.
+				 * @since 2.4.0
+				 * @hooked woocommerce_single_variation - 10 Empty div for variation data.
+				 * @hooked woocommerce_single_variation_add_to_cart_button - 20 Qty and cart button.
+				 */
+				do_action( 'woocommerce_single_variation' );
 
-                    echo '<label>';
-                      echo '<input type="radio" value="' . strtolower($term->slug) . '" ' . checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name );
-                    echo '</label>';
-                  }
-                } else {
+				/**
+				 * woocommerce_after_single_variation Hook.
+				 */
+				do_action( 'woocommerce_after_single_variation' );
+			?>
+		</div>
 
-                foreach ( $options as $option ) {
-                  echo '<label>';
-                    echo '<input type="radio" value="' .esc_attr( sanitize_title( $option ) ) . '" ' . checked( sanitize_title( $selected_value ), sanitize_title( $option ), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option );
-                  echo '</label>';
-                }
-              }
-            }
-            ?>
-          </fieldset> <?php
-          if ( sizeof($attributes) == $loop )
-            //echo '<a class="reset_variations" href="#reset">' . __( 'Clear selection', 'woocommerce' ) . '</a>';
-          ?>
-      </div>
-    <?php endforeach;?>
+		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+	<?php endif; ?>
 
-    <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-
-    <?php if ( $product->is_in_stock() ) : ?>
-
-      <!-- Variable price -->
-      <div class="single_variation"></div>
-
-      <div class="single_variation_wrap">
-        <?php do_action( 'woocommerce_before_single_variation' ); ?>
-
-        <button type="submit" class="single_add_to_cart_button product-type-variable button alt">Add to cart</button>
-
-        <input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
-        <input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
-        <input type="hidden" name="variation_id" value="" />
-
-        <?php do_action( 'woocommerce_after_single_variation' ); ?>
-      </div>
-    <?php else: ?>
-
-      <p class="stock out-of-stock"><?php _e( 'Out of stock', 'woocommerce' ); ?></p>
-
-    <?php endif; ?>
-
-    <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-
-  <?php else : ?>
-
-    <p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
-
-  <?php endif; ?>
-
+	<?php do_action( 'woocommerce_after_variations_form' ); ?>
 </form>
 
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
