@@ -7,15 +7,26 @@
     var hero_content = $('.hero .section-body');
 
     // Fade Content on scroll
-    hero_content.addClass('is-visible-0.7s');
+    if( hero_content.length > 0 ){
+      hero_content.addClass('is-visible-0.7s');
 
-    var waypoint = new Waypoint({
-      element: hero_content,
-      offset: '10%',
-      handler: function() {
-        hero_content.toggleClass('is-visible-0.7s');
-        hero_content.toggleClass('is-hidden-0.7s');
-      }
+      var waypoint = new Waypoint({
+        element: hero_content,
+        offset: '10%',
+        handler: function() {
+          hero_content.toggleClass('is-visible-0.7s');
+          hero_content.toggleClass('is-hidden-0.7s');
+        }
+      });
+    }
+
+    // Scroll arrow
+    var trigger = $('.arrow-scroll');
+
+    trigger.click( function() {
+      $('body').animate({
+        scrollTop: hero.height()
+      }, 500);
     });
   };
 
