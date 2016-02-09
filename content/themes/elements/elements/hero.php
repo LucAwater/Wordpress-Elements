@@ -12,14 +12,16 @@ $b_title = get_sub_field( 'hero_b_title' );
 $b_text = preg_replace( '/<p>/', '<p class="is-' . $o_b_textColor . '">', get_sub_field( 'hero_b_text' ) );
 
 // Classes
-$class_section = 'hero has-no-pad';
+$class_section = 'hero has-no-pad is-fullwidth';
 $class_banner = 'hero-banner';
 $class_body = 'section-body';
 ?>
 
 <section class="<?php echo $class_section; ?>">
-  <div class="<?php echo $class_banner; ?>">
-    <img src="<?php echo $banner['sizes']['large']; ?>" width="<?php echo $banner['width']; ?>" height="<?php echo $banner['height']; ?>">
+  <div class="<?php echo $class_banner; ?>"
+       style="background-image: url('<?php echo $banner['sizes']['large']; ?>');"
+       width="<?php echo $banner['width']; ?>"
+       height="<?php echo $banner['height']; ?>">
   </div>
 
   <?php if( $b_image || $b_title || $b_text ): ?>
