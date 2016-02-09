@@ -1,5 +1,5 @@
 section.hero{
-  height: 100vh;
+  height: calc(100vh - #{$header-height});
   margin-top: 0;
   margin-bottom: ($space-section / 2);
   padding: 0;

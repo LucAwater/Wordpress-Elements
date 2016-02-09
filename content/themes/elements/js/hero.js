@@ -26,7 +26,7 @@
 
     trigger.click( function() {
       $('body').animate({
-        scrollTop: hero.height() - header.height()
+        scrollTop: hero.height()
       }, 500);
     });
   };

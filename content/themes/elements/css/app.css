@@ -775,6 +775,9 @@ header,
 footer {
   padding: 0 6.25rem; }
 
+main {
+  padding-top: 60px; }
+
 main > * {
   padding: 3.125rem 6.25rem; }
   main > *:first-child {
@@ -1075,7 +1078,7 @@ section {
     margin-bottom: 3.125rem; }
 
 section.hero {
-  height: 100vh;
+  height: calc(100vh - 60px);
   margin-top: 0;
   margin-bottom: 3.125rem;
   padding: 0;
