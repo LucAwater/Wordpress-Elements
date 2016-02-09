@@ -6,7 +6,7 @@ section.hero{
   .hero-banner{
     width: 100%;
     height: 100%;
-    
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,48 +20,5 @@ section.hero{
     position: absolute;
 
     margin: auto;
-  }
-}
-
-// Scroll arrow
-.arrow-scroll{
-  left: 0;
-  right: 0;
-  bottom: 30px;
-  position: absolute;
-  z-index: $zIndex-arrow;
-
-  width: 60px;
-  height: 60px;
-  margin: auto;
-
-  background-color: $white;
-  border-radius: 100%;
-
-  img{
-    @include transition( .2s );
-    @include transform( rotate(90deg) );
-
-    top: 20px;
-    left: 15px;
-    position: absolute;
-    z-index: $zIndex-arrow;
-
-    width: 30px;
-  }
-
-  &:hover{
-    img{
-      @include transition( .2s );
-
-      top: 25px;
-    }
-  }
-}
-
-// Remove fixed positioning on mobile devices
-body.is-mobile{
-  section.hero .hero-banner{
-    position: relative;
   }
 }

@@ -902,6 +902,43 @@ nav ul {
 nav ul li.current {
   text-decoration: underline; }
 
+.arrow {
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black; }
+  .arrow.arrow-right {
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .arrow.arrow-left {
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .arrow.arrow-up {
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg); }
+  .arrow.arrow-scroll {
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    position: absolute;
+    z-index: 1100;
+    margin: auto; }
+
 .slider {
   position: relative; }
 
@@ -1063,44 +1100,6 @@ section.hero {
     left: 50%;
     position: absolute;
     margin: auto; }
-
-.arrow-scroll {
-  left: 0;
-  right: 0;
-  bottom: 30px;
-  position: absolute;
-  z-index: 1100;
-  width: 60px;
-  height: 60px;
-  margin: auto;
-  background-color: white;
-  border-radius: 100%; }
-  .arrow-scroll img {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    top: 20px;
-    left: 15px;
-    position: absolute;
-    z-index: 1100;
-    width: 30px; }
-  .arrow-scroll:hover img {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    top: 25px; }
-
-body.is-mobile section.hero .hero-banner {
-  position: relative; }
 
 section.text .section-body {
   max-width: 700px;

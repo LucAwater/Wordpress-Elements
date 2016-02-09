@@ -44,5 +44,5 @@ $class_body = 'section-body';
     </div>
   <?php endif; ?>
 
-  <a class="arrow arrow-scroll"><img src="<?php echo bloginfo( 'template_directory' ); ?>'/img/arrow.svg"></a>
+  <div class="arrow arrow-scroll"></div>
 </section>
