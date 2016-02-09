@@ -746,6 +746,8 @@ h1, h2, p, a {
   font-weight: normal; }
   h1.is_bold, h2.is_bold, p.is_bold, a.is_bold {
     font-weight: 700; }
+  h1 a, h2 a, p a, a a {
+    font-size: 1em; }
 
 h1, h2 {
   font-size: 3em; }
