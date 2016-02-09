@@ -13,12 +13,16 @@ $b_text = preg_replace( '/<p>/', '<p class="is-aligned-' . $o_b_align . '">', ge
 
 // Classes
 $class_section = 'text';
+$class_header = 'section-header is-pos-' . $o_b_pos;
 $class_body = 'section-body is-pos-' . $o_b_pos;
 ?>
 
 <section class="<?php echo $class_section; ?>">
-  <div class="<?php echo $class_body; ?>">
+  <div class="<?php echo $class_header; ?>">
     <h2><?php echo $b_title; ?></h2>
-    <div><?php echo $b_text; ?></div>
+  </div>
+
+  <div class="<?php echo $class_body; ?>">
+    <?php echo $b_text; ?>
   </div>
 </section>
