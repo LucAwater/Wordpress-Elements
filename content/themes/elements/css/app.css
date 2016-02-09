@@ -838,10 +838,6 @@ footer {
   footer p, footer a {
     color: white; }
 
-section .section-header,
-section .section-body {
-  background-color: #f3f4f5; }
-
 body.error404 #error404-content {
   max-width: 800px;
   margin: 100px auto;
