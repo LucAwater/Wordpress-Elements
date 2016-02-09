@@ -17,27 +17,7 @@
 
 function acf_get_field_reference( $field_name, $post_id ) {
 	
-	// try cache
-	$found = false;
-	$cache = wp_cache_get( "field_reference/post_id={$post_id}/name={$field_name}", 'acf', false, $found );
-	
-	if( $found ) {
-		
-		return $cache;
-		
-	}
-			
-	
-	// get reference
-	$reference = acf_get_metadata( $post_id, $field_name, true );
-	
-	
-	//update cache
-	wp_cache_set( "field_reference/post_id={$post_id}/name={$field_name}", $reference, 'acf' );
-	
-	
-	// return
-	return $reference;
+	return acf_get_metadata( $post_id, $field_name, true );
 	
 }
 
@@ -462,17 +442,17 @@ function have_rows( $selector, $post_id = false ) {
 		// If post_id has changed, this is most likely an archive loop
 		if( $change == 'post_id' ) {
 			
-			if( $prev && $prev['post_id'] == $post_id ) {
-				
-				// case: Change in $post_id was due to a nested loop ending
-				// action: move up one level through the loops
-				reset_rows();
-			
-			} elseif( empty($_post_id) && $sub_exists ) {
+			if( empty($_post_id) && $sub_exists ) {
 				
 				// case: Change in $post_id was due to this being a nested loop and not specifying the $post_id
 				// action: move down one level into a new loop
 				$new_child_loop = true;
+			
+			} elseif( $prev && $prev['post_id'] == $post_id ) {
+				
+				// case: Change in $post_id was due to a nested loop ending
+				// action: move up one level through the loops
+				reset_rows();
 			
 			} else {
 				
@@ -647,6 +627,21 @@ function acf_get_row() {
 	
 }
 
+function get_row_index() {
+	
+	// vars
+	$row = acf_get_row();
+	
+	
+	// bail early if no row
+	if( !$row ) return 0;
+	
+	
+	// return
+	return $row['i'] + 1;
+	
+}
+
 
 /*
 *  reset_rows
@@ -665,12 +660,14 @@ function acf_get_row() {
 function reset_rows( $hard_reset = false ) {
 	
 	// completely destroy?
-	if( $hard_reset )
-	{
+	if( $hard_reset ) {
+		
 		$GLOBALS['acf_field'] = array();
-	}
-	else
-	{
+	
+	
+	// reset current row	
+	} else {
+		
 		// vars
 		$depth = count( $GLOBALS['acf_field'] ) - 1;
 		
@@ -987,11 +984,7 @@ function acf_form_head() {
 	    	
 	    	
 	    	// validate
-	    	if( empty($GLOBALS['acf_form']) ) {
-		    	
-		    	return;
-		    	
-	    	}
+	    	if( empty($GLOBALS['acf_form']) ) return;
 	    	
 	    	
 	    	// vars
@@ -1069,6 +1062,14 @@ function _validate_save_post() {
 	
 	}
 	
+	
+	// honeypot
+	if( !empty($_POST['acf']['_validate_email']) ) {
+		
+		acf_add_validation_error( '', __('Spam Detected', 'acf') );
+		
+	}
+	
 }
 
 
@@ -1085,7 +1086,7 @@ function _validate_save_post() {
 *  @return	$post_id (int)
 */
 
-add_filter('acf/pre_save_post', '_acf_pre_save_post', 0, 2);
+add_filter('acf/pre_save_post', '_acf_pre_save_post', 5, 2);
 
 function _acf_pre_save_post( $post_id, $form ) {
 	
@@ -1135,6 +1136,10 @@ function _acf_pre_save_post( $post_id, $form ) {
 		$save['post_content'] = acf_extract_var($_POST['acf'], '_post_content');
 		
 	}
+	
+	
+	// honeypot
+	if( !empty($_POST['acf']['_validate_email']) ) return;
 	
 	
 	// validate
@@ -1211,7 +1216,8 @@ function acf_form( $args = array() ) {
 		'label_placement'		=> 'top',
 		'instruction_placement'	=> 'label',
 		'field_el'				=> 'div',
-		'uploader'				=> 'wp'
+		'uploader'				=> 'wp',
+		'honeypot'				=> true
 	));
 	
 	$args['form_attributes'] = wp_parse_args( $args['form_attributes'], array(
@@ -1302,9 +1308,7 @@ function acf_form( $args = array() ) {
 		
 	} elseif( $args['post_id'] == 'new_post' ) {
 		
-		$field_groups = acf_get_field_groups(array(
-			'post_type' => $args['new_post']['post_type']
-		));
+		$field_groups = acf_get_field_groups( $args['new_post'] );
 	
 	} else {
 		
@@ -1333,6 +1337,22 @@ function acf_form( $args = array() ) {
 		
 		}
 	
+	}
+	
+	
+	// honeypot
+	if( $args['honeypot'] ) {
+		
+		$fields[] = acf_get_valid_field(array(
+			'name'		=> '_validate_email',
+			'label'		=> 'Validate Email',
+			'type'		=> 'text',
+			'value'		=> '',
+			'wrapper'	=> array(
+				'style'	=> 'display:none;'
+			)
+		));
+		
 	}
 	
 	
@@ -1389,7 +1409,7 @@ function acf_form( $args = array() ) {
 	<!-- Submit -->
 	<div class="acf-form-submit">
 	
-		<input type="submit" class="button button-primary button-large" value="<?php echo $args['submit_value']; ?>" />
+		<input type="submit" class="acf-button button button-primary button-large" value="<?php echo $args['submit_value']; ?>" />
 		<span class="acf-spinner"></span>
 		
 	</div>
@@ -1667,6 +1687,15 @@ function add_row( $selector, $value, $post_id = false ) {
 	$i = (int) acf_get_metadata( $post_id, $field['name'] );
 	
 	
+	// if no rows, save this field via update_field() so that the reference field is created
+	if( !$i ) {
+		
+		// acf_update_value will return boolean, simply convert this to int for 1 | 0 (the number of rows!)
+		return (int) acf_update_value( array( $value ), $post_id, $field );
+		
+	}
+	
+	
 	// increase $i
 	$i++;
 	
@@ -1680,7 +1709,7 @@ function add_row( $selector, $value, $post_id = false ) {
 		
 		foreach( $value as $k => $v ) {
 		
-			update_sub_field( array( $field['name'], $i, $k ), $v, $post_id );
+			update_sub_field( array( $field['key'], $i, $k ), $v, $post_id );
 			
 		}
 	
@@ -1725,17 +1754,13 @@ function update_row( $selector, $row = 1, $value = false, $post_id = false ) {
 	
 	
 	// bail early if no field
-	if( !$field ) {
-		
-		return false;
-		
-	}
+	if( !$field ) return false;
 	
 	
 	// update sub fields
 	foreach( $value as $k => $v ) {
 		
-		update_sub_field( array( $field['name'], $row, $k ), $v, $post_id );
+		update_sub_field( array( $field['key'], $row, $k ), $v, $post_id );
 		
 	}
 	
@@ -1770,11 +1795,7 @@ function delete_row( $selector, $row = 1, $post_id = false ) {
 	
 	
 	// bail early if no field
-	if( !$field ) {
-		
-		return false;
-		
-	}
+	if( !$field ) return false;
 	
 	
 	// get value
@@ -1782,15 +1803,11 @@ function delete_row( $selector, $row = 1, $post_id = false ) {
 	
 	
 	// bail early if no value
-	if( empty($rows) ) {
-		
-		return false;
-		
-	}
+	if( empty($rows) ) return false;
 	
 	
 	// deincrement
-	if( $row = count($rows) ) {
+	if( $row == count($rows) ) {
 		
 		acf_update_metadata( $post_id, $field['name'], $row-1 );
 		
@@ -1800,7 +1817,7 @@ function delete_row( $selector, $row = 1, $post_id = false ) {
 	// update sub field values
 	foreach( $rows[0] as $k => $v ) {
 		
-		update_sub_field( array( $field['name'], $row, $k ), null, $post_id );
+		update_sub_field( array( $field['key'], $row, $k ), null, $post_id );
 		
 	}
 	

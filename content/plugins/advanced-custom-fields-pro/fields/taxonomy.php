@@ -195,11 +195,7 @@ class acf_field_taxonomy extends acf_field {
 	function ajax_query() {
 		
 		// validate
-		if( !acf_verify_ajax() ) {
-		
-			die();
-			
-		}
+		if( !acf_verify_ajax() ) die();
 		
 		
 		// get choices
@@ -207,11 +203,7 @@ class acf_field_taxonomy extends acf_field {
 		
 		
 		// validate
-		if( !$choices ) {
-			
-			die();
-			
-		}
+		if( !$choices ) die();
 		
 		
 		// return JSON
@@ -349,23 +341,43 @@ class acf_field_taxonomy extends acf_field {
 		$value = acf_get_valid_terms($value, $field['taxonomy']);
 		
 		
-		// load/save
+		// load_terms
 		if( $field['load_terms'] ) {
 			
 			// get terms
 			$term_ids = wp_get_object_terms($post_id, $field['taxonomy'], array('fields' => 'ids', 'orderby' => 'none'));
 			
 			
-			// error
-			if( is_wp_error($term_ids) ) {
+			// bail early if no terms
+			if( empty($term_ids) || is_wp_error($term_ids) ) return false;
+			
+			
+			// sort
+			if( !empty($value) ) {
 				
-				return false;
+				$order = array();
+				
+				foreach( $term_ids as $i => $v ) {
 					
+					$order[ $i ] = array_search($v, $value);
+					
+				}
+				
+				array_multisort($order, $term_ids);
+				
 			}
 			
 			
-			// return
-			return $term_ids;
+			// update value
+			$value = $term_ids;
+						
+		}
+		
+		
+		// convert back from array if neccessary
+		if( $field['field_type'] == 'select' || $field['field_type'] == 'radio' ) {
+			
+			$value = array_shift($value);
 			
 		}
 		
@@ -514,19 +526,11 @@ class acf_field_taxonomy extends acf_field {
 	function format_value( $value, $post_id, $field ) {
 		
 		// bail early if no value
-		if( empty($value) ) {
-			
-			return $value;
-		
-		}
+		if( empty($value) ) return false;
 		
 		
 		// force value to array
 		$value = acf_get_array( $value );
-		
-		
-		// convert values to int
-		$value = array_map('intval', $value);
 		
 		
 		// load posts if needed
@@ -548,6 +552,7 @@ class acf_field_taxonomy extends acf_field {
 
 		// return
 		return $value;
+		
 	}
 	
 	
@@ -569,10 +574,6 @@ class acf_field_taxonomy extends acf_field {
 		$field['value'] = acf_get_array( $field['value'] );
 		
 		
-		// convert values to int
-		$field['value'] = array_map('intval', $field['value']);
-		
-		
 		// vars
 		$div = array(
 			'class'				=> 'acf-taxonomy-field acf-soh',
@@ -588,7 +589,7 @@ class acf_field_taxonomy extends acf_field {
 		?>
 <div <?php acf_esc_attr_e($div); ?>>
 	<?php if( $field['add_term'] && current_user_can( $taxonomy->cap->manage_terms) ): ?>
-	<a href="#" class="acf-icon -plus acf-js-tooltip small acf-soh-target" data-name="add" title="<?php echo sprintf( __('Add new %s ', 'acf'), $taxonomy->labels->singular_name ); ?>"></a>
+	<a href="#" class="acf-icon -plus acf-js-tooltip small acf-soh-target" data-name="add" title="<?php echo esc_attr($taxonomy->labels->add_new_item); ?>"></a>
 	<?php endif;
 
 	if( $field['field_type'] == 'select' ) {
@@ -1008,7 +1009,7 @@ class acf_field_taxonomy extends acf_field {
 		}
 		
 		
-		?><p class="acf-submit"><button class="acf-button blue" type="submit"><?php _e("Add", 'acf'); ?></button><i class="acf-spinner"></i><span></span></p></form><?php
+		?><p class="acf-submit"><button class="acf-button button button-primary" type="submit"><?php _e("Add", 'acf'); ?></button><i class="acf-spinner"></i><span></span></p></form><?php
 		
 		
 		// die
