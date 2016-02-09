@@ -1,10 +1,12 @@
 === Woocommerce Ajax add to cart for variable products ===
-Contributors: Rcreators
+Contributors: Rcreators Websolutions
 Donate link: NA
 Tags: Woocommerce, Ajax, Variable Products, Add to cart
 Requires at least: 3.2
-Tested up to: 4.2.2
-Stable tag: 1.2.4
+Tested up to: 4.4
+Stable tag: 1.2.6
+WC requires at least: 2.0
+WC tested up to: 2.4.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +40,13 @@ This plugin activate ajax functionality everywhere. So like is it a single page,
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 1.2.6 =
+* Jquery Refined with latest woocommerce version.
+* Backward compability for swatches and hidden input variations
+
+= 1.2.5 =
+* Updated Jquery to work with Radio button plugins. :  mantish - WC Variations Radio Buttons - 8manos
 
 = 1.2.4 =
 * Updated Jquery issue reported by user. : david127, nonverbla
