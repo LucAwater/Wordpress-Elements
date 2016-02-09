@@ -41,9 +41,17 @@
       <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo.svg">
     </a>
 
-    <?php get_template_part( 'includes/nav' ); ?>
+    <nav>
+      <?php
+      $nav = array(
+        'theme_location'  => 'menu_primary',
+        'container'       => '',
+        'items_wrap'      => '<ul>%3$s</ul>'
+      );
 
-    <!-- <a class="trigger trigger-menu"><i></i></a> -->
+      wp_nav_menu( $nav );
+      ?>
+    </nav>
   </header>
 
   <!-- Main content -->
