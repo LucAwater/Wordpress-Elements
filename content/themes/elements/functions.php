@@ -9,6 +9,9 @@ require_once('includes/scripts.php');
 require_once('includes/posts.php');
 require_once('includes/admin/acf-page.php');
 
+require_once('includes/section.php');
+require_once('includes/section-grid.php');
+
 // Woocommerce includes
 require_once('includes/cart-update.php');
 require_once('woocommerce/woo-functions.php');

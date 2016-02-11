@@ -1,6 +1,4 @@
 <?php
-global $i_anchor;
-
 // Options (variables)
 $o_menu = get_sub_field( 'gridSec_o_menu' );
 
@@ -18,30 +16,30 @@ $class_section = 'grid grid-sec';
 $class_header = 'section-header is-pos-' . $o_h_pos;
 $class_body = 'section-body';
 
-$class_grid = 's-grid-1 m-grid-2 l-grid-4 row';
 if( $o_b_layout == 'masonry' ){
   $class_grid = 's-grid-1 m-grid-2 l-grid-4 row isotope isotope-masonry';
+} else {
+  $class_grid = 's-grid-1 m-grid-2 l-grid-4 row';
 }
+
+// Build section
+section_start( $class_section );
+
+  // Header
+  section_header($class_header, $h_title, $h_text, $o_h_align);
+
+  // Body
+  section_grid_start( $class_body, $class_grid );
+
+    if( have_rows('gridSec_b_item') ):
+      while( have_rows('gridSec_b_item') ): the_row();
+
+        include( 'gridSec-content.php' );
+
+      endwhile;
+    endif;
+
+  section_grid_end();
+
+section_end();
 ?>
-
-<section class="<?php echo $class_section; ?>">
-  <?php if( $h_title || $h_text ): ?>
-    <div class="<?php echo $class_header; ?>">
-      <h2 class="is-aligned-<?php echo $o_h_align; ?>"><?php echo $h_title; ?></h2>
-      <?php echo $h_text; ?>
-    </div>
-  <?php endif; ?>
-
-  <div class="<?php echo $class_body; ?>">
-    <ul class="<?php echo $class_grid; ?>">
-      <?php
-      if( have_rows('gridSec_b_item') ):
-        while( have_rows('gridSec_b_item') ): the_row();
-          set_query_var( 'o_h_align', $o_h_align );
-          get_template_part('content/gridSec', 'content');
-        endwhile;
-      endif;
-      ?>
-    </ul>
-  </div>
-</section>

@@ -78,7 +78,7 @@ define( 'WPLANG', '' );
 // ========================
 
 ini_set( 'display_errors', 0 );
-define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_DISPLAY', true );
 
 // ===============
 // Increase memory
