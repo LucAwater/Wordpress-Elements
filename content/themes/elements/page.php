@@ -24,15 +24,15 @@ if( have_rows('page') ):
     if( get_row_layout() == 'hero' ):
       get_template_part( 'elements/hero' );
     elseif( get_row_layout() == 'text' ):
-      get_template_part( 'elements/text' ); $i_anchor++;
+      get_template_part( 'elements/text' );
     elseif( get_row_layout() == 'image' ):
       get_template_part( 'elements/image' );
     elseif( get_row_layout() == 'grid_primary' ):
-      get_template_part( 'elements/gridPri' ); $i_anchor++;
+      get_template_part( 'elements/gridPri' );
     elseif( get_row_layout() == 'grid_secondary' ):
-      get_template_part( 'elements/gridSec' ); $i_anchor++;
+      get_template_part( 'elements/gridSec' );
     elseif( get_row_layout() == 'slider' ):
-      get_template_part( 'elements/slider' ); $i_anchor++;
+      get_template_part( 'elements/slider' );
     elseif( get_row_layout() == 'parallax' ): $i_par++;
       get_template_part( 'elements/parallax' );
     endif;
