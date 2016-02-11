@@ -15,9 +15,6 @@ if( is_woocommerce() ){
  * Important: acf.json must be imported in order to use elements theme from this point forward.
  */
 if( have_rows('page') ):
-  // Anchor id's used for navigation
-  $i_anchor = 1;
-
   // Every parallax element needs an id
   $i_par = 0;
 

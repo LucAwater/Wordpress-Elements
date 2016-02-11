@@ -1,5 +1,5 @@
 <?php
-global $i_anchor, $detect;
+global $detect;
 
 // Options (variables)
 $o_menu = get_sub_field( 'slider_o_menu' );

@@ -1,5 +1,5 @@
 <?php
-global $i_anchor, $i_par, $detect;
+global $i_par, $detect;
 
 // Content (variables)
 $id = "parallax-" . $i_par;
