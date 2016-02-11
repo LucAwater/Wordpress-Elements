@@ -12,16 +12,27 @@ $caption = get_sub_field( 'image_b_caption' );
 // Classes
 $class_section = 'image is-' . $o_b_width;
 $class_body = 'section-body is-pos-' . $o_b_pos;
+
+// Build section
+section_start( $class_section );
+
+  // Body
+  section_body_start( $class_body );
+
+    /*
+     * Body content
+     * This is the flexible part, that is different for each element
+     */
+    echo '<figure>';
+
+      echo '<img src="' . $image['sizes']['large'] . '" width="' . $image['width'] . '" height="' . $image['height'] . '">';
+
+      if( $caption )
+        echo '<figcaption><p class="is-small is-italic">' . $caption . '</p></figcaption>';
+
+    echo '</figure>';
+
+  section_body_end();
+
+section_end();
 ?>
-
-<section class="<?php echo $class_section; ?>">
-  <div class="<?php echo $class_body; ?>">
-    <figure>
-      <img src="<?php echo $image['sizes']['large']; ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>">
-
-      <figcaption>
-        <p class="is-small is-italic"><?php echo $caption; ?></p>
-      </figcaption>
-    </figure>
-  </div>
-</section>

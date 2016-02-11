@@ -29,17 +29,25 @@ section_start( $class_section );
   section_header($class_header, $h_title, $h_text, $o_h_align);
 
   // Body
-  section_grid_start( $class_body, $class_grid );
+  section_body_start( $class_body );
 
-    if( have_rows('gridSec_b_item') ):
-      while( have_rows('gridSec_b_item') ): the_row();
+    /*
+     * Body content
+     * This is the flexible part, that is different for each element
+     */
+    section_grid_start( $class_grid );
 
-        include( 'gridSec-content.php' );
+      if( have_rows('gridSec_b_item') ):
+        while( have_rows('gridSec_b_item') ): the_row();
 
-      endwhile;
-    endif;
+          include( 'gridSec-content.php' );
 
-  section_grid_end();
+        endwhile;
+      endif;
+
+    section_grid_end();
+
+  section_body_end();
 
 section_end();
 ?>

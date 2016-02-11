@@ -29,15 +29,23 @@ section_start( $class_section );
   section_header($class_header, $h_title, $h_text, $o_h_align);
 
   // Body
-  section_grid_start( $class_body, $class_grid );
+  section_body_start( $class_body );
 
-    foreach( $b_images as $image ):
+    /*
+     * Body content
+     * This is the flexible part, that is different for each element
+     */
+    section_grid_start( $class_grid );
 
-      include( 'gridPri-content.php' );
+      foreach( $b_images as $image ):
 
-    endforeach;
+        include( 'gridPri-content.php' );
 
-  section_grid_end();
+      endforeach;
+
+    section_grid_end();
+
+  section_body_end();
 
 section_end();
 ?>

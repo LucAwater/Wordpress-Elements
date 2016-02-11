@@ -6,15 +6,19 @@
 // Includes
 require_once('includes/scripts.php');
 
-require_once('includes/posts.php');
+// Includes: admin
 require_once('includes/admin/acf-page.php');
 
-require_once('includes/section.php');
-require_once('includes/section-grid.php');
+// Inludes: template functions
+require_once('includes/functions-template/posts.php');
+require_once('includes/functions-template/section.php');
+require_once('includes/functions-template/section-header.php');
+require_once('includes/functions-template/section-grid.php');
+require_once('includes/functions-template/section-slider.php');
 
-// Woocommerce includes
-require_once('includes/cart-update.php');
+// Includes: WooCommerce
 require_once('woocommerce/woo-functions.php');
+require_once('includes/functions-woocommerce/cart-update.php');
 
 // Add support for WooCommerce
 add_action( 'after_setup_theme', 'woocommerce_support' );
