@@ -73,6 +73,7 @@ class acf_field_user extends acf_field {
 			'post_id'		=>	0,
 			's'				=>	'',
 			'field_key'		=>	'',
+			'paged'			=> 1
 		));
 		
 				
@@ -81,14 +82,17 @@ class acf_field_user extends acf_field {
    		$args = array();
    		
 		
+		// paged
+   		$args['offset'] = 20 * ($options['paged'] - 1);
+		$args['number'] = 20;
+   		
+   		
 		// load field
 		$field = acf_get_field( $options['field_key'] );
 		
-		if( !$field ) {
 		
-			return false;
-			
-		}
+		// bail early if no field
+		if( !$field ) return false;
 		
 		
 		// editable roles
@@ -230,7 +234,7 @@ class acf_field_user extends acf_field {
 	function ajax_query() {
 		
 		// validate
-		if( empty($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'acf_nonce') ) {
+		if( !acf_verify_ajax() ) {
 		
 			die();
 			

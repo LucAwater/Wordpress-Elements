@@ -1,0 +1,1 @@
+!function(e){function n(){var n=(e(".hero"),e(".hero-banner"),e(".hero .section-body"));n.addClass("is-visible-0.7s");new Waypoint({element:n,offset:"10%",handler:function(){n.toggleClass("is-visible-0.7s"),n.toggleClass("is-hidden-0.7s")}})}console.log("RGWERGWRTGWRTG"),e("section.hero").length>0&&(n(),e(window).on("resize",function(){n()}))}(jQuery);

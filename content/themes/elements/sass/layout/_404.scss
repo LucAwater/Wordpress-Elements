@@ -1,0 +1,13 @@
+body.error404{
+  #error404-content{
+    max-width: 800px;
+    margin: 100px auto;
+    display: block !important;
+
+    background-color: transparent;
+
+    h2, p{
+      margin-bottom: 1em;
+    }
+  }
+}

@@ -18,34 +18,58 @@ add_action( 'admin_head', 'wr2x_admin_head' );
 function wr2x_admin_head() {
 	?>
 	<script type="text/javascript" >
-	
+
 		/* GENERATE RETINA IMAGES ACTION */
 
 		var current;
 		var maxPhpSize = <?php echo (int)ini_get('upload_max_filesize') * 1000000; ?>;
 		var ids = [];
+		var errors = 0;
 		var ajax_action = "generate"; // generate | delete
-	
+
 		function wr2x_display_please_refresh() {
-			jQuery('#wr2x_progression').html("<?php echo _e( "<a href='?page=wp-retina-2x&view=issues&refresh=true'>Refresh</a> this page.", 'wp-retina-2x' ); ?>");
+			wr2x_refresh_progress_status();
+			jQuery('#wr2x_progression').html(jQuery('#wr2x_progression').html() + " - <?php echo _e( "<a href='?page=wp-retina-2x&view=issues&refresh=true'>Refresh</a> this page.", 'wp-retina-2x' ); ?>");
+		}
+
+		function wr2x_refresh_progress_status() {
+			var errortext = "";
+			if ( errors > 0 ) {
+				errortext = ' - ' + errors + ' error(s)';
+			}
+			jQuery('#wr2x_progression').text(current + "/" + ids.length +
+				" (" + Math.round(current / ids.length * 100) + "%)" + errortext);
 		}
 
 		function wr2x_do_next () {
 			var data = { action: 'wr2x_' + ajax_action, attachmentId: ids[current - 1] };
-			jQuery('#wr2x_progression').text(current + "/" + ids.length + " (" + Math.round(current / ids.length * 100) + "%)");
+			wr2x_refresh_progress_status();
 			jQuery.post(ajaxurl, data, function (response) {
-				reply = jQuery.parseJSON(response);
-				if (reply.success = false) {
-					alert('Error: ' + reply.message);
-					return;
+				try {
+					reply = jQuery.parseJSON(response);
 				}
-				wr2x_refresh_media_sizes(reply.results);
-				if (reply.results_full) {
-					wr2x_refresh_full(reply.results_full);
+				catch (e) {
+					reply = null;
+				}
+				if ( !reply || !reply.success )
+					errors++;
+				else {
+					wr2x_refresh_media_sizes(reply.results);
+					if (reply.results_full)
+						wr2x_refresh_full(reply.results_full);
 				}
 				if (++current <= ids.length)
 					wr2x_do_next();
 				else {
+					current--;
+					wr2x_display_please_refresh();
+				}
+			}).fail(function () {
+				errors++;
+				if (++current <= ids.length)
+					wr2x_do_next();
+				else {
+					current--;
 					wr2x_display_please_refresh();
 				}
 			});
@@ -54,6 +78,7 @@ function wr2x_admin_head() {
 		function wr2x_do_all () {
 			current = 1;
 			ids = [];
+			errors = 0;
 			var data = { action: 'wr2x_list_all', issuesOnly: 0 };
 			jQuery('#wr2x_progression').text("<?php _e( "Wait...", 'wp-retina-2x' ); ?>");
 			jQuery.post(ajaxurl, data, function (response) {
@@ -81,7 +106,7 @@ function wr2x_admin_head() {
 			ajax_action = 'generate';
 			wr2x_do_all();
 		}
-	
+
 		// Refresh the dashboard retina full with the results from the Ajax operation (Upload)
 		function wr2x_refresh_full (results) {
 			jQuery.each(results, function (id, html) {
@@ -122,7 +147,7 @@ function wr2x_admin_head() {
 		}
 
 		function wr2x_delete_full(attachmentId) {
-			var data = { 
+			var data = {
 				action: 'wr2x_delete_full',
 				isAjax: true,
 				attachmentId: attachmentId
@@ -136,12 +161,12 @@ function wr2x_admin_head() {
 				else {
 					wr2x_refresh_full(data.results);
 					wr2x_display_please_refresh();
-				}				
+				}
 			});
 		}
 
 		function wr2x_load_details(attachmentId) {
-			var data = { 
+			var data = {
 				action: 'wr2x_retina_details',
 				isAjax: true,
 				attachmentId: attachmentId
@@ -155,7 +180,7 @@ function wr2x_admin_head() {
 				else {
 					jQuery('#wr2x-modal-info .loading').css('display', 'none');
 					jQuery('#wr2x-modal-info .content').html(data.result);
-				}				
+				}
 			});
 		}
 
@@ -184,7 +209,7 @@ function wr2x_admin_head() {
 				else {
 					alert("Unknown command. Contact the developer.");
 				}
-				var data = { 
+				var data = {
 					action: action,
 					isAjax: true,
 					filename: evt.target.filename,
@@ -298,7 +323,7 @@ function wr2x_wp_ajax_wr2x_list_all( $issuesOnly ) {
 	$issuesOnly = intval( $_POST['issuesOnly'] );
 	if ( $issuesOnly == 1 ) {
 		$ids = wr2x_get_issues();
-		echo json_encode( 
+		echo json_encode(
 			array(
 				'success' => true,
 				'message' => "List of issues only.",
@@ -328,7 +353,7 @@ function wr2x_wp_ajax_wr2x_list_all( $issuesOnly ) {
 			array_push( $ids, $id );
 			$total++;
 		}
-		echo json_encode( 
+		echo json_encode(
 			array(
 				'success' => true,
 				'message' => "List of everything.",
@@ -338,7 +363,7 @@ function wr2x_wp_ajax_wr2x_list_all( $issuesOnly ) {
 		die;
 	}
 	catch (Exception $e) {
-		echo json_encode( 
+		echo json_encode(
 			array(
 				'success' => false,
 				'message' => $e->getMessage()
@@ -350,7 +375,7 @@ function wr2x_wp_ajax_wr2x_list_all( $issuesOnly ) {
 function wr2x_wp_ajax_wr2x_delete_full( $pleaseReturn = false ) {
 
 	if ( !isset( $_POST['attachmentId'] ) ) {
-		echo json_encode( 
+		echo json_encode(
 			array(
 				'success' => false,
 				'message' => __( "The attachment ID is missing.", 'wp-retina-2x' )
@@ -373,7 +398,7 @@ function wr2x_wp_ajax_wr2x_delete_full( $pleaseReturn = false ) {
 	if ( $pleaseReturn )
 		return $info;
 
-	echo json_encode( 
+	echo json_encode(
 		array(
 			'results' => $results,
 			'success' => true,
@@ -386,7 +411,7 @@ function wr2x_wp_ajax_wr2x_delete_full( $pleaseReturn = false ) {
 function wr2x_wp_ajax_wr2x_delete() {
 
 	if ( !isset( $_POST['attachmentId'] ) ) {
-		echo json_encode( 
+		echo json_encode(
 			array(
 				'success' => false,
 				'message' => __( "The attachment ID is missing.", 'wp-retina-2x' )
@@ -401,12 +426,12 @@ function wr2x_wp_ajax_wr2x_delete() {
 
 	wr2x_delete_attachment( $attachmentId );
 	$meta = wp_get_attachment_metadata( $attachmentId );
-	
+
 	// RESULTS FOR RETINA DASHBOARD
 	wr2x_update_issue_status( $attachmentId );
 	$info = wpr2x_html_get_basic_retina_info( $attachmentId, wr2x_retina_info( $attachmentId ) );
 	$results[$attachmentId] = $info;
-	echo json_encode( 
+	echo json_encode(
 		array(
 			'results' => $results,
 			'results_full' => $results_full,
@@ -419,7 +444,7 @@ function wr2x_wp_ajax_wr2x_delete() {
 
 function wr2x_wp_ajax_wr2x_retina_details() {
 	if ( !isset( $_POST['attachmentId'] ) ) {
-		echo json_encode( 
+		echo json_encode(
 			array(
 				'success' => false,
 				'message' => __( "The attachment ID is missing.", 'wp-retina-2x' )
@@ -430,7 +455,7 @@ function wr2x_wp_ajax_wr2x_retina_details() {
 
 	$attachmentId = intval( $_POST['attachmentId'] );
 	$info = wpr2x_html_get_details_retina_info( $attachmentId, wr2x_retina_info( $attachmentId ) );
-	echo json_encode( 
+	echo json_encode(
 		array(
 			'result' => $info,
 			'success' => true,
@@ -441,9 +466,8 @@ function wr2x_wp_ajax_wr2x_retina_details() {
 }
 
 function wr2x_wp_ajax_wr2x_generate() {
-
 	if ( !isset( $_POST['attachmentId'] ) ) {
-		echo json_encode( 
+		echo json_encode(
 			array(
 				'success' => false,
 				'message' => __( "The attachment ID is missing.", 'wp-retina-2x' )
@@ -456,11 +480,11 @@ function wr2x_wp_ajax_wr2x_generate() {
 	wr2x_delete_attachment( $attachmentId );
 	$meta = wp_get_attachment_metadata( $attachmentId );
 	wr2x_generate_images( $meta );
-	
+
 	// RESULTS FOR RETINA DASHBOARD
 	$info = wpr2x_html_get_basic_retina_info( $attachmentId, wr2x_retina_info( $attachmentId ) );
 	$results[$attachmentId] = $info;
-	echo json_encode( 
+	echo json_encode(
 		array(
 			'results' => $results,
 			'success' => true,
@@ -478,22 +502,25 @@ function wr2x_check_get_ajax_uploaded_file() {
 		));
 		die();
 	}
-	
+
 	$data = $_POST['data'];
 
 	// Create the file as a TMP
 	if ( is_writable( sys_get_temp_dir() ) ) {
 		$tmpfname = tempnam( sys_get_temp_dir(), "wpx_" );
+		wr2x_log( "Upload a temporary file in $tmpfname (sys_get_temp_dir)." );
 	}
 	else if ( is_writable( wr2x_get_upload_root() ) ) {
 		if ( !file_exists( trailingslashit( wr2x_get_upload_root() ) . "wr2x-tmp" ) )
 			mkdir( trailingslashit( wr2x_get_upload_root() ) . "wr2x-tmp" );
 		$tmpfname = tempnam( trailingslashit( wr2x_get_upload_root() ) . "wr2x-tmp", "wpx_" );
+		wr2x_log( "Upload a temporary file in $tmpfname (wr2x_get_upload_root)." );
 	}
 
 	if ( $tmpfname == null || $tmpfname == FALSE ) {
 		$tmpdir = get_temp_dir();
 		error_log( "Retina: The temporary directory could not be created." );
+		wr2x_log( "The temporary directory could not be created." );
 		echo json_encode( array(
 			'success' => false,
 			'message' => __( "The temporary directory could not be created.", 'wp-retina-2x' )
@@ -509,6 +536,7 @@ function wr2x_check_get_ajax_uploaded_file() {
 	// Check if it is an image
 	$file_info = getimagesize( $tmpfname );
 	if ( empty( $file_info ) ) {
+		wr2x_log( "The file is not an image or the upload went wrong." );
 		unlink( $tmpfname );
 		echo json_encode( array(
 			'success' => false,
@@ -519,6 +547,7 @@ function wr2x_check_get_ajax_uploaded_file() {
 
 	$filedata = wp_check_filetype_and_ext( $tmpfname, $_POST['filename'] );
 	if ( $filedata["ext"] == "" ) {
+		wr2x_log( "You cannot use this file (wrong extension? wrong type?)." );
 		unlink( $current_file );
 		echo json_encode( array(
 			'success' => false,
@@ -527,6 +556,7 @@ function wr2x_check_get_ajax_uploaded_file() {
 		die();
 	}
 
+	wr2x_log( "The temporary file was written successfully." );
 	return $tmpfname;
 }
 
@@ -587,7 +617,7 @@ function wr2x_wp_ajax_wr2x_replace() {
 				$normal_file = trailingslashit( $basepath ) . $meta['sizes'][$name]['file'];
 				$pathinfo = pathinfo( $normal_file );
 				$retina_file = trailingslashit( $pathinfo['dirname'] ) . $pathinfo['filename'] . wr2x_retina_extension() . $pathinfo['extension'];
-				
+
 				// Test if the file exists and if it is actually a file (and not a dir)
 				// Some old WordPress Media Library are sometimes broken and link to directories
 				if ( file_exists( $normal_file ) && is_file( $normal_file ) )
@@ -603,7 +633,7 @@ function wr2x_wp_ajax_wr2x_replace() {
 	// Insert the new file and delete the temporary one
 	rename( $tmpfname, $current_file );
 	chmod( $current_file, 0644 );
-	
+
 	// Generate the images
 	wp_update_attachment_metadata( $attachmentId, wp_generate_attachment_metadata( $attachmentId, $current_file ) );
 	$meta = wp_get_attachment_metadata( $attachmentId );

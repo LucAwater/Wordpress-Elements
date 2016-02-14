@@ -75,7 +75,6 @@ class acf_field_post_object extends acf_field {
    		$options = acf_parse_args($options, array(
 			'post_id'		=> 0,
 			's'				=> '',
-			'lang'			=> false,
 			'field_key'		=> '',
 			'paged'			=> 1
 		));
@@ -97,20 +96,6 @@ class acf_field_post_object extends acf_field {
 		if( !$field ) {
 		
 			return false;
-			
-		}
-		
-		
-		// WPML
-		if( $options['lang'] ) {
-		
-			global $sitepress;
-			
-			if( !empty($sitepress) ) {
-			
-				$sitepress->switch_lang( $options['lang'] );
-				
-			}
 			
 		}
 		
@@ -250,7 +235,7 @@ class acf_field_post_object extends acf_field {
 	function ajax_query() {
 		
 		// validate
-		if( empty($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'acf_nonce') ) {
+		if( !acf_verify_ajax() ) {
 		
 			die();
 			

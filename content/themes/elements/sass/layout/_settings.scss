@@ -14,8 +14,8 @@
  * 1. Sizes & margins
  */
 
- // This is the default html and body font-size for the base rem value.
- $rem-base: 16px;
+// This is the default html and body font-size for the base rem value.
+$rem-base: 16px;
 
 // Don't worry about padding, header's elements are vertically centered with flex
 $header-height: 60px;
@@ -33,13 +33,12 @@ $space-section-small: rem-calc(60);
  * 2. Grid
  */
 
- // Basic settings
- $total-columns: 4;
- $column-gutter: rem-calc(30);
+// Basic settings
+$total-columns: 4;
+$column-gutter: rem-calc(30);
 
- $block-grid-elements: 4;
- $block-grid-default-spacing: rem-calc(30);
- $align-block-grid-to-grid: true;
+$block-grid-elements: 4;
+$block-grid-default-spacing: rem-calc(30);
 
 // Initialize foundation classes
 $include-html-classes: true;

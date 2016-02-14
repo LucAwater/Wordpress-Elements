@@ -1,0 +1,34 @@
+.arrow{
+  @include transform( rotate(45deg) );
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  border-right: 2px solid $black;
+  border-bottom: 2px solid $black;
+
+  // Default direction is down
+  &.arrow-right{
+    @include transform( rotate(-45deg) );
+  }
+
+  &.arrow-left{
+    @include transform( rotate(135deg) );
+  }
+
+  &.arrow-up{
+    @include transform( rotate(225deg) );
+  }
+
+  // Used in hero element
+  &.arrow-scroll{
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    position: absolute;
+    z-index: $zIndex-arrow;
+
+    margin: auto;
+  }
+}

@@ -1,0 +1,219 @@
+/*
+ * Body
+ */
+#wpbody #wpbody-content .wrap {
+  background-color: #F2F2F2;
+}
+#wpbody #wpbody-content .wrap .nav-tab-wrapper {
+  background-color: white;
+}
+#wpbody #wpbody-content .wrap .nav-tab-wrapper .nav-tab.nav-tab-active, #wpbody #wpbody-content .wrap .nav-tab-wrapper .nav-tab:hover {
+  border-bottom: 3px solid #4BA0D9;
+}
+
+#wpwrap {
+  background: #F2F2F2;
+}
+
+/*
+ * Navigation
+ */
+#wpadminbar {
+  background: #242B37;
+}
+#wpadminbar * {
+  color: white !important;
+}
+#wpadminbar li a.ab-item,
+#wpadminbar li .ab-sub-wrapper {
+  color: white !important;
+  background-color: #242B37 !important;
+}
+#wpadminbar li a:focus span {
+  color: #4BA0D9 !important;
+}
+#wpadminbar li:hover > a,
+#wpadminbar li:hover > a span {
+  color: #4BA0D9 !important;
+}
+
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+  background: #364052;
+}
+
+#adminmenuwrap ul#adminmenu li a .wp-menu-image:before {
+  color: white;
+}
+#adminmenuwrap ul#adminmenu li a .wp-menu-name {
+  color: white;
+}
+#adminmenuwrap ul#adminmenu li#collapse-menu #collapse-button
+#adminmenuwrap ul#adminmenu li.current a, #adminmenuwrap ul#adminmenu li.wp-has-current-submenu a {
+  background: #4BA0D9;
+}
+#adminmenuwrap ul#adminmenu li#collapse-menu #collapse-button
+#adminmenuwrap ul#adminmenu li.current a .wp-menu-name, #adminmenuwrap ul#adminmenu li.wp-has-current-submenu a .wp-menu-name {
+  color: white;
+}
+#adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu {
+  margin-top: 0 !important;
+  background: #242B37;
+}
+#adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a {
+  color: #e0e0e0;
+}
+#adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a.current {
+  color: white;
+}
+#adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a:hover {
+  color: white;
+}
+#adminmenuwrap ul#adminmenu li:hover a, #adminmenuwrap ul#adminmenu li:focus a {
+  color: white;
+  background: #4BA0D9;
+}
+#adminmenuwrap ul#adminmenu li.wp-menu-separator {
+  background: #242B37;
+}
+#adminmenuwrap ul#adminmenu li.menu-top:hover,
+#adminmenuwrap ul#adminmenu li.opensub > a.menu-top,
+#adminmenuwrap ul#adminmenu li > a.menu-top:focus {
+  background-color: #4BA0D9 !important;
+}
+
+#collapse-menu span,
+#collapse-menu #collapse-button div:after {
+  opacity: 0.3;
+  color: white;
+}
+
+#collapse-menu:hover span,
+#collapse-menu:hover #collapse-button div:after {
+  opacity: 1;
+  color: #4BA0D9;
+}
+
+/*
+ * Buttons
+ */
+.button-primary {
+  background-color: #4BA0D9 !important;
+}
+.button-primary:hover {
+  background-color: #3F89B2 !important;
+}
+
+button.button-primary, button.blue,
+.button.button-primary,
+.button.blue,
+.acf-button.button-primary,
+.acf-button.blue {
+  background-color: #4BA0D9 !important;
+}
+button.button-primary:hover, button.blue:hover,
+.button.button-primary:hover,
+.button.blue:hover,
+.acf-button.button-primary:hover,
+.acf-button.blue:hover {
+  background-color: #3F89B2 !important;
+}
+button:active, button:focus,
+.button:active,
+.button:focus,
+.acf-button:active,
+.acf-button:focus {
+  outline: none !important;
+}
+
+/*
+ * Messages
+ */
+.updated,
+.error,
+.settings-error {
+  background-color: white !important;
+}
+
+/*
+ * Settings
+ */
+.tamed-wrap input[type="radio"]:checked + label {
+  background-color: #F2F2F2;
+}
+.tamed-wrap #tamed-custom-login > div {
+  border: none;
+  background-color: #F2F2F2;
+}
+
+.tamed-wrap .tamed-box {
+  background-color: white;
+}
+.tamed-wrap .tamed-box .tamed-box-header {
+  border-bottom: thin solid #F2F2F2;
+}
+.tamed-wrap .tamed-box .tamed-box-body .tamed-box-inside {
+  background-color: #F2F2F2;
+}
+
+/*
+ * Editors
+ */
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus {
+  border-color: #4BA0D9 !important;
+}
+
+input[type="checkbox"]:before {
+  color: #4BA0D9 !important;
+}
+
+input[type=radio]:checked:before {
+  color: #4BA0D9;
+}
+
+.view-switch a.current:before {
+  color: #4BA0D9 !important;
+}
+
+.wp-editor-tabs .switch-tmce:hover, .wp-editor-tabs .switch-tmce:active, .wp-editor-tabs .switch-tmce:focus,
+.wp-editor-tabs .switch-html:hover,
+.wp-editor-tabs .switch-html:active,
+.wp-editor-tabs .switch-html:focus {
+  color: white !important;
+  background-color: #4BA0D9 !important;
+}
+
+.tmce-active .wp-editor-tabs .switch-tmce {
+  color: white !important;
+  background-color: #4BA0D9 !important;
+}
+
+.html-active .wp-editor-tabs .switch-html {
+  color: white !important;
+  background-color: #4BA0D9 !important;
+}
+
+/*
+ * Tables
+ */
+.post-com-count:hover span {
+  background-color: #4BA0D9 !important;
+}

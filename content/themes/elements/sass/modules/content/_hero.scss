@@ -1,54 +1,26 @@
 section.hero{
-  height: 90vh;
+  height: calc(100vh - #{$header-height});
+  margin-top: 0;
+  margin-bottom: ($space-section / 2);
+  padding: 0;
   overflow: hidden;
-  
+
   .hero-banner{
-    position: fixed;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  
+
   .section-body{
+    @include transform( translate(-50%, -50%) );
+
     top: 50%;
     left: 50%;
+    position: absolute;
+
     margin: auto;
-    position: absolute;
-    @include transform( translate(-50%, -50%) );
-  }
-}
-
-// Scroll arrow
-.arrow-scroll{
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: $white;
-  border-radius: 100%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: $zIndex-arrow;
-  
-  img{
-    width: 30px;
-    top: 20px;
-    left: 15px;
-    position: absolute;
-    z-index: $zIndex-arrow;
-    @include transition( .3s );
-    @include transform( rotate(90deg) );
-  }
-  
-  &:hover{
-    img{
-      top: 25px;
-      @include transition( .3s );
-    }
-  }
-}
-
-// Remove fixed positioning on mobile devices
-body.is-mobile{
-  section.hero .hero-banner{
-    position: relative;
   }
 }

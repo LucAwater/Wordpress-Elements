@@ -1,0 +1,29 @@
+ul.posts{
+  li{
+    div{
+      padding: 15px 30px;
+
+      background-color: $grey-light;
+
+      .post-category{
+        margin-bottom: 10px;
+        display: inline-block;
+
+        text-decoration: none;
+      }
+
+      .post-title{
+        display: block;
+      }
+    }
+
+    div:first-child{
+      padding-bottom: 200px;
+    }
+
+    img{
+      display: block;
+      margin-top: -185px;
+    }
+  }
+}

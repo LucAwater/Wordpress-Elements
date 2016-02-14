@@ -1,6 +1,8 @@
 <?php
-/**
- * @package WordPress
+/*
+ * The template for displaying the header
+ *
+ * Displays all of the head element and everything up until the main tag.
  */
 ?>
 
@@ -32,38 +34,25 @@
   <?php wp_head(); ?>
 </head>
 
-<body class="is-loading">
+<body <?php body_class(); ?>>
   <!-- Header -->
   <header>
     <a class="link-logo" href="<?php echo home_url(); ?>">
       <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo.svg">
     </a>
 
-    <?php include( 'includes/nav.php' ); ?>
+    <nav>
+      <?php
+      $nav = array(
+        'theme_location'  => 'menu_primary',
+        'container'       => '',
+        'items_wrap'      => '<ul>%3$s</ul>'
+      );
 
-    <!-- <a class="trigger trigger-menu"><i></i></a> -->
+      wp_nav_menu( $nav );
+      ?>
+    </nav>
   </header>
-
-  <?php
-  // Hero section must be placed before main
-  if( have_posts() ):
-    while( have_posts() ): the_post();
-
-      // Loop into ACF groups
-      if( have_rows('page') ):
-        while( have_rows('page') ): the_row();
-
-          if( get_row_layout() == 'hero' ):
-            echo '<!-- Hero -->';
-            include_once( locate_template('content/hero.php') );
-          endif;
-
-        endwhile;
-      endif;
-
-    endwhile;
-  endif;
-  ?>
 
   <!-- Main content -->
   <main role="main">
