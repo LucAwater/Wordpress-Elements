@@ -1,0 +1,41 @@
+body.single-post{
+  article{
+    max-width: 900px;
+    margin: 0 auto;
+
+    header{
+      margin-bottom: 50px;
+    }
+  }
+}
+
+body.single-post article header{
+  .post-categories{
+    float: left;
+
+    a{
+      border: none;
+    }
+
+    span{
+      color: $grey-text;
+    }
+
+    span:last-child{
+      display: none;
+    }
+  }
+
+  time{
+    float: right;
+  }
+
+  h1{
+    padding-top: 15px;
+  }
+
+  h1,
+  h2{
+    clear: both;
+  }
+}

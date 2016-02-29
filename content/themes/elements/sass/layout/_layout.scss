@@ -1,5 +1,5 @@
-header,
-footer{
+body > header,
+body > footer{
   padding: 0 $space-sides;
 }
 
@@ -20,8 +20,8 @@ main > *{
 }
 
 @media #{$small-only}{
-  header,
-  footer{
+  body > header,
+  body > footer{
     padding: 0 $space-sides-small;
   }
 
