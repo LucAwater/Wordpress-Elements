@@ -11,7 +11,8 @@
   "base/_colors",
 
   "base/typo/_fonts",
-  "base/typo/_typography";
+  "base/typo/_typography",
+  "base/typo/_links";
 
 // LAYOUT
 @import
@@ -41,7 +42,8 @@
   "modules/content/_grid",
   "modules/content/_parallax",
 
-  "modules/posts/posts-thumb";
+  "modules/posts/_posts-thumb",
+  "modules/posts/_single";
 
 // STATE
 @import

@@ -15,7 +15,7 @@
 /*
  * 3. Media queries
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 [class*="grid-"] {
   display: block;
   *zoom: 1; }
@@ -743,18 +743,21 @@ ul {
   width: calc( 100% + 1.875rem );
   margin-left: -0.9375rem; }
 
-h1, h2, p, a {
-  font-family: 'Open Sans', sans-serif;
+h1, h2, p, span,
+time, a {
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-size: 16px;
   font-weight: normal; }
-  h1.is_bold, h2.is_bold, p.is_bold, a.is_bold {
-    font-weight: 700; }
-  h1 a, h2 a, p a, a a {
-    font-size: 1em; }
+  h1.is_bold, h2.is_bold, p.is_bold, span.is_bold,
+  time.is_bold, a.is_bold {
+    font-weight: 600; }
 
-h1, h2 {
-  font-size: 3em; }
+h1 {
+  font-size: 4.5em; }
+
+article h1 {
+  font-size: 2.5em; }
 
 h2 {
   font-size: 2em; }
@@ -762,12 +765,46 @@ h2 {
 p {
   font-size: .9em; }
 
+article p {
+  margin-bottom: 1em;
+  font-size: 18px;
+  line-height: 1.6; }
+
 a {
-  color: black;
-  text-decoration: underline;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1em;
+  color: #888888;
+  text-decoration: none;
   cursor: pointer; }
-  a.has-content {
-    text-decoration: none; }
+  a:hover, a:focus {
+    color: black; }
+
+a.has-content {
+  color: black;
+  text-decoration: none; }
+
+article a {
+  border-bottom: thin solid #888888; }
+  article a:hover, article a:focus {
+    border-color: black; }
+
+nav a {
+  padding-bottom: 0;
+  color: black;
+  text-decoration: none;
+  border-bottom: thin solid transparent; }
+  nav a:hover, nav a:focus {
+    padding-bottom: 5px;
+    border-bottom: thin solid black; }
+
+nav .current_page_parent a,
+nav .current-menu-item a {
+  padding-bottom: 5px;
+  border-bottom: thin solid black; }
 
 html,
 body {
@@ -775,8 +812,8 @@ body {
   min-height: 100%;
   background: white; }
 
-header,
-footer {
+body > header,
+body > footer {
   padding: 0 6.25rem; }
 
 main {
@@ -790,8 +827,8 @@ main > * {
     padding-bottom: 6.25rem; }
 
 @media only screen and (max-width: 500px) {
-  header,
-  footer {
+  body > header,
+  body > footer {
     padding: 0 3.75rem; }
 
   main > * {
@@ -830,12 +867,12 @@ body > header {
   body > header .link-logo {
     width: 50px; }
 
-footer {
+body > footer {
   z-index: 1100;
   padding-top: 20px;
   padding-bottom: 20px;
   background: black; }
-  footer p, footer a {
+  body > footer p, body > footer a {
     color: white; }
 
 body.error404 #error404-content {
@@ -892,9 +929,7 @@ nav ul {
   display: inline; }
   nav ul li {
     display: inline-block;
-    padding-right: 1em; }
-    nav ul li a {
-      text-decoration: none; }
+    padding-right: 30px; }
     nav ul li:last-child {
       padding-right: 0; }
 
@@ -1170,6 +1205,28 @@ ul.posts li img {
   display: block;
   margin-top: -185px; }
 
+body.single-post article {
+  max-width: 900px;
+  margin: 0 auto; }
+  body.single-post article header {
+    margin-bottom: 50px; }
+
+body.single-post article header .post-categories {
+  float: left; }
+  body.single-post article header .post-categories a {
+    border: none; }
+  body.single-post article header .post-categories span {
+    color: #888888; }
+  body.single-post article header .post-categories span:last-child {
+    display: none; }
+body.single-post article header time {
+  float: right; }
+body.single-post article header h1 {
+  padding-top: 15px; }
+body.single-post article header h1,
+body.single-post article header h2 {
+  clear: both; }
+
 /*
  * Show and Hide class functions
  */
@@ -1415,27 +1472,38 @@ section.image .section-body.is-pos-center {
 section.image .section-body.is-pos-right {
   text-align: right; }
 
-h1.is-italic, h2.is-italic, p.is-italic, a.is-italic {
+h1.is-italic, h2.is-italic, p.is-italic, span.is-italic,
+time.is-italic, a.is-italic {
   font-style: italic; }
-h1.is-underlined, h2.is-underlined, p.is-underlined, a.is-underlined {
+h1.is-underlined, h2.is-underlined, p.is-underlined, span.is-underlined,
+time.is-underlined, a.is-underlined {
   text-decoration: underline; }
-h1.is-capitalized, h2.is-capitalized, p.is-capitalized, a.is-capitalized {
+h1.is-capitalized, h2.is-capitalized, p.is-capitalized, span.is-capitalized,
+time.is-capitalized, a.is-capitalized {
   text-transform: capitalize; }
-h1.is-uppercase, h2.is-uppercase, p.is-uppercase, a.is-uppercase {
+h1.is-uppercase, h2.is-uppercase, p.is-uppercase, span.is-uppercase,
+time.is-uppercase, a.is-uppercase {
   text-transform: uppercase; }
-h1.is-lowercase, h2.is-lowercase, p.is-lowercase, a.is-lowercase {
+h1.is-lowercase, h2.is-lowercase, p.is-lowercase, span.is-lowercase,
+time.is-lowercase, a.is-lowercase {
   text-transform: lowercase; }
-h1.is-bold, h2.is-bold, p.is-bold, a.is-bold {
+h1.is-bold, h2.is-bold, p.is-bold, span.is-bold,
+time.is-bold, a.is-bold {
   font-weight: 700; }
-h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, a.is-aligned-center {
+h1.is-aligned-center, h2.is-aligned-center, p.is-aligned-center, span.is-aligned-center,
+time.is-aligned-center, a.is-aligned-center {
   text-align: center; }
-h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, a.is-aligned-left {
+h1.is-aligned-left, h2.is-aligned-left, p.is-aligned-left, span.is-aligned-left,
+time.is-aligned-left, a.is-aligned-left {
   text-align: left; }
-h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, a.is-aligned-right {
+h1.is-aligned-right, h2.is-aligned-right, p.is-aligned-right, span.is-aligned-right,
+time.is-aligned-right, a.is-aligned-right {
   text-align: right; }
-h1.is-black, h2.is-black, p.is-black, a.is-black {
+h1.is-black, h2.is-black, p.is-black, span.is-black,
+time.is-black, a.is-black {
   color: black; }
-h1.is-white, h2.is-white, p.is-white, a.is-white {
+h1.is-white, h2.is-white, p.is-white, span.is-white,
+time.is-white, a.is-white {
   color: white; }
 
 p.is-small {
