@@ -1,0 +1,55 @@
+a{
+  @extend %base;
+  @include transition( .2s );
+
+  font-size: 1em;
+  color: $grey-text;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus{
+    color: $black;
+  }
+}
+
+// Link tags with headings, divs or images in them get has-content class to serve as click container
+a.has-content{
+  color: $black;
+  text-decoration: none;
+}
+
+// Links in articles
+article a{
+  border-bottom: thin solid $grey-text;
+
+  &:hover,
+  &:focus{
+    border-color: $black;
+  }
+}
+
+// Navigation in header
+nav a{
+  padding-bottom: 0;
+
+  color: $black;
+  text-decoration: none;
+  border-bottom: thin solid transparent;
+
+  &:hover,
+  &:focus{
+    padding-bottom: 5px;
+
+    border-bottom: thin solid $black;
+  }
+}
+
+nav .current_page_parent,
+nav .current-menu-item{
+  a{
+    padding-bottom: 5px;
+
+    border-bottom: thin solid $black;
+  }
+}
