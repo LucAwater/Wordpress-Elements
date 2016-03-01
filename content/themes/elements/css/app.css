@@ -754,6 +754,9 @@ time, a {
     font-weight: 600; }
 
 h1 {
+  font-size: 4.5em; }
+
+article h1 {
   font-size: 2.5em; }
 
 h2 {

@@ -8,6 +8,10 @@
 h1{
   @extend %base;
 
+  font-size: 4.5em;
+}
+
+article h1{
   font-size: 2.5em;
 }
 
